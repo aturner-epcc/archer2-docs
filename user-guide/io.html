@@ -14,7 +14,7 @@
     
     
       
-        <title>Overview - ARCHER2 User Documentation</title>
+        <title>I/O and file systems - ARCHER2 User Documentation</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#research-software" class="md-skip">
+        <a href="#io-and-file-systems" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              I/O and file systems
             
           </span>
         </div>
@@ -308,12 +308,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       <label class="md-nav__link" for="__nav_5">
         User and Best Practice Guide
@@ -331,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/index.html" class="md-nav__link">
+      <a href="index.html" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -343,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/connecting.html" class="md-nav__link">
+      <a href="connecting.html" class="md-nav__link">
         Connecting to ARCHER2
       </a>
     </li>
@@ -355,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/data.html" class="md-nav__link">
+      <a href="data.html" class="md-nav__link">
         Data management and transfer
       </a>
     </li>
@@ -367,7 +369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/sw-environment.html" class="md-nav__link">
+      <a href="sw-environment.html" class="md-nav__link">
         Software environment
       </a>
     </li>
@@ -379,7 +381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/scheduler.html" class="md-nav__link">
+      <a href="scheduler.html" class="md-nav__link">
         Running jobs on ARCHER2
       </a>
     </li>
@@ -389,11 +391,173 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../user-guide/io.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          I/O and file systems
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="io.html" class="md-nav__link md-nav__link--active">
         I/O and file systems
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-archer2-file-systems" class="md-nav__link">
+    Using the ARCHER2 file systems
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the ARCHER2 file systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#home-file-systems" class="md-nav__link">
+    Home file systems
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-file-system" class="md-nav__link">
+    Work file system
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-io-patterns" class="md-nav__link">
+    Common I/O patterns
+  </a>
+  
+    <nav class="md-nav" aria-label="Common I/O patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-file-single-writer-serial-io" class="md-nav__link">
+    Single file, single writer (Serial I/O)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-per-process-fpp" class="md-nav__link">
+    File-per-process (FPP)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-file-multiple-writers-without-collective-operations" class="md-nav__link">
+    Single file, multiple writers without collective operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-shared-file-with-collective-writes-ssf" class="md-nav__link">
+    Single Shared File with collective writes (SSF)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#achieving-efficient-io" class="md-nav__link">
+    Achieving efficient I/O
+  </a>
+  
+    <nav class="md-nav" aria-label="Achieving efficient I/O">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lustre" class="md-nav__link">
+    Lustre
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#striping" class="md-nav__link">
+    Striping
+  </a>
+  
+    <nav class="md-nav" aria-label="Striping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-configuration" class="md-nav__link">
+    Default configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-custom-striping-configurations" class="md-nav__link">
+    Setting Custom Striping Configurations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-archer2-io-settings" class="md-nav__link">
+    Recommended ARCHER2 I/O settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#io-profiling" class="md-nav__link">
+    I/O Profiling
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -403,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/dev-environment.html" class="md-nav__link">
+      <a href="dev-environment.html" class="md-nav__link">
         Application development environment
       </a>
     </li>
@@ -415,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/containers.html" class="md-nav__link">
+      <a href="containers.html" class="md-nav__link">
         Containers
       </a>
     </li>
@@ -427,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/python.html" class="md-nav__link">
+      <a href="python.html" class="md-nav__link">
         Using Python
       </a>
     </li>
@@ -439,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/analysis.html" class="md-nav__link">
+      <a href="analysis.html" class="md-nav__link">
         Data analysis
       </a>
     </li>
@@ -451,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/debug.html" class="md-nav__link">
+      <a href="debug.html" class="md-nav__link">
         Debugging
       </a>
     </li>
@@ -463,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/profile.html" class="md-nav__link">
+      <a href="profile.html" class="md-nav__link">
         Profiling
       </a>
     </li>
@@ -475,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/tuning.html" class="md-nav__link">
+      <a href="tuning.html" class="md-nav__link">
         Performance tuning
       </a>
     </li>
@@ -494,14 +658,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       <label class="md-nav__link" for="__nav_6">
         Research Software
@@ -517,64 +679,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../research-software/index.html" class="md-nav__link">
         Overview
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#centrally-supported-packages" class="md-nav__link">
-    Centrally supported packages
-  </a>
-  
-    <nav class="md-nav" aria-label="Centrally supported packages">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#not-on-the-list" class="md-nav__link">
-    Not on the list?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -584,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="castep/castep.html" class="md-nav__link">
+      <a href="../research-software/castep/castep.html" class="md-nav__link">
         CASTEP
       </a>
     </li>
@@ -596,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="chemshell/chemshell.html" class="md-nav__link">
+      <a href="../research-software/chemshell/chemshell.html" class="md-nav__link">
         Chemshell
       </a>
     </li>
@@ -608,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="code-saturne/code-saturne.html" class="md-nav__link">
+      <a href="../research-software/code-saturne/code-saturne.html" class="md-nav__link">
         Code_Saturne
       </a>
     </li>
@@ -620,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cp2k/cp2k.html" class="md-nav__link">
+      <a href="../research-software/cp2k/cp2k.html" class="md-nav__link">
         CP2K
       </a>
     </li>
@@ -632,7 +741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="elk/elk.html" class="md-nav__link">
+      <a href="../research-software/elk/elk.html" class="md-nav__link">
         ELK
       </a>
     </li>
@@ -644,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fenics/fenics.html" class="md-nav__link">
+      <a href="../research-software/fenics/fenics.html" class="md-nav__link">
         FEniCS
       </a>
     </li>
@@ -656,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="gromacs/gromacs.html" class="md-nav__link">
+      <a href="../research-software/gromacs/gromacs.html" class="md-nav__link">
         GROMACS
       </a>
     </li>
@@ -668,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lammps/lammps.html" class="md-nav__link">
+      <a href="../research-software/lammps/lammps.html" class="md-nav__link">
         LAMMPS
       </a>
     </li>
@@ -680,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mitgcm/mitgcm.html" class="md-nav__link">
+      <a href="../research-software/mitgcm/mitgcm.html" class="md-nav__link">
         MITgcm
       </a>
     </li>
@@ -692,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mo-unified-model/mo-unified-model.html" class="md-nav__link">
+      <a href="../research-software/mo-unified-model/mo-unified-model.html" class="md-nav__link">
         Met Office Unified Model
       </a>
     </li>
@@ -704,7 +813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="namd/namd.html" class="md-nav__link">
+      <a href="../research-software/namd/namd.html" class="md-nav__link">
         NAMD
       </a>
     </li>
@@ -716,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="nektarplusplus/nektarplusplus.html" class="md-nav__link">
+      <a href="../research-software/nektarplusplus/nektarplusplus.html" class="md-nav__link">
         Nektar++
       </a>
     </li>
@@ -728,7 +837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="nemo/nemo.html" class="md-nav__link">
+      <a href="../research-software/nemo/nemo.html" class="md-nav__link">
         NEMO
       </a>
     </li>
@@ -740,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="nwchem/nwchem.html" class="md-nav__link">
+      <a href="../research-software/nwchem/nwchem.html" class="md-nav__link">
         NWChem
       </a>
     </li>
@@ -752,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="onetep/onetep.html" class="md-nav__link">
+      <a href="../research-software/onetep/onetep.html" class="md-nav__link">
         ONETEP
       </a>
     </li>
@@ -764,7 +873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="openfoam/openfoam.html" class="md-nav__link">
+      <a href="../research-software/openfoam/openfoam.html" class="md-nav__link">
         OpenFOAM
       </a>
     </li>
@@ -776,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qe/qe.html" class="md-nav__link">
+      <a href="../research-software/qe/qe.html" class="md-nav__link">
         Quantum Espresso
       </a>
     </li>
@@ -788,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="vasp/vasp.html" class="md-nav__link">
+      <a href="../research-software/vasp/vasp.html" class="md-nav__link">
         VASP
       </a>
     </li>
@@ -1208,22 +1317,131 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#centrally-supported-packages" class="md-nav__link">
-    Centrally supported packages
+  <a href="#using-the-archer2-file-systems" class="md-nav__link">
+    Using the ARCHER2 file systems
   </a>
   
-    <nav class="md-nav" aria-label="Centrally supported packages">
+    <nav class="md-nav" aria-label="Using the ARCHER2 file systems">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#not-on-the-list" class="md-nav__link">
-    Not on the list?
+  <a href="#home-file-systems" class="md-nav__link">
+    Home file systems
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-file-system" class="md-nav__link">
+    Work file system
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-io-patterns" class="md-nav__link">
+    Common I/O patterns
+  </a>
+  
+    <nav class="md-nav" aria-label="Common I/O patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-file-single-writer-serial-io" class="md-nav__link">
+    Single file, single writer (Serial I/O)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-per-process-fpp" class="md-nav__link">
+    File-per-process (FPP)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-file-multiple-writers-without-collective-operations" class="md-nav__link">
+    Single file, multiple writers without collective operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-shared-file-with-collective-writes-ssf" class="md-nav__link">
+    Single Shared File with collective writes (SSF)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#achieving-efficient-io" class="md-nav__link">
+    Achieving efficient I/O
+  </a>
+  
+    <nav class="md-nav" aria-label="Achieving efficient I/O">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lustre" class="md-nav__link">
+    Lustre
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#striping" class="md-nav__link">
+    Striping
+  </a>
+  
+    <nav class="md-nav" aria-label="Striping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-configuration" class="md-nav__link">
+    Default configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-custom-striping-configurations" class="md-nav__link">
+    Setting Custom Striping Configurations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-archer2-io-settings" class="md-nav__link">
+    Recommended ARCHER2 I/O settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#io-profiling" class="md-nav__link">
+    I/O Profiling
+  </a>
   
 </li>
       
@@ -1239,52 +1457,206 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/ARCHER2-HPC/archer2-docs/edit/main/docs/research-software/index.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/ARCHER2-HPC/archer2-docs/edit/main/docs/user-guide/io.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="research-software">Research Software</h1>
-<p>Information on each of the centrally-installed Research Software
-packages, versions available, how to get access, example job submission
-scripts, good practice for getting best performance, links to associated
-training and webinars, links to associated technical reports (eCSE final
-reports, white papers), links to instruction manuals and further
-information.</p>
-<h2 id="centrally-supported-packages">Centrally supported packages</h2>
-<p>ARCHER2 provides a number of research software packages as <em>centrally
-supported packages</em>. Many of these packages are free to use, but others
-require a license (which you, or your research group, need to supply).</p>
-<p>The centrally supported package will usually be the current stable
-release, to include major releases and significant updates. We will
-usually not maintain older versions and versions no longer supported by
-the developers of the package.</p>
-<p>The following sections provide details on access to each of the
-centrally supported packages:</p>
+                <h1 id="io-and-file-systems">I/O and file systems</h1>
+<h2 id="using-the-archer2-file-systems">Using the ARCHER2 file systems</h2>
+<p>Different file systems are configured for different purposes and
+performance. ARCHER2 has three file systems available to users:</p>
+<table>
+<thead>
+<tr>
+<th>Node type</th>
+<th>Available file systems</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Login</td>
+<td>/home, /work</td>
+</tr>
+<tr>
+<td>Compute</td>
+<td>/work</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Any data used in a parallel jobs should be located on <code>/work</code> (Lustre).</p>
+</div>
+<h3 id="home-file-systems">Home file systems</h3>
+<p>Home directories provide a convenient means for a user to have access to
+files such as source files, input files or configuration files. This
+file system is only mounted on the login nodes. The home directory for
+each user is located at:</p>
+<pre><code>/home/[project code]/[group code]/[username]
+</code></pre>
+<p>where</p>
 <ul>
-<li><a href="castep/castep.html">CASTEP</a></li>
-<li><a href="chemshell/chemshell.html">Chemshell</a></li>
-<li><a href="code-saturne/code-saturne.html">Code_Saturne</a></li>
-<li><a href="cp2k/cp2k.html">CP2K</a></li>
-<li><a href="elk/elk.html">ELK</a></li>
-<li><a href="fenics/fenics.html">FEniCS</a></li>
-<li><a href="gromacs/gromacs.html">GROMACS</a></li>
-<li><a href="lammps/lammps.html">LAMMPS</a></li>
-<li><a href="mitgcm/mitgcm.html">MITgcm</a></li>
-<li><a href="mo-unified-model/mo-unified-model.html">Met Office Unified Model</a></li>
-<li><a href="namd/namd.html">NAMD</a></li>
-<li><a href="nektarplusplus/nektarplusplus.html">Nektar++</a></li>
-<li><a href="nemo/nemo.html">NEMO</a></li>
-<li><a href="nwchem/nwchem.html">NWChem</a></li>
-<li><a href="onetep/onetep.html">ONETEP</a></li>
-<li><a href="openfoam/openfoam.html">OpenFOAM</a></li>
-<li><a href="qe/qe.html">Quantum Espresso</a></li>
-<li><a href="vasp/vasp.html">VASP</a></li>
+<li><code>[project code]</code> is the code for your project (e.g., x01);</li>
+<li><code>[group code]</code> is the code for your project group, if your project has
+     groups, (e.g. x01-a) or the same as the project code, if not;</li>
+<li><code>[username]</code> is your login name.</li>
 </ul>
-<h3 id="not-on-the-list">Not on the list?</h3>
-<p>If the code you are interested in is not in the above list, we may still
-be able to help you install your own version, either individually, or as
-a project. Please <a href="https://www.archer2.ac.uk/support-access/servicedesk.html">contact the Service Desk</a>.</p>
+<p>Each project is allocated a portion of the total storage available, and
+the project PI will be able to sub-divide this quota among the groups
+and users within the project. As is standard practice on UNIX and Linux
+systems, the environment variable <code>$HOME</code> is automatically set to point
+to your home directory.</p>
+<p>It should be noted that the home file system is not designed, and does
+not have the capacity, to act as a long term archive for large sets of
+results.</p>
+<h3 id="work-file-system">Work file system</h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>There is no backup of data on any of the work file systems,
+which means that in the event of a major hardware failure, or if a user
+accidently deletes essential data, it will not be possible to recover
+the lost files.</p>
+</div>
+<p>A high-performance Lustre file system is mounted on the compute nodes. All
+parallel calculations must be run from directories on the <code>/work</code> file
+system and all files required by the calculation (apart from the
+executable) must reside on <code>/work</code>. Each project will be assigned space
+on a particular Lustre partition with the assignments chosen to balance
+the load across the available infrastructure.</p>
+<p>The work directory for each user is located at:</p>
+<pre><code>/work/[project code]/[group code]/[username]
+</code></pre>
+<p>where</p>
+<ul>
+<li><code>[project code]</code> is the code for your project (e.g., x01);</li>
+<li><code>[group code]</code> is the code for your project group, if your project has
+     groups, (e.g. x01-a) or the same as the project code, if not;</li>
+<li><code>[username]</code> is your login name.</li>
+</ul>
+<p>Links from the <code>/home</code> file system to directories or files on <code>/work</code>
+are strongly discouraged. If links are used, executables and data files
+on <code>/work</code> to be used by applications on the compute nodes (i.e. those
+executed via the <code>aprun</code> command) should be referenced directly on
+<code>/work</code>.</p>
+<h2 id="common-io-patterns">Common I/O patterns</h2>
+<p>There is a number of I/O patterns that are frequently used in
+applications:</p>
+<h3 id="single-file-single-writer-serial-io">Single file, single writer (Serial I/O)</h3>
+<p>A common approach is to funnel all the I/O through a single master
+process. Although this has the advantage of producing a single file, the
+fact that only a single client is doing all the I/O means that it gains
+little benefit from the parallel file system.</p>
+<h3 id="file-per-process-fpp">File-per-process (FPP)</h3>
+<p>One of the first parallel strategies people use for I/O is for each
+parallel process to write to its own file. This is a simple scheme to
+implement and understand but has the disadvantage that, at the end of
+the calculation, the data is spread across many different files and may
+therefore be difficult to use for further analysis without a data
+reconstruction stage.</p>
+<h3 id="single-file-multiple-writers-without-collective-operations">Single file, multiple writers without collective operations</h3>
+<p>There are a number of ways to achieve this. For example, many processes
+can open the same file but access different parts by skipping some
+initial offset; parallel I/O libraries such as MPI-IO, HDF5 and NetCDF
+also enable this.</p>
+<p>Shared-file I/O has the advantage that all the data is organised
+correctly in a single file making analysis or restart more
+straightforward.</p>
+<p>The problem is that, with many clients all accessing the same file,
+there can be a lot of contention for file system resources.</p>
+<h3 id="single-shared-file-with-collective-writes-ssf">Single Shared File with collective writes (SSF)</h3>
+<p>The problem with having many clients performing I/O at the same time is
+that, to prevent them clashing with each other, the I/O library may have
+to take a conservative approach. For example, a file may be locked while
+each client is accessing it which means that I/O is effectively
+serialised and performance may be poor.</p>
+<p>However, if I/O is done collectively where the library knows that all
+clients are doing I/O at the same time, then reads and writes can be
+explicitly coordinated to avoid clashes. It is only through collective
+I/O that the full bandwidth of the file system can be realised while
+accessing a single file.</p>
+<h2 id="achieving-efficient-io">Achieving efficient I/O</h2>
+<p>This section provides information on getting the best performance out of
+the parallel <code>/work</code> file systems on ARCHER2 when writing data,
+particularly using parallel I/O patterns.</p>
+<h3 id="lustre">Lustre</h3>
+<p>The ARCHER2 <code>/work</code> file systems use Lustre as a parallel file system
+technology. The Lustre file system provides POSIX semantics (changes on
+one node are immediately visible on other nodes) and can support very
+high data rates for appropriate I/O patterns.</p>
+<h3 id="striping">Striping</h3>
+<p>One of the main factors leading to the high performance of Lustre file
+systems is the ability to stripe data across multiple Object Storage
+Targets (OSTs) in a round-robin fashion. Files are striped when the data
+is split up in chunks that will then be stored on different OSTs across
+the Lustre system. Striping might improve the I/O performance because it
+increases the available bandwith since multiple processes can read and
+write the same files simultaneously. However striping can also increase
+the overhead. Choosing the right striping configuration is key to obtain
+high performance results.</p>
+<p>Users have control of a number of striping settings on Lustre file
+systems. Although these parameters can be set on a per-file basis they
+are usually set on directory where your output files will be written so
+that all output files inherit the settings.</p>
+<h4 id="default-configuration">Default configuration</h4>
+<p>The <code>/work</code> file systems on ARCHER2 have the same default stripe
+ settings:</p>
+<ul>
+<li>A default stripe count of 1</li>
+<li>A default stripe size of 1 MiB (1048576 bytes)</li>
+</ul>
+<p>These settings have been chosen to provide a good compromise for the
+wide variety of I/O patterns that are seen on the system but are
+unlikely to be optimal for any one particular scenario. The Lustre
+command to query the stripe settings for a directory (or file) is <code>lfs
+getstripe</code>. For example, to query the stripe settings of an already
+created directory <code>res_dir</code>:</p>
+<pre><code>[auser@archer2]$ lfs getstripe res_dir/
+res_dir
+stripe_count:   1 stripe_size:    1048576 stripe_offset:  -1
+</code></pre>
+<h4 id="setting-custom-striping-configurations">Setting Custom Striping Configurations</h4>
+<p>Users can set stripe settings for a directory (or file) using the
+<code>lfs setstripe</code> command. The options for <code>lfs setstripe</code> are:</p>
+<ul>
+<li><code>[--stripe-count|-c]</code> to set the stripe count; 0 means use the
+    system default (usually 1) and -1 means stripe over all available
+    OSTs.</li>
+<li><code>[--stripe-size|-s]</code> to set the stripe size; 0 means use the system
+    default (usually 1 MB) otherwise use k, m or g for KB, MB or GB
+    respectively</li>
+<li><code>[--stripe-index|-i]</code> to set the OST index (starting at 0) on which
+    to start striping for this file. An index of -1 allows the MDS to
+    choose the starting index and it is strongly recommended, as this
+    allows space and load balancing to be done by the MDS as needed.</li>
+</ul>
+<p>For example, to set a stripe size of 4 MiB for the existing directory
+<code>res_dir</code>, along with maximum striping count you would use:</p>
+<pre><code>[auser@archer2]$ lfs setstripe -s 4m -c -1 res_dir/
+</code></pre>
+<h3 id="recommended-archer2-io-settings">Recommended ARCHER2 I/O settings</h3>
+<p>With the default settings, parallel I/O on multiple nodes can
+currently give poor perfomance. We recommend always setting the
+following environment variable in your SLURM batch script:</p>
+<pre><code>export FI_OFI_RXM_SAR_LIMIT=64K
+</code></pre>
+<p>Although I/O requirements vary significantly between different
+applications, the following settings should be good in most cases:</p>
+<ul>
+<li>
+<p>If each process is writing to its own individual file then the default settings should give good performance.</p>
+</li>
+<li>
+<p>If processes are writing to a single shared file (e.g. using
+    MPI-IO, HDF5 or NetCDF), set the appropriate
+    directories to be fully striped: <code>lfs setstripe -c -1 directory/</code></p>
+</li>
+</ul>
+<h2 id="io-profiling">I/O Profiling</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We will add advice on I/O profiling soon.</p>
+</div>
                 
               
               
@@ -1304,7 +1676,7 @@ a project. Please <a href="https://www.archer2.ac.uk/support-access/servicedesk.
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../user-guide/tuning.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Performance tuning" rel="prev">
+        <a href="scheduler.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Running jobs on ARCHER2" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1313,20 +1685,20 @@ a project. Please <a href="https://www.archer2.ac.uk/support-access/servicedesk.
               <span class="md-footer__direction">
                 Previous
               </span>
-              Performance tuning
+              Running jobs on ARCHER2
             </div>
           </div>
         </a>
       
       
         
-        <a href="castep/castep.html" class="md-footer__link md-footer__link--next" aria-label="Next: CASTEP" rel="next">
+        <a href="dev-environment.html" class="md-footer__link md-footer__link--next" aria-label="Next: Application development environment" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              CASTEP
+              Application development environment
             </div>
           </div>
           <div class="md-footer__button md-icon">

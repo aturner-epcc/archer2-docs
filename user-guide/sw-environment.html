@@ -14,7 +14,7 @@
     
     
       
-        <title>Overview - ARCHER2 User Documentation</title>
+        <title>Software environment - ARCHER2 User Documentation</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#research-software" class="md-skip">
+        <a href="#software-environment" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Software environment
             
           </span>
         </div>
@@ -308,12 +308,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       <label class="md-nav__link" for="__nav_5">
         User and Best Practice Guide
@@ -331,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/index.html" class="md-nav__link">
+      <a href="index.html" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -343,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/connecting.html" class="md-nav__link">
+      <a href="connecting.html" class="md-nav__link">
         Connecting to ARCHER2
       </a>
     </li>
@@ -355,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/data.html" class="md-nav__link">
+      <a href="data.html" class="md-nav__link">
         Data management and transfer
       </a>
     </li>
@@ -365,11 +367,98 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../user-guide/sw-environment.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Software environment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="sw-environment.html" class="md-nav__link md-nav__link--active">
         Software environment
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-module-command" class="md-nav__link">
+    Using the module command
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the module command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#information-on-the-available-modules" class="md-nav__link">
+    Information on the available modules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loading-removing-and-swapping-modules" class="md-nav__link">
+    Loading, removing and swapping modules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-programming-environment" class="md-nav__link">
+    Changing Programming Environment
+  </a>
+  
+    <nav class="md-nav" aria-label="Changing Programming Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capturing-your-environment-for-reuse" class="md-nav__link">
+    Capturing your environment for reuse
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-environment-overview" class="md-nav__link">
+    Shell environment overview
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -379,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/scheduler.html" class="md-nav__link">
+      <a href="scheduler.html" class="md-nav__link">
         Running jobs on ARCHER2
       </a>
     </li>
@@ -391,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/io.html" class="md-nav__link">
+      <a href="io.html" class="md-nav__link">
         I/O and file systems
       </a>
     </li>
@@ -403,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/dev-environment.html" class="md-nav__link">
+      <a href="dev-environment.html" class="md-nav__link">
         Application development environment
       </a>
     </li>
@@ -415,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/containers.html" class="md-nav__link">
+      <a href="containers.html" class="md-nav__link">
         Containers
       </a>
     </li>
@@ -427,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/python.html" class="md-nav__link">
+      <a href="python.html" class="md-nav__link">
         Using Python
       </a>
     </li>
@@ -439,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/analysis.html" class="md-nav__link">
+      <a href="analysis.html" class="md-nav__link">
         Data analysis
       </a>
     </li>
@@ -451,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/debug.html" class="md-nav__link">
+      <a href="debug.html" class="md-nav__link">
         Debugging
       </a>
     </li>
@@ -463,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/profile.html" class="md-nav__link">
+      <a href="profile.html" class="md-nav__link">
         Profiling
       </a>
     </li>
@@ -475,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/tuning.html" class="md-nav__link">
+      <a href="tuning.html" class="md-nav__link">
         Performance tuning
       </a>
     </li>
@@ -494,14 +583,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       <label class="md-nav__link" for="__nav_6">
         Research Software
@@ -517,64 +604,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../research-software/index.html" class="md-nav__link">
         Overview
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#centrally-supported-packages" class="md-nav__link">
-    Centrally supported packages
-  </a>
-  
-    <nav class="md-nav" aria-label="Centrally supported packages">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#not-on-the-list" class="md-nav__link">
-    Not on the list?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -584,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="castep/castep.html" class="md-nav__link">
+      <a href="../research-software/castep/castep.html" class="md-nav__link">
         CASTEP
       </a>
     </li>
@@ -596,7 +630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="chemshell/chemshell.html" class="md-nav__link">
+      <a href="../research-software/chemshell/chemshell.html" class="md-nav__link">
         Chemshell
       </a>
     </li>
@@ -608,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="code-saturne/code-saturne.html" class="md-nav__link">
+      <a href="../research-software/code-saturne/code-saturne.html" class="md-nav__link">
         Code_Saturne
       </a>
     </li>
@@ -620,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cp2k/cp2k.html" class="md-nav__link">
+      <a href="../research-software/cp2k/cp2k.html" class="md-nav__link">
         CP2K
       </a>
     </li>
@@ -632,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="elk/elk.html" class="md-nav__link">
+      <a href="../research-software/elk/elk.html" class="md-nav__link">
         ELK
       </a>
     </li>
@@ -644,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fenics/fenics.html" class="md-nav__link">
+      <a href="../research-software/fenics/fenics.html" class="md-nav__link">
         FEniCS
       </a>
     </li>
@@ -656,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="gromacs/gromacs.html" class="md-nav__link">
+      <a href="../research-software/gromacs/gromacs.html" class="md-nav__link">
         GROMACS
       </a>
     </li>
@@ -668,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lammps/lammps.html" class="md-nav__link">
+      <a href="../research-software/lammps/lammps.html" class="md-nav__link">
         LAMMPS
       </a>
     </li>
@@ -680,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mitgcm/mitgcm.html" class="md-nav__link">
+      <a href="../research-software/mitgcm/mitgcm.html" class="md-nav__link">
         MITgcm
       </a>
     </li>
@@ -692,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mo-unified-model/mo-unified-model.html" class="md-nav__link">
+      <a href="../research-software/mo-unified-model/mo-unified-model.html" class="md-nav__link">
         Met Office Unified Model
       </a>
     </li>
@@ -704,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="namd/namd.html" class="md-nav__link">
+      <a href="../research-software/namd/namd.html" class="md-nav__link">
         NAMD
       </a>
     </li>
@@ -716,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="nektarplusplus/nektarplusplus.html" class="md-nav__link">
+      <a href="../research-software/nektarplusplus/nektarplusplus.html" class="md-nav__link">
         Nektar++
       </a>
     </li>
@@ -728,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="nemo/nemo.html" class="md-nav__link">
+      <a href="../research-software/nemo/nemo.html" class="md-nav__link">
         NEMO
       </a>
     </li>
@@ -740,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="nwchem/nwchem.html" class="md-nav__link">
+      <a href="../research-software/nwchem/nwchem.html" class="md-nav__link">
         NWChem
       </a>
     </li>
@@ -752,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="onetep/onetep.html" class="md-nav__link">
+      <a href="../research-software/onetep/onetep.html" class="md-nav__link">
         ONETEP
       </a>
     </li>
@@ -764,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="openfoam/openfoam.html" class="md-nav__link">
+      <a href="../research-software/openfoam/openfoam.html" class="md-nav__link">
         OpenFOAM
       </a>
     </li>
@@ -776,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qe/qe.html" class="md-nav__link">
+      <a href="../research-software/qe/qe.html" class="md-nav__link">
         Quantum Espresso
       </a>
     </li>
@@ -788,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="vasp/vasp.html" class="md-nav__link">
+      <a href="../research-software/vasp/vasp.html" class="md-nav__link">
         VASP
       </a>
     </li>
@@ -1208,22 +1242,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#centrally-supported-packages" class="md-nav__link">
-    Centrally supported packages
+  <a href="#using-the-module-command" class="md-nav__link">
+    Using the module command
   </a>
   
-    <nav class="md-nav" aria-label="Centrally supported packages">
+    <nav class="md-nav" aria-label="Using the module command">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#not-on-the-list" class="md-nav__link">
-    Not on the list?
+  <a href="#information-on-the-available-modules" class="md-nav__link">
+    Information on the available modules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loading-removing-and-swapping-modules" class="md-nav__link">
+    Loading, removing and swapping modules
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-programming-environment" class="md-nav__link">
+    Changing Programming Environment
+  </a>
+  
+    <nav class="md-nav" aria-label="Changing Programming Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capturing-your-environment-for-reuse" class="md-nav__link">
+    Capturing your environment for reuse
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-environment-overview" class="md-nav__link">
+    Shell environment overview
+  </a>
   
 </li>
       
@@ -1239,52 +1307,311 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/ARCHER2-HPC/archer2-docs/edit/main/docs/research-software/index.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/ARCHER2-HPC/archer2-docs/edit/main/docs/user-guide/sw-environment.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="research-software">Research Software</h1>
-<p>Information on each of the centrally-installed Research Software
-packages, versions available, how to get access, example job submission
-scripts, good practice for getting best performance, links to associated
-training and webinars, links to associated technical reports (eCSE final
-reports, white papers), links to instruction manuals and further
-information.</p>
-<h2 id="centrally-supported-packages">Centrally supported packages</h2>
-<p>ARCHER2 provides a number of research software packages as <em>centrally
-supported packages</em>. Many of these packages are free to use, but others
-require a license (which you, or your research group, need to supply).</p>
-<p>The centrally supported package will usually be the current stable
-release, to include major releases and significant updates. We will
-usually not maintain older versions and versions no longer supported by
-the developers of the package.</p>
-<p>The following sections provide details on access to each of the
-centrally supported packages:</p>
+                <h1 id="software-environment">Software environment</h1>
+<p>The software environment on ARCHER2 is primarily controlled through the
+<code>module</code> command. By loading and switching software modules you control
+which software and versions are available to you.</p>
+<div class="admonition information">
+<p class="admonition-title">Information</p>
+<p>A module is a self-contained description of a software package -- it
+contains the settings required to run a software package and, usually,
+encodes required dependencies on other software packages.</p>
+</div>
+<p>By default, all users on ARCHER2 start with the default software
+environment loaded.</p>
+<p>Software modules on ARCHER2 are provided by both HPE Cray (usually known
+as the <em>Cray Development Environment, CDE</em>) and by EPCC, who provide the
+Service Provision, and Computational Science and Engineering services.</p>
+<p>In this section, we provide:</p>
 <ul>
-<li><a href="castep/castep.html">CASTEP</a></li>
-<li><a href="chemshell/chemshell.html">Chemshell</a></li>
-<li><a href="code-saturne/code-saturne.html">Code_Saturne</a></li>
-<li><a href="cp2k/cp2k.html">CP2K</a></li>
-<li><a href="elk/elk.html">ELK</a></li>
-<li><a href="fenics/fenics.html">FEniCS</a></li>
-<li><a href="gromacs/gromacs.html">GROMACS</a></li>
-<li><a href="lammps/lammps.html">LAMMPS</a></li>
-<li><a href="mitgcm/mitgcm.html">MITgcm</a></li>
-<li><a href="mo-unified-model/mo-unified-model.html">Met Office Unified Model</a></li>
-<li><a href="namd/namd.html">NAMD</a></li>
-<li><a href="nektarplusplus/nektarplusplus.html">Nektar++</a></li>
-<li><a href="nemo/nemo.html">NEMO</a></li>
-<li><a href="nwchem/nwchem.html">NWChem</a></li>
-<li><a href="onetep/onetep.html">ONETEP</a></li>
-<li><a href="openfoam/openfoam.html">OpenFOAM</a></li>
-<li><a href="qe/qe.html">Quantum Espresso</a></li>
-<li><a href="vasp/vasp.html">VASP</a></li>
+<li>A brief overview of the <code>module</code> command</li>
+<li>A brief description of how the <code>module</code> command manipulates your
+     environment</li>
 </ul>
-<h3 id="not-on-the-list">Not on the list?</h3>
-<p>If the code you are interested in is not in the above list, we may still
-be able to help you install your own version, either individually, or as
-a project. Please <a href="https://www.archer2.ac.uk/support-access/servicedesk.html">contact the Service Desk</a>.</p>
+<h2 id="using-the-module-command">Using the <code>module</code> command</h2>
+<p>We only cover basic usage of the <code>module</code> command here. For full
+documentation please see the <a href="http://linux.die.net/man/1/module">Linux manual page on
+modules</a></p>
+<p>The <code>module</code> command takes a subcommand to indicate what operation you
+wish to perform. Common subcommands are:</p>
+<ul>
+<li><code>module list [name]</code> - List modules currently loaded in your
+     environment, optionally filtered by <code>[name]</code></li>
+<li><code>module avail [name]</code> - List modules available, optionally
+     filtered by <code>[name]</code></li>
+<li><code>module savelist</code> - List module collections available (usually
+     used for accessing different programming environments)</li>
+<li><code>module restore name</code> - Restore the module collection called
+     <code>name</code> (usually used for setting up a programming environment)</li>
+<li><code>module load name</code> - Load the module called <code>name</code> into your
+     environment</li>
+<li><code>module remove name</code> - Remove the module called <code>name</code> from your
+     environment</li>
+<li><code>module swap old new</code> - Swap module <code>new</code> for module <code>old</code> in your
+     environment</li>
+<li><code>module help name</code> - Show help information on module <code>name</code></li>
+<li><code>module show name</code> - List what module <code>name</code> actually does to your
+     environment</li>
+</ul>
+<p>These are described in more detail below.</p>
+<h3 id="information-on-the-available-modules">Information on the available modules</h3>
+<p>The <code>module list</code> command will give the names of the modules and their
+versions you have presently loaded in your environment:</p>
+<div class="highlight"><pre><span></span><code>auser@uan01:~&gt; module list
+Currently Loaded Modulefiles:
+1) cpe-aocc                          7) cray-dsmml/0.1.2(default)
+2) aocc/2.1.0.3(default)             8) perftools-base/20.09.0(default)
+3) craype/2.7.0(default)             9) xpmem/2.2.35-7.0.1.0_1.3__gd50fabf.shasta(default)
+4) craype-x86-rome                  10) cray-mpich/8.0.15(default)
+5) libfabric/1.11.0.0.233(default)  11) cray-libsci/20.08.1.2(default)
+6) craype-network-ofi
+</code></pre></div>
+<p>Finding out which software modules are available on the system is
+performed using the <code>module avail</code> command. To list all software modules
+available, use:</p>
+<div class="highlight"><pre><span></span><code>auser@uan01:~&gt; module avail
+------------------------------- /opt/cray/pe/perftools/20.09.0/modulefiles --------------------------------
+perftools       perftools-lite-events  perftools-lite-hbm    perftools-nwpc     
+perftools-lite  perftools-lite-gpu     perftools-lite-loops  perftools-preload  
+
+---------------------------------- /opt/cray/pe/craype/2.7.0/modulefiles ----------------------------------
+craype-hugepages1G  craype-hugepages8M   craype-hugepages128M  craype-network-ofi          
+craype-hugepages2G  craype-hugepages16M  craype-hugepages256M  craype-network-slingshot10  
+craype-hugepages2M  craype-hugepages32M  craype-hugepages512M  craype-x86-rome             
+craype-hugepages4M  craype-hugepages64M  craype-network-none   
+
+------------------------------------- /usr/local/Modules/modulefiles --------------------------------------
+dot  module-git  module-info  modules  null  use.own  
+
+-------------------------------------- /opt/cray/pe/cpe-prgenv/7.0.0 --------------------------------------
+cpe-aocc  cpe-cray  cpe-gnu  
+
+-------------------------------------------- /opt/modulefiles ---------------------------------------------
+aocc/2.1.0.3(default)  cray-R/4.0.2.0(default)  gcc/8.1.0  gcc/9.3.0  gcc/10.1.0(default)  
+
+
+---------------------------------------- /opt/cray/pe/modulefiles -----------------------------------------
+atp/3.7.4(default)              cray-mpich-abi/8.0.15             craype-dl-plugin-py3/20.06.1(default)  
+cce/10.0.3(default)             cray-mpich-ucx/8.0.15             craype/2.7.0(default)                  
+cray-ccdb/4.7.1(default)        cray-mpich/8.0.15(default)        craypkg-gen/1.3.10(default)            
+cray-cti/2.7.3(default)         cray-netcdf-hdf5parallel/4.7.4.0  gdb4hpc/4.7.3(default)                 
+cray-dsmml/0.1.2(default)       cray-netcdf/4.7.4.0               iobuf/2.0.10(default)                  
+cray-fftw/3.3.8.7(default)      cray-openshmemx/11.1.1(default)   papi/6.0.0.2(default)                  
+cray-ga/5.7.0.3                 cray-parallel-netcdf/1.12.1.0     perftools-base/20.09.0(default)        
+cray-hdf5-parallel/1.12.0.0     cray-pmi-lib/6.0.6(default)       valgrind4hpc/2.7.2(default)            
+cray-hdf5/1.12.0.0              cray-pmi/6.0.6(default)           
+cray-libsci/20.08.1.2(default)  cray-python/3.8.5.0(default)    
+</code></pre></div>
+<p>This will list all the names and versions of the modules available on
+the service. Not all of them may work in your account though due to, for
+example, licencing restrictions. You will notice that for many modules
+we have more than one version, each of which is identified by a version
+number. One of these versions is the default. As the service develops
+the default version will change and old versions of software may be
+deleted.</p>
+<p>You can list all the modules of a particular type by providing an
+argument to the <code>module avail</code> command. For example, to list all
+available versions of the HPE Cray FFTW library, use:</p>
+<div class="highlight"><pre><span></span><code>auser@uan01:~&gt; module avail cray-fftw
+
+---------------------------------------- /opt/cray/pe/modulefiles -----------------------------------------
+cray-fftw/3.3.8.7(default) 
+</code></pre></div>
+<p>If you want more info on any of the modules, you can use the <code>module
+help</code> command:</p>
+<div class="highlight"><pre><span></span><code>auser@uan01:~&gt; module help cray-fftw
+
+-------------------------------------------------------------------
+Module Specific Help for /opt/cray/pe/modulefiles/cray-fftw/3.3.8.7:
+
+
+===================================================================
+FFTW 3.3.8.7
+============
+  Release Date:
+  -------------
+    June 2020
+
+
+  Purpose:
+  --------
+    This Cray FFTW 3.3.8.7 release is supported on Cray Shasta Systems. 
+    FFTW is supported on the host CPU but not on the accelerator of Cray systems.
+
+    The Cray FFTW 3.3.8.7 release provides the following:
+      - Optimizations for AMD Rome CPUs.
+    See the Product and OS Dependencies section for details
+
+[...]
+</code></pre></div>
+<p>The <code>module show</code> command reveals what operations the module actually
+performs to change your environment when it is loaded. We provide a
+brief overview of what the significance of these different settings mean
+below. For example, for the default FFTW module:</p>
+<div class="highlight"><pre><span></span><code>auser@uan01:~&gt; module show cray-fftw
+-------------------------------------------------------------------
+/opt/cray/pe/modulefiles/cray-fftw/3.3.8.7:
+
+conflict        cray-fftw
+conflict        fftw
+setenv          FFTW_VERSION 3.3.8.7
+setenv          CRAY_FFTW_VERSION 3.3.8.7
+setenv          CRAY_FFTW_PREFIX /opt/cray/pe/fftw/3.3.8.7/x86_rome
+setenv          FFTW_ROOT /opt/cray/pe/fftw/3.3.8.7/x86_rome
+setenv          FFTW_DIR /opt/cray/pe/fftw/3.3.8.7/x86_rome/lib
+setenv          FFTW_INC /opt/cray/pe/fftw/3.3.8.7/x86_rome/include
+prepend-path    PATH /opt/cray/pe/fftw/3.3.8.7/x86_rome/bin
+prepend-path    MANPATH /opt/cray/pe/fftw/3.3.8.7/share/man
+prepend-path    CRAY_LD_LIBRARY_PATH /opt/cray/pe/fftw/3.3.8.7/x86_rome/lib
+prepend-path    PE_PKGCONFIG_PRODUCTS PE_FFTW
+setenv          PE_FFTW_TARGET_x86_skylake x86_skylake
+setenv          PE_FFTW_TARGET_x86_rome x86_rome
+setenv          PE_FFTW_TARGET_x86_cascadelake x86_cascadelake
+setenv          PE_FFTW_TARGET_x86_64 x86_64
+setenv          PE_FFTW_TARGET_share share
+setenv          PE_FFTW_TARGET_sandybridge sandybridge
+setenv          PE_FFTW_TARGET_mic_knl mic_knl
+setenv          PE_FFTW_TARGET_ivybridge ivybridge
+setenv          PE_FFTW_TARGET_haswell haswell
+setenv          PE_FFTW_TARGET_broadwell broadwell
+setenv          PE_FFTW_VOLATILE_PKGCONFIG_PATH /opt/cray/pe/fftw/3.3.8.7/@PE_FFTW_TARGET@/lib/pkgconfig
+setenv          PE_FFTW_PKGCONFIG_VARIABLES PE_FFTW_OMP_REQUIRES_@openmp@
+setenv          PE_FFTW_OMP_REQUIRES { }
+setenv          PE_FFTW_OMP_REQUIRES_openmp _mp
+setenv          PE_FFTW_PKGCONFIG_LIBS fftw3_mpi:libfftw3_threads:fftw3:fftw3f_mpi:libfftw3f_threads:fftw3f
+module-whatis   {FFTW 3.3.8.7 - Fastest Fourier Transform in the West}
+  [...]
+</code></pre></div>
+<h3 id="loading-removing-and-swapping-modules">Loading, removing and swapping modules</h3>
+<p>To load a module to use the <code>module load</code> command. For example, to load
+the default version of HPE Cray FFTW into your environment, use:</p>
+<div class="highlight"><pre><span></span><code>auser@uan01:~&gt; module load cray-fftw
+</code></pre></div>
+<p>Once you have done this, your environment will be setup to use the HPE
+Cray FFTW library. The above command will load the default version of
+HPE Cray FFTW. If you need a specific version of the software, you can
+add more information:</p>
+<div class="highlight"><pre><span></span><code>auser@uan01:~&gt; module load cray-fftw/3.3.8.7
+</code></pre></div>
+<p>will load HPE Cray FFTW version 3.3.8.7 into your environment,
+regardless of the default.</p>
+<p>If you want to remove software from your environment, <code>module remove</code>
+will remove a loaded module:</p>
+<div class="highlight"><pre><span></span><code>auser@uan01:~&gt; module remove cray-fftw
+</code></pre></div>
+<p>will unload what ever version of <code>cray-fftw</code> (even if it is not the
+default) you might have loaded.</p>
+<p>There are many situations in which you might want to change the
+presently loaded version to a different one, such as trying the latest
+version which is not yet the default or using a legacy version to keep
+compatibility with old data. This can be achieved most easily by using
+<code>module swap oldmodule newmodule</code>.</p>
+<p>Suppose you have loaded version 3.3.8.7 of <code>cray-fftw</code>, the following
+command will change to version 3.3.8.5:</p>
+<div class="highlight"><pre><span></span><code>auser@uan01:~&gt; module swap cray-fftw cray-fftw/3.3.8.5
+</code></pre></div>
+<p>You did not need to specify the version of the loaded module in your
+current environment as this can be inferred as it will be the only one
+you have loaded.</p>
+<h2 id="changing-programming-environment">Changing Programming Environment</h2>
+<p>The three programming environments <code>PrgEnv-aocc</code>, <code>PrgEnv-cray</code>,
+<code>PrgEnv-gnu</code> are implemented as module collections. The correct way to
+change programming environment, that is, change the collection of
+modules, is therefore via <code>module restore</code>. For example:</p>
+<div class="highlight"><pre><span></span><code>auser@uan01:~&gt; module restore PrgEnv-gnu
+</code></pre></div>
+<p>!!! note there is only one argument, which is the collection to be restored.
+The command <code>module restore</code> will output a list of modules in the
+outgoing collection as they are unloaded, and the modules in the
+incoming collection as they are loaded. If you prefer not to have
+messages</p>
+<div class="highlight"><pre><span></span><code>auser@uan1:~&gt; module -s restore PrgEnv-gnu
+</code></pre></div>
+<p>will suppress the messages. An attempt to restore a collection which is
+already loaded will result in no operation.</p>
+<p>Module collections are stored in a user's home directory
+<code>${HOME}/.module</code>. However, as the home directory is not available to
+the back end, <code>module restore</code> may fail for batch jobs. In this case, it
+is possible to restore one of the three standard programming
+environments via, e.g.,</p>
+<div class="highlight"><pre><span></span><code>module restore /etc/cray-pe.d/PrgEnv-gnu
+</code></pre></div>
+<h3 id="capturing-your-environment-for-reuse">Capturing your environment for reuse</h3>
+<p>Sometimes it is useful to save the module environment that you are using
+to compile a piece of code or execute a piece of software. This is saved
+as a module collection. You can save a collection from your current
+environment by executing:</p>
+<div class="highlight"><pre><span></span><code>auser@uan01:~&gt; module save [collection_name]
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you do not specify the environment name, it is called <code>default</code>.</p>
+</div>
+<p>You can find the list of saved module environments by executing:</p>
+<div class="highlight"><pre><span></span><code>auser@uan01:~&gt; module savelist
+Named collection list:
+ 1) default   2) PrgEnv-aocc   3) PrgEnv-cray   4) PrgEnv-gnu 
+</code></pre></div>
+<p>To list the modules in a collection, you can execute, e.g.,:</p>
+<div class="highlight"><pre><span></span><code>auser@uan01:~&gt; module saveshow PrgEnv-gnu
+-------------------------------------------------------------------
+/home/t01/t01/auser/.module/default:
+module use --append /opt/cray/pe/perftools/20.09.0/modulefiles
+module use --append /opt/cray/pe/craype/2.7.0/modulefiles
+module use --append /usr/local/Modules/modulefiles
+module use --append /opt/cray/pe/cpe-prgenv/7.0.0
+module use --append /opt/modulefiles
+module use --append /opt/cray/modulefiles
+module use --append /opt/cray/pe/modulefiles
+module use --append /opt/cray/pe/craype-targets/default/modulefiles
+module load cpe-gnu
+module load gcc
+module load craype
+module load craype-x86-rome
+module load --notuasked libfabric
+module load craype-network-ofi
+module load cray-dsmml
+module load perftools-base
+module load xpmem
+module load cray-mpich
+module load cray-libsci
+module load /work/y07/shared/archer2-modules/modulefiles-cse/epcc-setup-env
+</code></pre></div>
+<p>Note again that the details of the collection have been saved to the
+home directory (the first line of output above). It is possible to save
+a module collection with a fully qualified path, e.g.,</p>
+<div class="highlight"><pre><span></span><code>auser@uan1:~&gt; module save /work/t01/z01/auser/.module/PrgEnv-gnu
+</code></pre></div>
+<p>which would make it available from the batch system.</p>
+<p>To delete a module environment, you can execute:</p>
+<div class="highlight"><pre><span></span><code>auser@uan01:~&gt; module saverm &lt;environment_name&gt;
+</code></pre></div>
+<h2 id="shell-environment-overview">Shell environment overview</h2>
+<p>When you log in to ARCHER2, you are using the <em>bash</em> shell by default.
+As any other software, the <em>bash</em> shell has loaded a set of environment
+variables that can be listed by executing <code>printenv</code> or <code>export</code>.</p>
+<p>The environment variables listed before are useful to define the
+behaviour of the software you run. For instance, <code>OMP_NUM_THREADS</code>
+define the number of threads.</p>
+<p>To define an environment variable, you need to execute:</p>
+<div class="highlight"><pre><span></span><code>export OMP_NUM_THREADS=4
+</code></pre></div>
+<p>Please note there are no blanks between the variable name, the
+assignation symbol, and the value. If the value is a string, enclose the
+string in double quotation marks.</p>
+<p>You can show the value of a specific environment variable if you print
+it:</p>
+<div class="highlight"><pre><span></span><code>echo $OMP_NUM_THREADS
+</code></pre></div>
+<p>Do not forget the dollar symbol. To remove an environment variable, just
+execute:</p>
+<div class="highlight"><pre><span></span><code>unset OMP_NUM_THREADS
+</code></pre></div>
                 
               
               
@@ -1304,7 +1631,7 @@ a project. Please <a href="https://www.archer2.ac.uk/support-access/servicedesk.
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../user-guide/tuning.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Performance tuning" rel="prev">
+        <a href="data.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Data management and transfer" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1313,20 +1640,20 @@ a project. Please <a href="https://www.archer2.ac.uk/support-access/servicedesk.
               <span class="md-footer__direction">
                 Previous
               </span>
-              Performance tuning
+              Data management and transfer
             </div>
           </div>
         </a>
       
       
         
-        <a href="castep/castep.html" class="md-footer__link md-footer__link--next" aria-label="Next: CASTEP" rel="next">
+        <a href="scheduler.html" class="md-footer__link md-footer__link--next" aria-label="Next: Running jobs on ARCHER2" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              CASTEP
+              Running jobs on ARCHER2
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -14,7 +14,7 @@
     
     
       
-        <title>Essential Skills - ARCHER2 User Documentation</title>
+        <title>Connecting to ARCHER2 - ARCHER2 User Documentation</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#essential-skills" class="md-skip">
+        <a href="#connecting-to-archer2" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Essential Skills
+              Connecting to ARCHER2
             
           </span>
         </div>
@@ -308,12 +308,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       <label class="md-nav__link" for="__nav_5">
         User and Best Practice Guide
@@ -331,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/index.html" class="md-nav__link">
+      <a href="index.html" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -341,11 +343,194 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../user-guide/connecting.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Connecting to ARCHER2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="connecting.html" class="md-nav__link md-nav__link--active">
         Connecting to ARCHER2
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-terminal" class="md-nav__link">
+    Command line terminal
+  </a>
+  
+    <nav class="md-nav" aria-label="Command line terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    MacOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-credentials" class="md-nav__link">
+    Access credentials
+  </a>
+  
+    <nav class="md-nav" aria-label="Access credentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh-key-pairs" class="md-nav__link">
+    SSH Key Pairs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-public-part-of-key-pair-to-safe" class="md-nav__link">
+    Upload public part of key pair to SAFE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initial-passwords" class="md-nav__link">
+    Initial passwords
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-clients" class="md-nav__link">
+    SSH Clients
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH Clients">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging-in" class="md-nav__link">
+    Logging in
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#host-keys" class="md-nav__link">
+    Host Keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-access-more-convenient-using-the-ssh-configuration-file" class="md-nav__link">
+    Making access more convenient using the SSH configuration file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-debugging-tips" class="md-nav__link">
+    SSH debugging tips
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH debugging tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-the-userloginarcher2acuk-syntax-rather-than-l-user-loginarcher2acuk" class="md-nav__link">
+    Use the user@login.archer2.ac.uk syntax rather than -l user login.archer2.ac.uk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-you-connect-to-the-login-node" class="md-nav__link">
+    Can you connect to the login node?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password" class="md-nav__link">
+    Password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-key" class="md-nav__link">
+    SSH key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-verbose-output" class="md-nav__link">
+    SSH verbose output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -355,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/data.html" class="md-nav__link">
+      <a href="data.html" class="md-nav__link">
         Data management and transfer
       </a>
     </li>
@@ -367,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/sw-environment.html" class="md-nav__link">
+      <a href="sw-environment.html" class="md-nav__link">
         Software environment
       </a>
     </li>
@@ -379,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/scheduler.html" class="md-nav__link">
+      <a href="scheduler.html" class="md-nav__link">
         Running jobs on ARCHER2
       </a>
     </li>
@@ -391,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/io.html" class="md-nav__link">
+      <a href="io.html" class="md-nav__link">
         I/O and file systems
       </a>
     </li>
@@ -403,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/dev-environment.html" class="md-nav__link">
+      <a href="dev-environment.html" class="md-nav__link">
         Application development environment
       </a>
     </li>
@@ -415,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/containers.html" class="md-nav__link">
+      <a href="containers.html" class="md-nav__link">
         Containers
       </a>
     </li>
@@ -427,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/python.html" class="md-nav__link">
+      <a href="python.html" class="md-nav__link">
         Using Python
       </a>
     </li>
@@ -439,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/analysis.html" class="md-nav__link">
+      <a href="analysis.html" class="md-nav__link">
         Data analysis
       </a>
     </li>
@@ -451,7 +636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/debug.html" class="md-nav__link">
+      <a href="debug.html" class="md-nav__link">
         Debugging
       </a>
     </li>
@@ -463,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/profile.html" class="md-nav__link">
+      <a href="profile.html" class="md-nav__link">
         Profiling
       </a>
     </li>
@@ -475,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/tuning.html" class="md-nav__link">
+      <a href="tuning.html" class="md-nav__link">
         Performance tuning
       </a>
     </li>
@@ -1064,79 +1249,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Essential Skills
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../essentials/index.html" class="md-nav__link">
         Essential Skills
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#terminal" class="md-nav__link">
-    Terminal
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#linux-command-line" class="md-nav__link">
-    Linux Command Line
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-slurm-commands" class="md-nav__link">
-    Basic Slurm commands
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#text-editors" class="md-nav__link">
-    Text Editors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-reference-sheet" class="md-nav__link">
-    Quick Reference Sheet
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1221,37 +1338,152 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#terminal" class="md-nav__link">
-    Terminal
+  <a href="#command-line-terminal" class="md-nav__link">
+    Command line terminal
+  </a>
+  
+    <nav class="md-nav" aria-label="Command line terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    MacOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-credentials" class="md-nav__link">
+    Access credentials
+  </a>
+  
+    <nav class="md-nav" aria-label="Access credentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh-key-pairs" class="md-nav__link">
+    SSH Key Pairs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-public-part-of-key-pair-to-safe" class="md-nav__link">
+    Upload public part of key pair to SAFE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initial-passwords" class="md-nav__link">
+    Initial passwords
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-clients" class="md-nav__link">
+    SSH Clients
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH Clients">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging-in" class="md-nav__link">
+    Logging in
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#host-keys" class="md-nav__link">
+    Host Keys
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#linux-command-line" class="md-nav__link">
-    Linux Command Line
+  <a href="#making-access-more-convenient-using-the-ssh-configuration-file" class="md-nav__link">
+    Making access more convenient using the SSH configuration file
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#basic-slurm-commands" class="md-nav__link">
-    Basic Slurm commands
+  <a href="#ssh-debugging-tips" class="md-nav__link">
+    SSH debugging tips
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH debugging tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-the-userloginarcher2acuk-syntax-rather-than-l-user-loginarcher2acuk" class="md-nav__link">
+    Use the user@login.archer2.ac.uk syntax rather than -l user login.archer2.ac.uk
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#text-editors" class="md-nav__link">
-    Text Editors
+        
+          <li class="md-nav__item">
+  <a href="#can-you-connect-to-the-login-node" class="md-nav__link">
+    Can you connect to the login node?
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-reference-sheet" class="md-nav__link">
-    Quick Reference Sheet
+        
+          <li class="md-nav__item">
+  <a href="#password" class="md-nav__link">
+    Password
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-key" class="md-nav__link">
+    SSH key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-verbose-output" class="md-nav__link">
+    SSH verbose output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1267,58 +1499,405 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/ARCHER2-HPC/archer2-docs/edit/main/docs/essentials/index.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/ARCHER2-HPC/archer2-docs/edit/main/docs/user-guide/connecting.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="essential-skills">Essential Skills</h1>
-<p>This section provides information and links on essential skills required to use ARCHER2 efficiently: e.g. using Linux command line, accessing help and documentation.</p>
-<h2 id="terminal">Terminal</h2>
-<p>In order to access HPC machines such as ARCHER2 you will need to use a Linux command line terminal window</p>
-<p>Options for Linux, MacOS and Windows are described under our <a href="https://docs.archer2.ac.uk/user-guide/connecting/">Connecting to ARCHER2 guide</a></p>
-<h2 id="linux-command-line">Linux Command Line</h2>
-<p>A guide to using the <a href="https://swcarpentry.github.io/shell-novice/">Unix Shell for complete novices</a></p>
-<p>For those already familiar with the basics there is also a lesson on <a href="https://carpentries-incubator.github.io/shell-extras/">shell extras</a></p>
-<h2 id="basic-slurm-commands">Basic Slurm commands</h2>
-<p>Slurm is the scheduler used on ARCHER2 and we provide a guide to using the <a href="https://docs.archer2.ac.uk/user-guide/scheduler/#basic-slurm-commands">basic Slurm commands</a> including how to find out:</p>
+                <h1 id="connecting-to-archer2">Connecting to ARCHER2</h1>
+<p>On the ARCHER2 system, interactive access can be achieved via SSH, either directly from a command line terminal or using an SSH client. In addition data can be transferred to and from the ARCHER2 system using
+<code>scp</code> from the command line or by using a file transfer client.</p>
+<p>This section covers the basic connection methods.</p>
+<p>Before following the process below, we assume you have setup an account on ARCHER2 through the EPCC SAFE. Documentation on how to do this can be
+found at:</p>
 <ul>
-<li>what resources are available to you </li>
-<li>how to submit jobs to the scheduler  </li>
-<li>the status of jobs submitted</li>
+<li><a href="https://epcced.github.io/safe-docs/safe-for-users/">SAFE Guide for Users</a></li>
 </ul>
-<h2 id="text-editors">Text Editors</h2>
-<p>The following text editors are available on ARCHER2</p>
+<h2 id="command-line-terminal">Command line terminal</h2>
+<h3 id="linux">Linux</h3>
+<p>Linux distributions and MacOS each come installed with a terminal application that can be used for SSH access to the login nodes. Linux users will have different terminals depending on their distribution and window manager (e.g. GNOME Terminal in GNOME, Konsole in KDE). Consult your Linux distribution's documentation for details on how to load a terminal.</p>
+<h3 id="macos">MacOS</h3>
+<p>MacOS users can use the Terminal application, located in the Utilities folder within the Applications folder.</p>
+<h3 id="windows">Windows</h3>
+<p>A typical Windows installation will not include a terminal client, though there are various clients available. We recommend all our Windows users to download and install MobaXterm to access ARCHER2. It is very easy to use and includes an integrated X server with SSH client to run any graphical applications on ARCHER2.</p>
+<p>You can download MobaXterm Home Edition (Installer Edition) from the following link:</p>
+<ul>
+<li><a href="http://mobaxterm.mobatek.net/download-home-edition.html">Install MobaXterm</a></li>
+</ul>
+<p>Double-click the downloaded Microsoft Installer file (.msi), and the Windows wizard will automatically guides you through the installation process. Note, you might need to have administrator rights to install on
+some Windows OS. Also make sure to check whether Windows Firewall hasn't blocked any features of this program after installation.</p>
+<p>Start MobaXterm and then click "Start local terminal"</p>
+<div class="admonition tips">
+<p class="admonition-title">Tips</p>
+<ul>
+<li>
+<p>If you download the .zip file rather than the .msi, make sure you unzip before attempting to run the installer.</p>
+</li>
+<li>
+<p>If you are using a "managed desktop" machine, so do not have admin rights, you can use the <a href="https://mobaxterm.mobatek.net/download-home-edition.html">Portable edition of MobaXterm</a> which doesn't need install privilages.</p>
+</li>
+<li>
+<p>If this is your first time using MobaXterm, check that a permanent /home directory has been set up (or all saved info will be lost from session to session). Go to "Settings" -&gt; "Configuration"-&gt; check path to "Persistent home directory" is set and make sure path is "private" if prompted.</p>
+</li>
+<li>
+<p>Any ssh key generated in MobaXterm will, by default, be stored in the permanent /home directory (see above) i.e. if your /home directory is <code>_MyDocuments_\MobaXterm\home</code> then within that folder you will find <code>_MyDocuments_\MobaXterm\home\.ssh</code> with your keys.  This folder will be 'hidden' by default so you may need to tick 'Hidden items' under 'View' in Windows Explorer to see it.</p>
+</li>
+<li>
+<p>MobaXterm also allows you to set up ssh sessions with the username, login host and key details saved.  You are welcome to use this, rather than using the "Local terminal" but we are not able to assist with debugging connection issues if you choose this method.  We recommend sticking to command line terminal access.</p>
+</li>
+</ul>
+</div>
+<h2 id="access-credentials">Access credentials</h2>
+<p>To access ARCHER2, you need to use two credentials: your password <strong>and</strong> an SSH key pair protected by a passphrase. You can find more detailed instructions on how to set up your credentials to access ARCHER2 from Windows, macOS and Linux below.</p>
+<h3 id="ssh-key-pairs">SSH Key Pairs</h3>
+<p>You will need to generate an SSH key pair protected by a passphrase to access ARCHER2.</p>
+<p>Using a <a href="#command-line-terminal">terminal</a> (the command line), set up a key pair that contains
+your e-mail address and enter a passphrase you will use to unlock the
+key:</p>
+<pre><code>$ ssh-keygen -t rsa -C "your@email.com"
+...
+-bash-4.1$ ssh-keygen -t rsa -C "your@email.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Home/user/.ssh/id_rsa): [Enter]
+Enter passphrase (empty for no passphrase): [Passphrase]
+Enter same passphrase again: [Passphrase]
+Your identification has been saved in /Home/user/.ssh/id_rsa.
+Your public key has been saved in /Home/user/.ssh/id_rsa.pub.
+The key fingerprint is:
+03:d4:c4:6d:58:0a:e2:4a:f8:73:9a:e8:e3:07:16:c8 your@email.com
+The key's randomart image is:
++--[ RSA 2048]----+
+|    . ...+o++++. |
+| . . . =o..      |
+|+ . . .......o o |
+|oE .   .         |
+|o =     .   S    |
+|.    +.+     .   |
+|.  oo            |
+|.  .             |
+| ..              |
++-----------------+
+</code></pre>
+<p>(remember to replace "your@email.com" with your e-mail address).</p>
+<h3 id="upload-public-part-of-key-pair-to-safe">Upload public part of key pair to SAFE</h3>
+<p>You should now upload the public part of your SSH key pair to the SAFE
+by following the instructions at:</p>
+<p><a href="https://safe.epcc.ed.ac.uk">Login to SAFE</a>. Then:</p>
+<ol>
+<li>Go to the Menu <em>Login accounts</em> and select the ARCHER2 account you
+     want to add the SSH key to</li>
+<li>On the subsequent Login account details page click the <em>Add
+     Credential</em> button</li>
+<li>Select <em>SSH public key</em> as the Credential Type and click <em>Next</em></li>
+<li>Either copy and paste the public part of your SSH key into the
+     <em>SSH Public key</em> box or use the button to select the public key
+     file on your computer.</li>
+<li>Click <em>Add</em> to associate the public SSH key part with your account</li>
+</ol>
+<p>Once you have done this, your SSH key will be added to your ARCHER2 account.</p>
+<p>Remember, you will need to use both an SSH key and password to log into ARCHER2 so you will also need to collect your initial password before you can log into ARCHER2. We cover this next.</p>
+<h3 id="initial-passwords">Initial passwords</h3>
+<p>The SAFE web interface is used to provide your initial password for logging onto ARCHER2 (see the <a href="https://epcced.github.io/safe-docs">SAFE
+Documentation</a> for more details on requesting accounts and picking up passwords).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You may now change your password on the ARCHER2 machine itself
+using the <em>passwd</em> command or when you are prompted the first time you
+login. This change will not be reflected in the SAFE. If you forget your
+password, you should use the SAFE to request a new one-shot password.</p>
+</div>
+<h2 id="ssh-clients">SSH Clients</h2>
+<p>Interaction with ARCHER2 is done remotely, over an encrypted
+communication channel, Secure Shell version 2 (SSH-2). This allows
+command-line access to one of the login nodes of a ARCHER2, from which
+you can run commands or use a command-line text editor to edit files.
+SSH can also be used to run graphical programs such as GUI text editors
+and debuggers when used in conjunction with an X client.</p>
+<h3 id="logging-in">Logging in</h3>
+<p>You can use the following command from the <a href="#command-line-terminal">terminal</a> window to login into
+ARCHER2:</p>
+<pre><code>ssh username@login.archer2.ac.uk
+</code></pre>
+<p>You will first be prompted for your machine account password. Once you have entered your password successfully, you will then be prompted for the passphrase associated with your SSH key pair. You need to enter both credentials correctly to be able to access ARCHER2.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If your SSH key pair is not stored in the default location (usually
+<code>~/.ssh/id_rsa</code>) on your local system, you may need to specify the path
+to the private part of the key wih the <code>-i</code> option to <code>ssh</code>. For
+example, if your key is in a file called <code>keys/id_rsa_ARCHER2</code> you would
+use the command <code>ssh -i keys/id_rsa_ARCHER2
+username@login.archer2.ac.uk</code> to log in.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When you first log into ARCHER2, you will be prompted to change your
+initial password. This is a three step process:</p>
+<ol>
+<li>When promoted to enter your <em>ldap password</em>: Re-enter the password
+    you retrieved from SAFE</li>
+<li>When prompted to enter your new password: type in a new password</li>
+<li>When prompted to re-enter the new password: re-enter the new
+    password</li>
+</ol>
+<p>Your password has now been changed</p>
+</div>
+<p>To allow remote programs, especially graphical applications to control your local display, such as being able to open up a new GUI window (such as for a debugger), use:</p>
+<pre><code>ssh -X username@login.archer2.ac.uk
+</code></pre>
+<p>Some sites recommend using the <code>-Y</code> flag. While this can fix some
+compatibility issues, the <code>-X</code> flag is more secure.</p>
+<p>Current MacOS systems do not have an X window system. Users should install the XQuartz package to allow for SSH with X11 forwarding on MacOS systems:</p>
+<ul>
+<li><a href="http://www.xquartz.org/">XQuartz website</a></li>
+</ul>
+<h2 id="host-keys">Host Keys</h2>
+<p>These are the entries in <code>~/.ssh/known_hosts</code></p>
+<pre><code>AAAAB3NzaC1yc2EAAAADAQABAAABAQC/zGWlNKRmbGcH3j/+wQ/3vytRJnautfshhKNx6naoymVxmXSg9CvtsJQUCNsNMnYu7NvZwOu1SqouXUNbpXZbOxikPLooRmM6JmCiJ72Zz5ylsXaFaIPmU7nl40J8YP5xcmlW6+HP6/gcnrZeCGLOcCSGHIIAAPotL1hwF9ab0RFbHV1+IyNPc5LYwslwmtn1zU5BY6xKISL8cMy+tAxBExY07xKZ6k+7bNPc4Ia4GfoU+8U9/2ZpN6wpNZVCNOsQ92nyELKveO9PIzLPJvxkxnRYaEfYshnRPCauBEnhZbixqrlnyWQsShbjfxBac3XEgQlg0XIAvHfFLUQNL1bv
+</code></pre>
+<h2 id="making-access-more-convenient-using-the-ssh-configuration-file">Making access more convenient using the SSH configuration file</h2>
+<p>Typing in the full command to login or transfer data to ARCHER2 can
+become tedious as it often has to be repeated many times. You can use
+the SSH configuration file, usually located on your local machine at
+<code>.ssh/config</code> to make things a bit more convenient.</p>
+<p>Each remote site (or group of sites) can have an entry in this file
+which may look something like:</p>
+<pre><code>Host archer2
+  HostName login.archer2.ac.uk
+  User username
+</code></pre>
+<p>(remember to replace <code>username</code> with your actual username!).</p>
+<p>The <code>Host archer2</code> line defines a short name for the entry. In this
+case, instead of typing <code>ssh username@login.archer2.ac.uk</code> to access the
+ARCHER2 login nodes, you could use <code>ssh archer2</code> instead. The remaining
+lines define the options for the <code>archer2</code> host.</p>
+<ul>
+<li><code>Hostname login.archer2.ac.uk</code> - defines the full address of the
+     host</li>
+<li><code>User username</code> - defines the username to use by default for this
+     host (replace <code>username</code> with your own username on the remote
+     host)</li>
+</ul>
+<p>Now you can use SSH to access ARCHER2 without needing to enter your
+username or the full hostname every time:</p>
+<pre><code>$ ssh archer2
+</code></pre>
+<p>You can set up as many of these entries as you need in your local
+configuration file. Other options are available. See the ssh_config man
+page (or <code>man ssh_config</code> on any machine with SSH installed) for a
+description of the SSH configuration file. You may find the
+<code>IdentityFile</code> option useful if you have to manage multiple SSH key
+pairs for different systems as this allows you to specify which SSH key
+to use for each system.</p>
+<div class="admonition bug">
+<p class="admonition-title">Bug</p>
+<p>There is a known bug with Windows ssh-agent. If you get the error
+message: <code>Warning: agent returned different signature type ssh-rsa
+(expected rsa-sha2-512)</code>, you will need to either specify the path to
+your ssh key in the command line (using the <code>-i</code> option as described
+above) or add the path to your SSH config file by using the
+<code>IdentityFile</code> option.</p>
+</div>
+<h2 id="ssh-debugging-tips">SSH debugging tips</h2>
+<p>If you find you are unable to connect via SSH there are a number of ways
+you can try and diagnose the issue. Some of these are collected below -
+if you are having difficulties connecting we suggest trying these before
+contacting the ARCHER2 service desk.</p>
+<h3 id="use-the-userloginarcher2acuk-syntax-rather-than-l-user-loginarcher2acuk">Use the <code>user@login.archer2.ac.uk</code> syntax rather than <code>-l user login.archer2.ac.uk</code></h3>
+<p>We have seen a number of instances where people using the syntax</p>
+<div class="highlight"><pre><span></span><code>ssh -l user login.archer2.ac.uk
+</code></pre></div>
+<p>have not been able to connect properly and get prompted for a password many
+times. We have found that using the alternative syntax:</p>
+<div class="highlight"><pre><span></span><code>ssh user@login.archer2.ac.uk
+</code></pre></div>
+<p>works more reliably. If you are using the <code>-l user</code> option to connect and 
+are seeing issues, then try using <code>user@login.archer2.ac.uk</code> instead.</p>
+<h3 id="can-you-connect-to-the-login-node">Can you connect to the login node?</h3>
+<p>Try the command <code>ping -c 3 login.archer2.ac.uk</code>. If you successfully
+connect to the login node, the output should include:</p>
+<pre><code>--- login.archer2.ac.uk ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 38ms
+</code></pre>
+<p>(the ping time '38ms' is not important). If not all packets are received
+there could be a problem with your internet connection, or the login
+node could be unavailable.</p>
+<h3 id="password">Password</h3>
+<p>If you are having trouble entering your password consider using a
+password manager, from which you can copy and paste it. This will also
+help you generate a secure password. If you need to reset your password,
+instructions for doing so can be found in <a href="https://epcced.github.io/safe-docs/safe-for-users/#reset_machine">the SAFE documentation</a></p>
+<p>Windows users please note that <code>Ctrl+V</code> does not work to paste in to
+PuTTY, MobaXterm, or PowerShell. Instead use <code>Shift+Ins</code> to paste.
+Alternatively, right-click and select 'Paste' in PuTTY and MobaXterm, or
+simply right-click to paste in PowerShell.</p>
+<h3 id="ssh-key">SSH key</h3>
+<p>If you get the error message <code>Permission denied (publickey)</code> this can
+indicate a problem with your SSH key. Some things to check:</p>
+<ul>
+<li>
+<p>Have you uploaded the key to SAFE? Please note that if the same
+     key is reuploaded SAFE will not map the "new" key to ARCHER2. If
+     for some reason this is required, please delete the key first,
+     then reupload.</p>
+</li>
+<li>
+<p>Is ssh using the correct key? You can check which keys are being
+     found and offered by ssh using <code>ssh -vvv</code>. If your private key has
+     a non-default name you can use the <code>-i</code> flag to provide it to ssh,
+     i.e. <code>ssh -i path/to/key username@login.archer2.ac.uk</code>.</p>
+</li>
+<li>
+<p>Are you entering the passphrase correctly? You will be asked for
+     your private key's passphrase first. If you enter it incorrectly
+     you will usually be asked to enter it again, and usually up to
+     three times in total, after which ssh will fail with <code>Permission
+     denied (publickey)</code>. If you would like to confirm your passphrase
+     without attempting to connect, you can use <code>ssh-keygen -y -f
+     /path/to/private/key</code>. If successful, this command will print the
+     corresponding public key. You can also use this to check it is the
+     one uploaded to SAFE.</p>
+</li>
+<li>
+<p>Are permissions correct on the ssh key? One common issue is that
+     the permissions are incorrect on the either the key file, or the
+     directory it's contained in. On Linux/MacOS for example, if your
+     private keys are held in <code>~/.ssh/</code> you can check this with <code>ls -al
+     ~/.ssh</code>. This should give something similar to the following
+     output:</p>
+<pre><code> $ ls -al ~/.ssh/
+ drwx------.  2 user group    48 Jul 15 20:24 .
+ drwx------. 12 user group  4096 Oct 13 12:11 ..
+ -rw-------.  1 user group   113 Jul 15 20:23 authorized_keys
+ -rw-------.  1 user group 12686 Jul 15 20:23 id_rsa
+ -rw-r--r--.  1 user group  2785 Jul 15 20:23 id_rsa.pub
+ -rw-r--r--.  1 user group  1967 Oct 13 14:11 known_hosts
+</code></pre>
+<p>The important section here is the string of letters and dashes at
+ the start, for the lines ending in <code>.</code>, <code>id_rsa</code>, and
+ <code>id_rsa.pub</code>, which indicate permissions on the containing
+ directory, private key, and public key respectively. If your
+ permissions are not correct, they can be set with <code>chmod</code>. Consult
+ the table below for the relevant <code>chmod</code> command. On Windows,
+ permissions are handled differently but can be set by
+ right-clicking on the file and selecting Properties > Security >
+ Advanced. The user, SYSTEM, and Administrators should have <code>Full
+ control</code>, and no other permissions should exist for both public
+ and private key files, and the containing folder.</p>
+</li>
+</ul>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Description</th>
-<th>Examples</th>
+<th>Target</th>
+<th>Permissions</th>
+<th><code>chmod</code> Code</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>emacs</td>
-<td>A widely used editor <br /> with a focus on extensibility.</td>
-<td><code>emacs    -nw    sharpen.pbs</code> <br /> <code>CTRL+X CTRL+C</code> quits  <br /> <code>CTRL+X CTRL+S</code> saves</td>
+<td>Directory</td>
+<td><code>drwx------</code></td>
+<td>700</td>
 </tr>
 <tr>
-<td>nano</td>
-<td>A small, free editor  <br />with a focus on user friendliness.</td>
-<td><code>nano sharpen.pbs</code> <br /> <code>CTRL+X</code> quits <br /> <code>CTRL+O</code> saves</td>
+<td>Private Key</td>
+<td><code>-rw-------</code></td>
+<td>600</td>
 </tr>
 <tr>
-<td>vi</td>
-<td>A mode based editor <br /> with a focus on aiding code development.</td>
-<td><code>vi cfd.f90</code>  <br /> <code>:q</code> in command mode quits  <br /> <code>:q!</code> in command mode quits without saving  <br /><code>:w</code> in command mode saves  <br /> <code>i</code> in command mode switches to insert mode  <br /> <code>ESC</code> in insert mode switches to command mode</td>
+<td>Public Key</td>
+<td><code>-rw-r--r--</code></td>
+<td>644</td>
 </tr>
 </tbody>
 </table>
-<p>If you are using MobaXterm on Windows you can use the inbuilt MobaTextEditor text file editor.</p>
-<p>You can edit on your local machine using your preferred text editor, and then upload the file to ARCHER2.  Make sure you can save the file using Linux line-endings. Notepad, for example, will support Unix/Linux line endings (LF), Macintosh line endings (CR), and Windows Line endings (CRLF) </p>
-<h2 id="quick-reference-sheet">Quick Reference Sheet</h2>
-<p>We have produced this <a href="Quick-Reference-Sheet.pdf">Quick Reference Sheet</a> which you may find useful.</p>
+<p><code>chmod</code> can be used to set permissions on the target in the following
+way: <code>chmod &lt;code&gt; &lt;target&gt;</code>. So for example to set correct permissions
+on the private key file <code>id_rsa_ARCHER2</code> one would use the command
+<code>chmod 600 id_rsa_ARCHER2</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Unix file permissions can be understood in the following way. There are
+three groups that can have file permissions: (owning) <em>users</em>, (owning)
+<em>groups</em>, and <em>others</em>. The available permissions are <em>read</em>, <em>write</em>,
+and <em>execute</em>. The first character indicates whether the target is a
+file <code>-</code>, or directory <code>d</code>. The next three characters indicate the
+owning user's permissions. The first character is <code>r</code> if they have read
+permission, <code>-</code> if they don't, the second character is <code>w</code> if they have
+write permission, <code>-</code> if they don't, the third character is <code>x</code> if they
+have execute permission, <code>-</code> if they don't. This pattern is then
+repeated for <em>group</em>, and <em>other</em> permissions. For example the pattern
+<code>-rw-r--r--</code> indicates that the owning user can read and write the file,
+members of the owning group can read it, and anyone else can also read
+it. The <code>chmod</code> codes are constructed by treating the user, group, and
+owner permission strings as binary numbers, then converting them to
+decimal. For example the permission string <code>-rwx------</code> becomes
+<code>111 000 000</code> -> <code>700</code>.</p>
+</div>
+<h3 id="ssh-verbose-output">SSH verbose output</h3>
+<p>Verbose debugging output from <code>ssh</code> can be very useful for diagnosing
+the issue. In particular, it can be used to distinguish between problems
+with the SSH key and password - further details are given below. To
+enable verbose output add the <code>-vvv</code> flag to your SSH command. For
+example:</p>
+<pre><code>ssh -vvv username@login.archer2.ac.uk
+</code></pre>
+<p>The output is lengthy, but somewhere in there you should see lines
+similar to the following:</p>
+<pre><code>debug1: Next authentication method: keyboard-interactive
+debug2: userauth_kbdint
+debug3: send packet: type 50
+debug2: we sent a keyboard-interactive packet, wait for reply
+debug3: receive packet: type 60
+debug2: input_userauth_info_req
+debug2: input_userauth_info_req: num_prompts 1
+Password:
+debug3: send packet: type 61
+debug3: receive packet: type 60
+debug2: input_userauth_info_req
+debug2: input_userauth_info_req: num_prompts 0
+debug3: send packet: type 61
+debug3: receive packet: type 51
+Authenticated with partial success.
+debug1: Authentications that can continue: publickey,password
+</code></pre>
+<p>If you do not see the <code>Password:</code> prompt you may have connection issues,
+or there could be a problem with the ARCHER2 login nodes. If you do not
+see <code>Authenticated with partial success</code> it means your password was not
+accepted. You will be asked to re-enter your password, usually two more
+times before the connection will be rejected. Consider the suggestions
+under <em>Password</em> above. If you <em>do</em> see <code>Authenticated with partial
+success</code>, it means your password was accepted, and your SSH key will now
+be checked.</p>
+<p>You should next see something similiar to:</p>
+<pre><code>debug1: Next authentication method: publickey
+debug1: Offering public key: RSA SHA256:&lt;key_hash&gt; &lt;path_to_private_key&gt;
+debug3: send_pubkey_test
+debug3: send packet: type 50
+debug2: we sent a publickey packet, wait for reply
+debug3: receive packet: type 60
+debug1: Server accepts key: pkalg rsa-sha2-512 blen 2071
+debug2: input_userauth_pk_ok: fp SHA256:&lt;key_hash&gt;
+debug3: sign_and_send_pubkey: RSA SHA256:&lt;key_hash&gt;
+Enter passphrase for key '&lt;path_to_private_key&gt;':
+debug3: send packet: type 50
+debug3: receive packet: type 52
+debug1: Authentication succeeded (publickey).
+</code></pre>
+<p>Most importantly, you can see which files ssh has checked for private
+keys, and you can see if any key is accepted. The line <code>Authenticated
+succeeded</code> indicates that the SSH key has been accepted. By default ssh
+will go through a list of standard private key files, as well as any you
+have specified with <code>-i</code> or a config file. This is fine, as long as one
+of the files mentioned is the one that matches the public key uploaded
+to SAFE.</p>
+<p>If your SSH key passphrase is incorrect, you will be asked to try again
+up to three times in total, before being disconnected with <code>Permission
+denied (publickey)</code>. If you enter your passphrase correctly, but still
+see this error message, please consider the advice under <em>SSH key</em>
+above.</p>
+<p>The equivalent information can be obtained in PuTTY by
+enabling all logging in settings.</p>
                 
               
               
@@ -1338,7 +1917,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../data-tools/visidata.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: VisiData" rel="prev">
+        <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1347,20 +1926,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              VisiData
+              Overview
             </div>
           </div>
         </a>
       
       
         
-        <a href="../other-software/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Overview" rel="next">
+        <a href="data.html" class="md-footer__link md-footer__link--next" aria-label="Next: Data management and transfer" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Overview
+              Data management and transfer
             </div>
           </div>
           <div class="md-footer__button md-icon">
