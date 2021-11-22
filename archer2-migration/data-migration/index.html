@@ -399,16 +399,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#transferring-data-interactively-from-the-4-cabinet-system-to-the-full-system" class="md-nav__link">
+    Transferring data interactively from the 4-cabinet system to the full system
+  </a>
+  
+    <nav class="md-nav" aria-label="Transferring data interactively from the 4-cabinet system to the full system">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#transferring-data-using-rsync-recommended" class="md-nav__link">
     Transferring data using rsync (recommended)
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#transferring-data-using-scp" class="md-nav__link">
     Transferring data using scp
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferring-data-via-the-serial-queue" class="md-nav__link">
+    Transferring data via the serial queue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1552,16 +1572,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#transferring-data-interactively-from-the-4-cabinet-system-to-the-full-system" class="md-nav__link">
+    Transferring data interactively from the 4-cabinet system to the full system
+  </a>
+  
+    <nav class="md-nav" aria-label="Transferring data interactively from the 4-cabinet system to the full system">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#transferring-data-using-rsync-recommended" class="md-nav__link">
     Transferring data using rsync (recommended)
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#transferring-data-using-scp" class="md-nav__link">
     Transferring data using scp
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferring-data-via-the-serial-queue" class="md-nav__link">
+    Transferring data via the serial queue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1583,12 +1623,6 @@
                 
                 
                 <h1 id="data-migration-from-the-archer2-4-cabinet-system-to-the-archer2-full-system">Data migration from the ARCHER2 4-cabinet system to the ARCHER2 full system</h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>The full ARCHER2 system is not yet available so you will not be able to
-transfer any data yet. Users will be informed once the full system 
-is available and they can start transferring data and using the system.</p>
-</div>
 <p>This short guide explains how to move data from from the work file system on the ARCHER2 4-cabinet system
 to the ARCHER2 full system. Your space on the home file system is shared between the ARCHER2 4-cabinet system 
 and the ARCHER2 full system so everything from your home directory is already effectively
@@ -1602,10 +1636,15 @@ in to both accounts.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Unlike normal access, ARCHER2 4-cabinet system to ARCHER2 full system transfer 
-has been set up to require only one form of authentication. You will not need 
-to generate a new SSH key pair to transfer data from the ARCHER2 4-cabinet system 
-to ARCHER2 as your password will suffice.</p>
+has been set up to require only one form of authentication. You will only need
+one factor to authenticate from the 4-cab to the full system or vice versa. This
+factor can be either an SSH key (that has been registered against your account in 
+SAFE) or you can use your passowrd. If you have a large amount of data to transfer
+you may want to setup a passphrase-less SSH key on ARCHER2 full system and
+<a href="../../user-guide/data/">use the data analysis nodes</a> to run transfers via a
+Slurm job.</p>
 </div>
+<h2 id="transferring-data-interactively-from-the-4-cabinet-system-to-the-full-system">Transferring data interactively from the 4-cabinet system to the full system</h2>
 <p>First, login to the ARCHER2 4-cabinet system (making sure to change <code>auser</code> 
 to your username):</p>
 <pre><code>ssh auser@login-4c.archer2.ac.uk
@@ -1616,7 +1655,10 @@ following command:</p>
 </code></pre>
 <p>Please be selective -- the more data you want to transfer, the more time it 
 will take.</p>
-<h2 id="transferring-data-using-rsync-recommended">Transferring data using <code>rsync</code> (recommended)</h2>
+<p>Unpack the archive file in the destination directory</p>
+<pre><code>tar -xzf all_my_files.tar.gz
+</code></pre>
+<h3 id="transferring-data-using-rsync-recommended">Transferring data using <code>rsync</code> (recommended)</h3>
 <p>Begin the data transfer from the ARCHER2 4-cabinet system to the ARCHER2 full 
 system using <code>rsync</code>:</p>
 <pre><code>rsync -Pv all_my_files.tar.gz a2user@login.archer2.ac.uk:/work/t01/t01/a2user
@@ -1629,13 +1671,51 @@ the budget associated with that username.</p>
 <p>We use the <code>-P</code> flag to allow partial transfer -- the same
 command could be used to restart the transfer after a loss of
 connection. We move our research archive to our project work directory 
-on the ARCHER2 full ssystem.</p>
-<h2 id="transferring-data-using-scp">Transferring data using scp</h2>
+on the ARCHER2 full system.</p>
+<h3 id="transferring-data-using-scp">Transferring data using scp</h3>
 <p>If you are unconcerned about being able to restart an interrupted
 transfer, you could instead use the <code>scp</code> command,</p>
 <pre><code>scp all_my_files.tar.gz a2user@login.archer2.ac.uk:/work/t01/t01/a2user/
 </code></pre>
 <p>but <code>rsync</code> is recommended for larger transfers.</p>
+<h3 id="transferring-data-via-the-serial-queue">Transferring data via the serial queue</h3>
+<p>It may be convenient to submit long data transfers to the serial queue.
+In this case, a number of simple preparatory steps are required to
+authenticate:</p>
+<ol>
+<li>On the full system, create a new ssh key pair without passphrase (just
+   press return when prompted).</li>
+<li>Add the new public key to SAFE against your machine account.</li>
+<li>Use this key pair for <code>ssh/scp</code> commands in the serial queue to
+   authenticate. As
+   it has been arranged that only one of ssh key/password are required
+   between the serial nodes and the 4-cabinet system,
+   this is sufficient.</li>
+</ol>
+<p>An example serial queue script using <code>rsync</code> might be:</p>
+<p><div class="highlight"><pre><span></span><code>#!/bin/bash
+
+# Slurm job options (job-name, job time)
+
+#SBATCH --partition=serial
+#SBATCH --qos=serial
+
+#SBATCH --time=02:00:00
+#SBATCH --ntasks=1
+
+# Replace [budget code] below with your budget code
+
+#SBATCH --account=[budget code] 
+
+# Issue appropriate rsync command
+
+rsync -av --stats --progress --rsh=&quot;ssh -i ${HOME}/.ssh/id_rsa_batch&quot; \
+      user-01@login-4c.archer2.ac.uk:/work/proj01/proj01/user-01/src \
+      /work/proj01/proj01/user-01/destination
+</code></pre></div>
+where <code>${HOME}/.ssh/id_rsa_batch</code> is the new ssh key.
+Note that the <code>${HOME}</code> directory is visible from the serial nodes
+on the full system, so ssh key pairs in <code>${HOME}/.ssh</code> are available. </p>
                 
               
               

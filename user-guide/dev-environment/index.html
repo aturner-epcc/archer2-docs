@@ -715,6 +715,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#cce-reference-documentation" class="md-nav__link">
+    CCE Reference Documentation
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -812,6 +819,13 @@
   
     <nav class="md-nav" aria-label="Switching to a different HPE Cray Programming Environment release">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-performance-analysis-tools-in-non-default-programming-environment" class="md-nav__link">
+    Accessing performance analysis tools in non-default Programming Environment
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#available-hpe-cray-programming-environment-releases-on-archer2" class="md-nav__link">
@@ -1880,6 +1894,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#cce-reference-documentation" class="md-nav__link">
+    CCE Reference Documentation
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1977,6 +1998,13 @@
   
     <nav class="md-nav" aria-label="Switching to a different HPE Cray Programming Environment release">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-performance-analysis-tools-in-non-default-programming-environment" class="md-nav__link">
+    Accessing performance analysis tools in non-default Programming Environment
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#available-hpe-cray-programming-environment-releases-on-archer2" class="md-nav__link">
@@ -2597,6 +2625,12 @@ useful:</p>
 </tr>
 </tbody>
 </table>
+<h4 id="cce-reference-documentation">CCE Reference Documentation</h4>
+<ul>
+<li><a href="https://clang.llvm.org/docs/UsersManual.html">Clang/Clang++ documentation</a>, CCE-specific 
+  details are available via <code>man clang</code> once the CCE compiler environment is loaded.</li>
+<li><a href="https://internal.support.hpe.com/hpesc/public/docDisplay?docId=a00114872en_us&amp;page=index.html">Cray Fortran documentation</a></li>
+</ul>
 <h3 id="amd-optimizing-compiler-collection-aocc">AMD Optimizing Compiler Collection (AOCC)</h3>
 <p>The AMD Optimizing Compiler Collection (AOCC) is a clang-based optimising
 compiler. AOCC also includes a flang-based Fortran compiler.</p>
@@ -2620,11 +2654,11 @@ Due to MODULEPATH changes, the following have been reloaded:
 <h3 id="hpe-cray-mpich">HPE Cray MPICH</h3>
 <p>HPE Cray provide, as standard, an MPICH implementation of the message
 passing interface which is specifically optimised for the ARCHER2
-network. The current implementation supports MPI standard version 3.1.</p>
+interconnect. The current implementation supports MPI standard version 3.1.</p>
 <p>The HPE Cray MPICH implementation is linked into software by default when
 compiling using the standard wrapper scripts: <code>cc</code>, <code>CC</code> and <code>ftn</code>.</p>
 <p>You do not need to do anything to make HPE Cray MPICH available when you
-log into ArCHER2, it is available by default to all users.</p>
+log into ARCHER2, it is available by default to all users.</p>
 <h4 id="switching-to-alternative-ucx-mpi-implementation">Switching to alternative UCX MPI implementation</h4>
 <p>HPE Cray MPICH can use two different low-level protocols to transfer
 data across the network. The default is the Open Fabrics Interface
@@ -2746,6 +2780,12 @@ completed the process described above.</p>
 release. To restore the default programming environment release you should log 
 out and then log back in to ARCHER2.</p>
 </div>
+<h4 id="accessing-performance-analysis-tools-in-non-default-programming-environment">Accessing performance analysis tools in non-default Programming Environment</h4>
+<p>The performance analysis tools (such as CrayPAT and CrayPAT-lite) behave slightly differently
+to other HPE Cray modules when you change to a non-default version of the programming
+environment. Specifically, an additional step is required to make them available. Once
+you have loaded the <code>cpe</code> module, you will also need to load the <code>perftools-base</code> 
+module to be able to load and use the performance tools modules.</p>
 <h3 id="available-hpe-cray-programming-environment-releases-on-archer2">Available HPE Cray Programming Environment releases on ARCHER2</h3>
 <p>ARCHER2 currently has the following HPE Cray Programming Environment releases available:</p>
 <ul>
