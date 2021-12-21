@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
@@ -17,7 +17,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f7951f6f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -703,6 +703,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#slurm-job-state-codes" class="md-nav__link">
+    Slurm job state codes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#slurm-queued-reasons" class="md-nav__link">
     Slurm queued reasons
   </a>
@@ -1023,8 +1030,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#io-performance" class="md-nav__link">
-    I/O performance
+  <a href="#interconnect-locality" class="md-nav__link">
+    Interconnect locality
   </a>
   
 </li>
@@ -2175,6 +2182,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#slurm-job-state-codes" class="md-nav__link">
+    Slurm job state codes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#slurm-queued-reasons" class="md-nav__link">
     Slurm queued reasons
   </a>
@@ -2495,8 +2509,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#io-performance" class="md-nav__link">
-    I/O performance
+  <a href="#interconnect-locality" class="md-nav__link">
+    Interconnect locality
   </a>
   
 </li>
@@ -3020,11 +3034,11 @@ the corresponding QoS. E.g., the time limit for the short QoS
 is 20 minutes.</p>
 </li>
 </ul>
-<h3 id="slurm-queued-reasons">Slurm queued reasons</h3>
+<h3 id="slurm-job-state-codes">Slurm job state codes</h3>
 <p>The <code>squeue</code> command allows users to view information for jobs managed by Slurm. Jobs
 typically go through the following states: PENDING, RUNNING, COMPLETING, and COMPLETED.
 The first table provides a description of some job state codes. The second table provides a description
-of the reasons that cause a job to be in a state.</p>
+of the <a href="#slurm-queued-reasons">reasons</a> that cause a job to be in a state.</p>
 <table>
 <thead>
 <tr>
@@ -3092,6 +3106,7 @@ of the reasons that cause a job to be in a state.</p>
 </tbody>
 </table>
 <p>For a full list of see <a href="https://slurm.schedmd.com/squeue.html#lbAG">Job State Codes</a>.</p>
+<h3 id="slurm-queued-reasons">Slurm queued reasons</h3>
 <table>
 <thead>
 <tr>
@@ -4748,7 +4763,44 @@ overhead for each job as the state is saved and loaded so you should
 experiment to find the best balance between runtime (long runtimes
 minimise the checkpoint/restart overheads) and throughput (short
 runtimes maximise throughput).</p>
-<h3 id="io-performance">I/O performance</h3>
+<h3 id="interconnect-locality">Interconnect locality</h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The locality options are only available on the full ARCHER2 
+system. The 4-cabinet system does not support this option.</p>
+</div>
+<p>For jobs which are sensitive to interconnect (MPI) performance and
+utilise 128 nodes or less it is possible to request that all nodes
+are in a single Slingshot dragonfly group. The maximum number of nodes in
+a group on ARCHER2 is 128.</p>
+<p>Slurm has a concept of "switches" which on ARCHER2 are configured to map
+to Slingshot electrical groups; where all compute nodes have all-to-all
+electrical connections which minimises latency. Since this places an
+additional constraint on the scheduler a maximum time to wait for the
+requested topology can be specified - after this time, the job will be
+placed without the constraint.</p>
+<p>For example, to specify that all requested nodes should come from one
+electrical group and to wait for up to 6 hours (360 minutes) for that
+placement, you would use the following option in your job:</p>
+<div class="highlight"><pre><span></span><code><span class="kp">#SBATCH --switches=1@360</span>
+</code></pre></div>
+<p>You can request multiple groups using this option if you are using 
+more nodes than are in a single group to maximise the number of
+nodes that share electrical connetions in the job. For example, to
+request 4 groups (maximum of 512 nodes) and have this as an absolute
+constraint with no timeout, you would use:</p>
+<div class="highlight"><pre><span></span><code><span class="kp">#SBATCH --switches=4</span>
+</code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>When specifying the number of groups take care to request enough
+groups to satisfy the requested number of nodes. If the number
+is too low then an unneccesary delay will be added due to the
+unsatisfiable request.</p>
+<p>A useful heuristic to ensure this is the case is to ensure that
+the total nodes requested is greater than or equal to the number
+of groups multiplied by 128.</p>
+</div>
 <h3 id="large-jobs">Large Jobs</h3>
 <p>Large jobs may take longer to start up. The <code>sbcast</code> command is
 recommended for large jobs requesting over 1500 MPI tasks. By default,
@@ -5005,7 +5057,7 @@ value to obtain more information on huge pages use.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.649a939e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
       
     
   </body>
