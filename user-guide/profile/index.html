@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.3">
     
     
       
@@ -29,7 +29,7 @@
       
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -1736,18 +1736,19 @@ suite.</p>
 <ol>
 <li>
 <p>Ensure the <code>perftools-base</code> module is loaded.</p>
-<p><code>auser@ln01:/work/t01/t01/auser&gt; module list</code></p>
+<p><code>module list</code></p>
 </li>
 <li>
 <p>Load the <code>perftools-lite</code> module.</p>
-<p><code>auser@ln01:/work/t01/t01/auser&gt; module load perftools-lite</code></p>
+<p><code>module load perftools-lite</code></p>
 </li>
 <li>
 <p>Compile your application normally. An informational message from
     CrayPat-lite will appear indicating that the executable has been
     instrumented.</p>
-<div class="highlight"><pre><span></span><code>auser@uan01:/work/t01/t01/auser&gt; cc -h std=c99  -o myapplication.x myapplication.c
-INFO: creating the CrayPat-instrumented executable &#39;myapplication.x&#39; (lite-samples) ...OK  
+<div class="highlight"><pre><span></span><code>cc -h std=c99  -o myapplication.x myapplication.c
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>INFO: creating the CrayPat-instrumented executable &#39;myapplication.x&#39; (lite-samples) ...OK  
 </code></pre></div>
 </li>
 <li>
@@ -2048,16 +2049,22 @@ information on running jobs:</p>
   Durham.)</li>
 </ul>
 <p>We provide examples of the use of these three commands below.</p>
+<p>For the <code>sacct</code> and <code>sstat</code> command, the memory properties we print out below are:</p>
+<ul>
+<li><code>AveRSS</code> - The mean memory use per node over the length of the job</li>
+<li><code>MaxRSS</code> - The maximum memory use per node measureed during the job</li>
+<li><code>MaxRSSTask</code> - The maximum memory use from any process in the job</li>
+</ul>
 <h3 id="example-1-sstat-for-running-jobs">Example 1: <code>sstat</code> for running jobs</h3>
 <p>To display the current memory use of a running job with the ID 123456:</p>
-<div class="highlight"><pre><span></span><code>auser@ln01:/work/t01/t01/auser&gt; sstat --format=JobID,AveCPU,AveRSS,MaxRSS,MaxRSSTask,AveVMSize,MaxVMSize -j 123456
+<div class="highlight"><pre><span></span><code>sstat --format=JobID,AveCPU,AveRSS,MaxRSS,MaxRSSTask -j 123456
 </code></pre></div>
 <h3 id="example-2-sacct-for-finished-jobs">Example 2: <code>sacct</code> for finished jobs</h3>
 <p>To display the memory use of a completed job with the ID 123456:</p>
-<div class="highlight"><pre><span></span><code>auser@ln01:/work/t01/t01/auser&gt; sacct --format=JobID,JobName,AveRSS,MaxRSS,MaxRSSTask,AveVMSize,MaxVMSize -j 123456
+<div class="highlight"><pre><span></span><code>sacct --format=JobID,JobName,AveRSS,MaxRSS,MaxRSSTask -j 123456
 </code></pre></div>
 <p>Another usage of <code>sacct</code> is to display when a job was submitted, started running and ended for a particular user:</p>
-<div class="highlight"><pre><span></span><code>auser@ln01:/work/t01/t01/auser&gt; sacct --format=JobID,Submit,Start,End -u auser
+<div class="highlight"><pre><span></span><code>sacct --format=JobID,Submit,Start,End -u auser
 </code></pre></div>
 <h3 id="example-3-archer2jobload-for-running-jobs">Example 3: <code>archer2jobload</code> for running jobs</h3>
 <p>Using the <code>archer2jobload</code> command on its own with no options will show the current
@@ -2185,7 +2192,7 @@ nid001922           127.35              256000              239872              
     <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b88e97c5.min.js"></script>
       
     
   </body>
