@@ -15,7 +15,7 @@
     
     
       
-        <title>Casino - ARCHER2 User Documentation</title>
+        <title>ARCHER2 Test and Development System (TDS) user notes - ARCHER2 User Documentation</title>
       
     
     
@@ -76,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#archer2-test-and-development-system-tds-user-notes" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Casino
+              ARCHER2 Test and Development System (TDS) user notes
             
           </span>
         </div>
@@ -426,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -440,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/hardware/" class="md-nav__link">
+      <a href="../hardware/" class="md-nav__link">
         Hardware
       </a>
     </li>
@@ -454,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/connecting/" class="md-nav__link">
+      <a href="../connecting/" class="md-nav__link">
         Connecting to ARCHER2
       </a>
     </li>
@@ -468,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/data/" class="md-nav__link">
+      <a href="../data/" class="md-nav__link">
         Data management and transfer
       </a>
     </li>
@@ -482,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/sw-environment/" class="md-nav__link">
+      <a href="../sw-environment/" class="md-nav__link">
         Software environment
       </a>
     </li>
@@ -496,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/scheduler/" class="md-nav__link">
+      <a href="../scheduler/" class="md-nav__link">
         Running jobs
       </a>
     </li>
@@ -510,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/io/" class="md-nav__link">
+      <a href="../io/" class="md-nav__link">
         I/O and file systems
       </a>
     </li>
@@ -524,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/dev-environment/" class="md-nav__link">
+      <a href="../dev-environment/" class="md-nav__link">
         Application development environment
       </a>
     </li>
@@ -538,7 +543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/containers/" class="md-nav__link">
+      <a href="../containers/" class="md-nav__link">
         Containers
       </a>
     </li>
@@ -552,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/python/" class="md-nav__link">
+      <a href="../python/" class="md-nav__link">
         Using Python
       </a>
     </li>
@@ -566,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/analysis/" class="md-nav__link">
+      <a href="../analysis/" class="md-nav__link">
         Data analysis
       </a>
     </li>
@@ -580,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/debug/" class="md-nav__link">
+      <a href="../debug/" class="md-nav__link">
         Debugging
       </a>
     </li>
@@ -594,7 +599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/profile/" class="md-nav__link">
+      <a href="../profile/" class="md-nav__link">
         Profiling
       </a>
     </li>
@@ -608,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/tuning/" class="md-nav__link">
+      <a href="../tuning/" class="md-nav__link">
         Performance tuning
       </a>
     </li>
@@ -622,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/energy/" class="md-nav__link">
+      <a href="../energy/" class="md-nav__link">
         Energy use
       </a>
     </li>
@@ -1488,6 +1493,44 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tds-system-details" class="md-nav__link">
+    TDS system details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-the-tds" class="md-nav__link">
+    Connecting to the TDS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slurm-scheduler-configuration" class="md-nav__link">
+    Slurm scheduler configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-issuesnotes" class="md-nav__link">
+    Known issues/notes
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1505,9 +1548,85 @@
   
 
 
-  <h1>Casino</h1>
-
-<p><a href="../../research-software/casino/">This page has moved</a></p>
+<h1 id="archer2-test-and-development-system-tds-user-notes">ARCHER2 Test and Development System (TDS) user notes</h1>
+<p>The ARCHER2 Test and Development System (TDS) is a small system used for testing
+changes before they are rolled out onto the full ARCHER2 system. This page 
+contains useful information for people using the TDS on its configuration and
+what they can expect from the system.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The TDS is used for testing on a day to day basis. This means that nodes and
+the entire system may be made unavailable or rebooted with little or no warning.</p>
+</div>
+<h2 id="tds-system-details">TDS system details</h2>
+<ul>
+<li>Login node: 2x 64-core AMD EPYC 7742, 512 GB RAM</li>
+<li>
+<p>Compute nodes: 8 compute nodes in total</p>
+<ul>
+<li>4 standard memory compute nodes: 2x 64-core AMD EPYC 7742, 256 GB RAM</li>
+<li>4 high memory compute nodes: 2x 64-core AMD EPYC 7742, 512 GB RAM</li>
+</ul>
+</li>
+<li>
+<p>Slingshot interconnect</p>
+</li>
+<li>
+<p>Storage:</p>
+<ul>
+<li>/home file system: shared with ARCHER2 main system</li>
+<li>/work file system: 224 TiB Lustre (2x MDT, 2x OST) - not shared with main system</li>
+</ul>
+</li>
+</ul>
+<h2 id="connecting-to-the-tds">Connecting to the TDS</h2>
+<p>You can only log into the TDS from an ARCHER2 login node. You should create an 
+SSH key pair on an ARCHER2 login node and add the public part to your ARCHER2 account
+in SAFE in the usual way.</p>
+<p>Once your new key pair is setup, you can then login to the TDS (from an ARCHER2 login
+node) with</p>
+<div class="highlight"><pre><span></span><code>ssh login-tds.archer2.ac.uk
+</code></pre></div>
+<p>You will require your SSH key passphrase (for the new key pair you generated) and your
+usual ARCHER2 account password to login to the TDS.</p>
+<h2 id="slurm-scheduler-configuration">Slurm scheduler configuration</h2>
+<ul>
+<li>Paritions available:<ul>
+<li><code>standard</code>: includes all compute nodes</li>
+<li><code>highmem</code>: includes high memory compute nodes</li>
+</ul>
+</li>
+<li>QoS available:<ul>
+<li><code>standard</code>: same limits as on ARCHER2 main system</li>
+<li><code>highmem</code>: same limits as on ARCHER2 main system</li>
+</ul>
+</li>
+</ul>
+<h2 id="known-issuesnotes">Known issues/notes</h2>
+<ul>
+<li>
+<p>Software modules</p>
+<ul>
+<li>HPE Cray Programming Environment 22.12</li>
+<li>ARCHER2 CSE service modules available but not all software installed on TDS <code>/work</code> file system - i.e. you may be able to load a module but the software it points to may not be available. Check if the software is actually installed before trying to use it.</li>
+</ul>
+</li>
+<li>
+<p>GCC 12.2.0 (gcc/g++/gfortran) compiler has been shown to give incorrect numerical results for a number of software packages (VASP, CASTEP. CP2K). If you want to use this compiler version we recommend checking output carefully. We may remove this version from the PE software stack installed on the full system as part of the software upgrade.</p>
+</li>
+<li>
+<p>Singularity + MPI does not currently work - MPI executable in the Singularity container segfaults.</p>
+</li>
+<li>
+<p>Energy use data is not available from TDS compute nodes.</p>
+</li>
+<li>
+<p>Issues with <code>--cpus-per-task</code> Slurm option. If you set <code>--cpus-per-task</code> greater than <code>1</code> in your job submission script (e.g. using <code>#SBATCH</code> directives) then this option is not inhereted by <code>srun</code> commands in the job script. You need to repeat the option explicitly in the <code>srun</code> command (e.g. <code>srun --cpus-per-task=2 --hint=nomultithread --distribution=block:block</code>).</p>
+</li>
+<li>
+<p>Change in definition of a Slurm NUMA region. On the TDS, a Slurm NUMA region is 4 cores (corresponding to an Core CompleX CCX in the AMD EPYC Zen2 architecture). This means cyclic process placements on NUMA regions (e.g. <code>--distribution=block:cyclic</code>) will cycle over 4-core CCX. (On the main system, a Slurm NUMA region is 16 cores).</p>
+</li>
+</ul>
 
 
   
