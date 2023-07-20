@@ -15,7 +15,7 @@
         <link rel="next" href="../mkl/">
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
     
     
       
@@ -23,10 +23,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -1229,11 +1229,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#compiling-and-linking-agaisnt-matio" class="md-nav__link">
-    Compiling and linking agaisnt Matio
+  <a href="#compiling-and-linking-against-matio" class="md-nav__link">
+    Compiling and linking against Matio
   </a>
   
-    <nav class="md-nav" aria-label="Compiling and linking agaisnt Matio">
+    <nav class="md-nav" aria-label="Compiling and linking against Matio">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1279,6 +1279,20 @@
     <li class="md-nav__item">
       <a href="../mkl/" class="md-nav__link">
         Intel MKL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mesa/" class="md-nav__link">
+        MESA
       </a>
     </li>
   
@@ -1579,11 +1593,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#compiling-and-linking-agaisnt-matio" class="md-nav__link">
-    Compiling and linking agaisnt Matio
+  <a href="#compiling-and-linking-against-matio" class="md-nav__link">
+    Compiling and linking against Matio
   </a>
   
-    <nav class="md-nav" aria-label="Compiling and linking agaisnt Matio">
+    <nav class="md-nav" aria-label="Compiling and linking against Matio">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1633,8 +1647,8 @@
 <h1 id="matio">Matio</h1>
 <p>Matio is a library which allows reading and writing matrices in
 MATLAB MAT format. It is an open source development released under
-a BSD license. </p>
-<h2 id="compiling-and-linking-agaisnt-matio">Compiling and linking agaisnt Matio</h2>
+a BSD license.</p>
+<h2 id="compiling-and-linking-against-matio">Compiling and linking against Matio</h2>
 <ul>
 <li><code>module load matio</code></li>
 </ul>
@@ -1646,8 +1660,14 @@ compiler wrappers.</p>
 utility <code>matdump</code> can be used. The module also defines <code>MATIO_PATH</code>
 which gives the root of the installation if this is needed.</p>
 <h3 id="version-history">Version history</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Full system</label><label for="__tabbed_1_2">4-cabinet system</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Upgrade 2023</label><label for="__tabbed_1_2">Full system</label><label for="__tabbed_1_3">4-cabinet system</label></div>
 <div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Module <code>matio/1.5.23</code> installed May 2023 (PE 22.12)</li>
+<li>Module <code>matio/1.5.18</code> is removed.</li>
+</ul>
+</div>
 <div class="tabbed-block">
 <ul>
 <li>Module <code>matio/1.5.18</code> installed October 2021 (PE 21.04)</li>
@@ -1666,7 +1686,7 @@ compiled using the script avaailable from the Archer2
 <a href="https://github.com/ARCHER2-HPC/pe-scripts/tree/cse-develop">github repository</a>:</p>
 <p><div class="highlight"><pre><span></span><code>$ git clone https://github.com/ARCHER2-HPC/pe-scripts.git
 $ cd pe-scripts
-$ git checkout modules-2021-10
+$ git checkout modules-2022-12
 $ ./sh/tpsl/matio.sh --prefix=/path/to/install/location
 </code></pre></div>
 where <code>--prefix</code> defines the location of the installation.</p>
@@ -1748,10 +1768,10 @@ where <code>--prefix</code> defines the location of the installation.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   </body>
