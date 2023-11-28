@@ -12,11 +12,11 @@
         <link rel="prev" href="../tuning/">
       
       
-        <link rel="next" href="../../research-software/">
+        <link rel="next" href="../gpu/">
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.bd3936ea.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -73,7 +73,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
   
     
     
@@ -231,6 +231,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
         
@@ -247,6 +248,7 @@
     
       
       
+  
   
   
   
@@ -286,6 +288,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../quick-start/overview/" class="md-nav__link">
         
@@ -303,6 +306,7 @@
             
               
                 
+  
   
   
   
@@ -326,6 +330,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../quick-start/quickstart-developers/" class="md-nav__link">
         
@@ -343,6 +348,7 @@
             
               
                 
+  
   
   
   
@@ -373,6 +379,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../known-issues/" class="md-nav__link">
         
@@ -389,6 +396,7 @@
     
       
       
+  
   
   
   
@@ -428,6 +436,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../faq/" class="md-nav__link">
         
@@ -455,6 +464,7 @@
   
   
     
+  
   
   
     
@@ -493,6 +503,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../" class="md-nav__link">
         
@@ -510,6 +521,7 @@
             
               
                 
+  
   
   
   
@@ -533,6 +545,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../connecting/" class="md-nav__link">
         
@@ -550,6 +563,7 @@
             
               
                 
+  
   
   
   
@@ -573,6 +587,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../sw-environment/" class="md-nav__link">
         
@@ -590,6 +605,7 @@
             
               
                 
+  
   
   
   
@@ -613,6 +629,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../io/" class="md-nav__link">
         
@@ -630,6 +647,7 @@
             
               
                 
+  
   
   
   
@@ -653,6 +671,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../containers/" class="md-nav__link">
         
@@ -670,6 +689,7 @@
             
               
                 
+  
   
   
   
@@ -693,6 +713,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../analysis/" class="md-nav__link">
         
@@ -710,6 +731,7 @@
             
               
                 
+  
   
   
   
@@ -733,6 +755,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../profile/" class="md-nav__link">
         
@@ -750,6 +773,7 @@
             
               
                 
+  
   
   
   
@@ -773,6 +797,7 @@
   
   
     
+  
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -821,7 +846,9 @@
       
         <li class="md-nav__item">
   <a href="#monitoring-energy-use" class="md-nav__link">
-    Monitoring energy use
+    <span class="md-ellipsis">
+      Monitoring energy use
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Monitoring energy use">
@@ -829,14 +856,18 @@
         
           <li class="md-nav__item">
   <a href="#using-sacct-to-get-energy-usage-for-individual-jobs" class="md-nav__link">
-    Using sacct to get energy usage for individual jobs
+    <span class="md-ellipsis">
+      Using sacct to get energy usage for individual jobs
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#accessing-the-node-energypower-counters" class="md-nav__link">
-    Accessing the node energy/power counters
+    <span class="md-ellipsis">
+      Accessing the node energy/power counters
+    </span>
   </a>
   
 </li>
@@ -848,7 +879,9 @@
       
         <li class="md-nav__item">
   <a href="#controlling-cpu-frequency" class="md-nav__link">
-    Controlling CPU frequency
+    <span class="md-ellipsis">
+      Controlling CPU frequency
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Controlling CPU frequency">
@@ -856,14 +889,18 @@
         
           <li class="md-nav__item">
   <a href="#default-cpu-frequency" class="md-nav__link">
-    Default CPU frequency
+    <span class="md-ellipsis">
+      Default CPU frequency
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#slurm-cpu-frequency-settings-for-centrally-installed-software" class="md-nav__link">
-    Slurm CPU frequency settings for centrally-installed software
+    <span class="md-ellipsis">
+      Slurm CPU frequency settings for centrally-installed software
+    </span>
   </a>
   
 </li>
@@ -882,6 +919,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GPU development system
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -891,6 +949,7 @@
     
       
       
+  
   
   
   
@@ -930,6 +989,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/" class="md-nav__link">
         
@@ -947,6 +1007,7 @@
             
               
                 
+  
   
   
   
@@ -970,6 +1031,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/castep/" class="md-nav__link">
         
@@ -987,6 +1049,7 @@
             
               
                 
+  
   
   
   
@@ -1010,6 +1073,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/chemshell/" class="md-nav__link">
         
@@ -1027,6 +1091,7 @@
             
               
                 
+  
   
   
   
@@ -1050,6 +1115,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/cp2k/" class="md-nav__link">
         
@@ -1067,6 +1133,7 @@
             
               
                 
+  
   
   
   
@@ -1090,6 +1157,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/fhi-aims/" class="md-nav__link">
         
@@ -1107,6 +1175,7 @@
             
               
                 
+  
   
   
   
@@ -1130,6 +1199,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/lammps/" class="md-nav__link">
         
@@ -1147,6 +1217,7 @@
             
               
                 
+  
   
   
   
@@ -1170,6 +1241,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/mo-unified-model/" class="md-nav__link">
         
@@ -1187,6 +1259,7 @@
             
               
                 
+  
   
   
   
@@ -1210,6 +1283,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/nektarplusplus/" class="md-nav__link">
         
@@ -1227,6 +1301,7 @@
             
               
                 
+  
   
   
   
@@ -1250,6 +1325,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/nwchem/" class="md-nav__link">
         
@@ -1267,6 +1343,7 @@
             
               
                 
+  
   
   
   
@@ -1290,6 +1367,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/openfoam/" class="md-nav__link">
         
@@ -1307,6 +1385,7 @@
             
               
                 
+  
   
   
   
@@ -1330,6 +1409,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/qe/" class="md-nav__link">
         
@@ -1347,6 +1427,7 @@
             
               
                 
+  
   
   
   
@@ -1374,6 +1455,7 @@
     
       
       
+  
   
   
   
@@ -1413,6 +1495,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/" class="md-nav__link">
         
@@ -1430,6 +1513,7 @@
             
               
                 
+  
   
   
   
@@ -1453,6 +1537,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/fftw/" class="md-nav__link">
         
@@ -1470,6 +1555,7 @@
             
               
                 
+  
   
   
   
@@ -1493,6 +1579,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/netcdf/" class="md-nav__link">
         
@@ -1510,6 +1597,7 @@
             
               
                 
+  
   
   
   
@@ -1533,6 +1621,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/aocl/" class="md-nav__link">
         
@@ -1550,6 +1639,7 @@
             
               
                 
+  
   
   
   
@@ -1573,6 +1663,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/boost/" class="md-nav__link">
         
@@ -1590,6 +1681,7 @@
             
               
                 
+  
   
   
   
@@ -1613,6 +1705,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/glm/" class="md-nav__link">
         
@@ -1630,6 +1723,7 @@
             
               
                 
+  
   
   
   
@@ -1653,6 +1747,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/matio/" class="md-nav__link">
         
@@ -1670,6 +1765,7 @@
             
               
                 
+  
   
   
   
@@ -1693,6 +1789,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/mesa/" class="md-nav__link">
         
@@ -1710,6 +1807,7 @@
             
               
                 
+  
   
   
   
@@ -1733,6 +1831,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/petsc/" class="md-nav__link">
         
@@ -1750,6 +1849,7 @@
             
               
                 
+  
   
   
   
@@ -1773,6 +1873,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/scotch/" class="md-nav__link">
         
@@ -1790,6 +1891,7 @@
             
               
                 
+  
   
   
   
@@ -1813,6 +1915,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/superlu/" class="md-nav__link">
         
@@ -1830,6 +1933,7 @@
             
               
                 
+  
   
   
   
@@ -1857,6 +1961,7 @@
     
       
       
+  
   
   
   
@@ -1896,6 +2001,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../data-tools/" class="md-nav__link">
         
@@ -1913,6 +2019,7 @@
             
               
                 
+  
   
   
   
@@ -1936,6 +2043,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../data-tools/arm-forge/" class="md-nav__link">
         
@@ -1953,6 +2061,7 @@
             
               
                 
+  
   
   
   
@@ -1976,6 +2085,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../data-tools/julia/" class="md-nav__link">
         
@@ -1993,6 +2103,7 @@
             
               
                 
+  
   
   
   
@@ -2016,6 +2127,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../data-tools/cray-r/" class="md-nav__link">
         
@@ -2033,6 +2145,7 @@
             
               
                 
+  
   
   
   
@@ -2063,6 +2176,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../essentials/" class="md-nav__link">
         
@@ -2079,6 +2193,7 @@
     
       
       
+  
   
   
   
@@ -2124,7 +2239,9 @@
       
         <li class="md-nav__item">
   <a href="#monitoring-energy-use" class="md-nav__link">
-    Monitoring energy use
+    <span class="md-ellipsis">
+      Monitoring energy use
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Monitoring energy use">
@@ -2132,14 +2249,18 @@
         
           <li class="md-nav__item">
   <a href="#using-sacct-to-get-energy-usage-for-individual-jobs" class="md-nav__link">
-    Using sacct to get energy usage for individual jobs
+    <span class="md-ellipsis">
+      Using sacct to get energy usage for individual jobs
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#accessing-the-node-energypower-counters" class="md-nav__link">
-    Accessing the node energy/power counters
+    <span class="md-ellipsis">
+      Accessing the node energy/power counters
+    </span>
   </a>
   
 </li>
@@ -2151,7 +2272,9 @@
       
         <li class="md-nav__item">
   <a href="#controlling-cpu-frequency" class="md-nav__link">
-    Controlling CPU frequency
+    <span class="md-ellipsis">
+      Controlling CPU frequency
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Controlling CPU frequency">
@@ -2159,14 +2282,18 @@
         
           <li class="md-nav__item">
   <a href="#default-cpu-frequency" class="md-nav__link">
-    Default CPU frequency
+    <span class="md-ellipsis">
+      Default CPU frequency
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#slurm-cpu-frequency-settings-for-centrally-installed-software" class="md-nav__link">
-    Slurm CPU frequency settings for centrally-installed software
+    <span class="md-ellipsis">
+      Slurm CPU frequency settings for centrally-installed software
+    </span>
   </a>
   
 </li>
@@ -2199,8 +2326,8 @@
 which allows some control over how much energy is consumed by jobs.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>The default CPU frequency on ARCHER2 compute nodes for jobs launched using <code>srun</code> is currently set
-to 2.0 GHz. Information below describes how to control the CPU frequency using Slurm.</p>
+<p>The default CPU frequency cap on ARCHER2 compute nodes for jobs launched using <code>srun</code> is currently set
+to 2.0 GHz. Information below describes how to control the CPU frequency cap using Slurm.</p>
 </div>
 <h2 id="monitoring-energy-use">Monitoring energy use</h2>
 <p>The Slurm accounting database stores the total energy consumed by a job and you can also directly access
@@ -2243,7 +2370,7 @@ job. </p>
 <p>There are a number of files in this directory, all the counter files include the current value and a timestamp.</p>
 <ul>
 <li>power - Point-in-time power (Watts).</li>
-<li>energy - Accumulated energy (Joules)</li>
+<li>energy - Accumulated energy (Joules).</li>
 <li>cpu_power - Point-in-time power (Watts) used by the CPU domain.</li>
 <li>cpu_energy - The total energy (Joules) used by the CPU domain.</li>
 <li>cpu*_temp - Temperature reading (Celsius) of the CPU domain - one file per CPU socket.</li>
@@ -2256,6 +2383,16 @@ job. </p>
 <li>power_cap - Current power cap limit in Watts; 0 indicates no capping.</li>
 <li>raw_scan_hz - The power management scanning rate for all data in pm_counters.</li>
 </ul>
+<p>This documentation is from the official HPE documentation:</p>
+<ul>
+<li><a href="https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&amp;docId=dp00002748en_us">HPE Cray Operating System Administration Guide: CSM on HPE Cray EX
+Systems</a></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The overall <code>power</code> and <code>energy</code> counters include all on-node systems. The major components
+are the CPU (processor), memory and Slingshot network interface controller (NIC).</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>There exists an MPI-based wrapper library that can gather the <code>pm</code> counter values at runtime via a simple
@@ -2265,8 +2402,8 @@ set of function calls. See the link below for details.</p>
 </ul>
 </div>
 <h2 id="controlling-cpu-frequency">Controlling CPU frequency</h2>
-<p>You can request specific CPU frequencies (in kHz) for compute nodes through <code>srun</code> options or environment variables.
-The available frequencies on the ARCHER2 processors along with the options and environment variables:</p>
+<p>You can request specific CPU frequency caps (in kHz) for compute nodes through <code>srun</code> options or environment variables.
+The available frequency caps on the ARCHER2 processors along with the options and environment variables:</p>
 <table>
 <thead>
 <tr>
@@ -2297,7 +2434,20 @@ The available frequencies on the ARCHER2 processors along with the options and e
 </tr>
 </tbody>
 </table>
-<p>The only frequencies available on the processors on ARCHER2 are 1.5 GHz, 2.0 GHz and 2.25GHz.</p>
+<p>The only frequency caps available on the processors on ARCHER2 are 1.5 GHz, 2.0 GHz and 2.25GHz+turbo.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Setting the CPU frequency cap in this way sets the <em>maximum</em> frequency that the processors can use.
+In practice, the individual cores may select different frequencies up to the value you have set depending
+on the workload on the processor.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>When you select the highest frequency value (2.25 GHz), you also enable turbo boost and so
+the processor is free to set the CPU frequency to values above 2.25 GHz if possible within
+the power and thermal limits of the processor. We see that, with turbo boost enabled,
+the processors typically boost to around 2.8 GHz even when performing compute-intensive work.</p>
+</div>
 <p>For example, you can add the following option to <code>srun</code> commands in your job submission scripts to set the CPU frequency
 to 2.25 GHz (and also enable turbo boost):</p>
 <div class="highlight"><pre><span></span><code>srun --cpu-freq=2250000 ...usual srun options and arguments...
@@ -2310,12 +2460,6 @@ to launch the application:</p>
 <p class="admonition-title">Tip</p>
 <p>Testing by the ARCHER2 CSE team has shown that most software are most energy efficient when 2.0 GHz 
 is selected as the CPU frequency.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>When the highest frequency (2.25 GHz) is selected this also enables frequency turbo boost. Experiments
-on ARCHER2 have shown that under typical use, with all 128 cores heavily loaded, the processors
-turbo boost up to around 2.8 GHz when the frequency is set to 2.25 GHz.</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -2454,7 +2598,7 @@ above <em>after</em> you have loaded the module, you will override the setting f
     <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.94c44541.min.js"></script>
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
       
     
   </body>

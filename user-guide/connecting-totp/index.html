@@ -1,0 +1,2959 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Connecting to ARCHER2 - ARCHER2 User Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/archer2.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XVNML97F1T"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XVNML97F1T",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XVNML97F1T",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#connecting-to-archer2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ARCHER2 User Documentation" class="md-header__button md-logo" aria-label="ARCHER2 User Documentation" data-md-component="logo">
+      
+  <img src="../../images/archer2_white_transparent.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ARCHER2 User Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Connecting to ARCHER2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ARCHER2-HPC/archer2-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ARCHER2-HPC/archer2-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ARCHER2 User Documentation" class="md-nav__button md-logo" aria-label="ARCHER2 User Documentation" data-md-component="logo">
+      
+  <img src="../../images/archer2_white_transparent.png" alt="logo">
+
+    </a>
+    ARCHER2 User Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ARCHER2-HPC/archer2-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ARCHER2-HPC/archer2-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Quickstart
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Quickstart
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/quickstart-users/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quickstart for users
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/quickstart-developers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quickstart for developers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/quickstart-next-steps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quickstart next steps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../known-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ARCHER2 Known Issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ARCHER2 Frequently Asked Questions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            ARCHER2 Frequently Asked Questions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User and Best Practice Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            User and Best Practice Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hardware
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connecting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to ARCHER2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data management and transfer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sw-environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scheduler/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    I/O and file systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev-environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Application development environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Containers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debug/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../profile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Profiling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Performance tuning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Energy use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GPU development system
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Research Software
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Research Software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/casino/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CASINO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/castep/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CASTEP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/cesm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CESM2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/chemshell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chemshell
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/code-saturne/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code_Saturne
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/cp2k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CP2K
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/crystal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CRYSTAL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/fhi-aims/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FHI-aims
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/gromacs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GROMACS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/lammps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LAMMPS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/mitgcm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MITgcm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/mo-unified-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Met Office Unified Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/namd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NAMD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/nektarplusplus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nektar++
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/nemo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NEMO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/nwchem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NWChem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/onetep/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ONETEP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/openfoam/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenFOAM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/orca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ORCA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/qe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quantum Espresso
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-software/vasp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VASP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software Libraries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Software Libraries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/libsci/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HPE Cray LibSci: BLAS, LAPACK, ScaLAPACK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/fftw/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FFTW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/hdf5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HDF5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/netcdf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NetCDF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/adios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ADIOS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/aocl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AOCL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/arpack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ARPACK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/boost/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Boost
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/eigen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eigen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/glm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GLM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/hypre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HYPRE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/matio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/mkl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intel MKL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/mesa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MESA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/mumps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MUMPS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/petsc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PETSc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/metis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metis/Parmetis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/scotch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scotch/PT-Scotch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/slepc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SLEPc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/superlu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SuperLU/SuperLU_DIST
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-libraries/trilinos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trilinos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Analysis and Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Data Analysis and Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-tools/amd-uprof/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AMD uProf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-tools/arm-forge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arm Forge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-tools/pm-mpi-lib/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Energy Counters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-tools/julia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Julia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-tools/paraview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ParaView
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-tools/cray-r/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-tools/visidata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VisiData
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essentials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Essential Skills
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publish/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ARCHER2 and Publications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command line terminal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command line terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      MacOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access credentials
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Access credentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh-key-pairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH Key Pairs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-public-part-of-key-pair-to-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upload public part of key pair to SAFE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mfa-time-based-one-time-passcode-totp-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      MFA Time-based one-time passcode (TOTP code)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-login-password-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      First login: password required
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-clients" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH Clients
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH Clients">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging in
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#host-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Host Keys
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Host Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loginarcher2acuk" class="md-nav__link">
+    <span class="md-ellipsis">
+      login.archer2.ac.uk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-access-more-convenient-using-the-ssh-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Making access more convenient using the SSH configuration file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-debugging-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH debugging tips
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH debugging tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-the-userloginarcher2acuk-syntax-rather-than-l-user-loginarcher2acuk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use the user@login.archer2.ac.uk syntax rather than -l user login.archer2.ac.uk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-you-connect-to-the-login-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can you connect to the login node?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mfa" class="md-nav__link">
+    <span class="md-ellipsis">
+      MFA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-verbose-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH verbose output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Related Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tmux" class="md-nav__link">
+    <span class="md-ellipsis">
+      tmux
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="connecting-to-archer2">Connecting to ARCHER2</h1>
+<p>This section covers the basic connection methods.</p>
+<p>On the ARCHER2 system, interactive access is achieved using SSH, either directly from a command-line terminal or using an SSH client. In addition, data can be transferred to and from the ARCHER2 system using
+<code>scp</code> from the command line or by using a file-transfer client.</p>
+<p>Before following the process below, we assume you have set up an account on ARCHER2 through the EPCC SAFE. Documentation on how to do this can be
+found at:</p>
+<ul>
+<li><a href="https://epcced.github.io/safe-docs/safe-for-users/">SAFE Guide for Users</a></li>
+</ul>
+<h2 id="command-line-terminal">Command line terminal</h2>
+<h3 id="linux">Linux</h3>
+<p>Linux distributions include a terminal application that can be used for SSH access to the ARCHER2 login nodes. Linux users will have different terminals depending on their distribution and window manager (e.g., GNOME Terminal in GNOME, Konsole in KDE). Consult your Linux distribution's documentation for details on how to load a terminal.</p>
+<h3 id="macos">MacOS</h3>
+<p>MacOS users can use the Terminal application, located in the Utilities folder within the Applications folder.</p>
+<h3 id="windows">Windows</h3>
+<p>A typical Windows installation will not include a terminal client, though there are various clients available. We recommend Windows users download and install MobaXterm to access ARCHER2. It is very easy to use and includes an integrated X Server, which allows you to run graphical applications on ARCHER2.</p>
+<p>You can download MobaXterm Home Edition (Installer Edition) from the following link:</p>
+<ul>
+<li><a href="http://mobaxterm.mobatek.net/download-home-edition.html">Install MobaXterm</a></li>
+</ul>
+<p>Double-click the downloaded Microsoft Installer file (.msi) and follow
+the instructions from the Windows Installation Wizard. Note, you might
+need to have administrator rights to install on some versions of Windows. Also,
+make sure to check whether Windows Firewall has blocked any
+features of this program after installation (Windows will warn you if the built-in firewall blocks an action, and gives you the opportunity to override the behaviour).</p>
+<p>Once installed, start MobaXterm and then click "Start local terminal".</p>
+<div class="admonition tips">
+<p class="admonition-title">Tips</p>
+<ul>
+<li>
+<p>If you download the .zip file rather than the .msi, make sure you unzip it before attempting to run the installer.</p>
+</li>
+<li>
+<p>If you do not have administrator rights, you can use the <a href="https://mobaxterm.mobatek.net/download-home-edition.html">Portable edition of MobaXterm</a>.</p>
+</li>
+<li>
+<p>If this is your first time using MobaXterm, you should check that a permanent /home directory has been set up (otherwise, all saved info will be lost from session to session). Go to "Settings" -&gt; "Configuration" and check that a path is set in the field marked "Persistent home directory". If prompted, make sure path is set as "private".</p>
+</li>
+<li>
+<p>Any SSH key generated in MobaXterm will, by default, be stored in the permanent /home directory (see above). That is, if your /home directory is <code>_MyDocuments_\MobaXterm\home</code> then within that folder you will find a folder named <code>_MyDocuments_\MobaXterm\home\.ssh</code> containing your keys.  This folder will be 'hidden' by default, so you may need to tick 'Hidden items' under 'View' in Windows Explorer to see it.</p>
+</li>
+<li>
+<p>MobaXterm also allows you to set up pre-configured SSH sessions with the username, login host and key details saved.  You are welcome to use this, rather than using the "Local terminal", but we are not able to assist with debugging connection issues if you choose this method.</p>
+</li>
+</ul>
+</div>
+<h2 id="access-credentials">Access credentials</h2>
+<p>To access ARCHER2, you need to use two sets of credentials: your   SSH
+key pair protected by a passphrase <strong>and</strong> a Time-based one-time password. You can find more detailed instructions on how to set up your credentials to access ARCHER2 from Windows, MacOS and Linux below.</p>
+<h3 id="ssh-key-pairs">SSH Key Pairs</h3>
+<p>You will need to generate an SSH key pair protected by a passphrase to access ARCHER2.</p>
+<p>Using a <a href="#command-line-terminal">terminal</a> (the command line), set up a key pair that contains
+your e-mail address and enter a passphrase you will use to unlock the
+key:</p>
+<pre><code>$ ssh-keygen -t rsa -C "your@email.com"
+...
+-bash-4.1$ ssh-keygen -t rsa -C "your@email.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Home/user/.ssh/id_rsa): [Enter]
+Enter passphrase (empty for no passphrase): [Passphrase]
+Enter same passphrase again: [Passphrase]
+Your identification has been saved in /Home/user/.ssh/id_rsa.
+Your public key has been saved in /Home/user/.ssh/id_rsa.pub.
+The key fingerprint is:
+03:d4:c4:6d:58:0a:e2:4a:f8:73:9a:e8:e3:07:16:c8 your@email.com
+The key's randomart image is:
++--[ RSA 2048]----+
+|    . ...+o++++. |
+| . . . =o..      |
+|+ . . .......o o |
+|oE .   .         |
+|o =     .   S    |
+|.    +.+     .   |
+|.  oo            |
+|.  .             |
+| ..              |
++-----------------+
+</code></pre>
+<p>(remember to replace "your@email.com" with your e-mail address).</p>
+<h3 id="upload-public-part-of-key-pair-to-safe">Upload public part of key pair to SAFE</h3>
+<p>You should now upload the public part of your SSH key pair to the SAFE
+by following the instructions at:</p>
+<p><a href="https://safe.epcc.ed.ac.uk">Login to SAFE</a>.</p>
+<p>Then:</p>
+<ol>
+<li>Go to the Menu <em>Login accounts</em> and select the ARCHER2 account you
+     want to add the SSH key to.</li>
+<li>On the subsequent Login Account details page, click the <em>Add
+     Credential</em> button.</li>
+<li>Select <em>SSH public key</em> as the Credential Type and click <em>Next</em></li>
+<li>Either copy and paste the public part of your SSH key into the
+     <em>SSH Public key</em> box or use the button to select the public key
+     file on your computer.</li>
+<li>Click <em>Add</em> to associate the public SSH key with your account.</li>
+</ol>
+<p>Once you have done this, your SSH key will be added to your ARCHER2 account.</p>
+<h3 id="mfa-time-based-one-time-passcode-totp-code">MFA Time-based one-time passcode (TOTP code)</h3>
+<p>Remember, you will need to use both an SSH key and time-based one-time passcode to log into ARCHER2 so you will
+also need to <a href="https://epcced.github.io/safe-docs/safe-for-users/#how-to-turn-on-mfa-on-your-machine-account">set up a method for generating a TOTP code</a> before you can log into ARCHER2. </p>
+<h3 id="first-login-password-required">First login: password required</h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>You will <strong>not</strong> use your password when logging on to ARCHER2 after the first login for a new account.</p>
+</div>
+<p>As an additional security measure, you will also need to use a password from SAFE for your first login to ARCHER2
+with a new account. When you log into ARCHER2 for the first time with a new account, you will be prompted to change
+your initial password. This is a three step process:</p>
+<ol>
+<li>When promoted to enter your <em>ldap password</em>: Enter the password  which you <a href="https://epcced.github.io/safe-docs/safe-for-users/#how-can-i-pick-up-my-password-for-the-service-machine">retrieve from SAFE</a></li>
+<li>When prompted to enter your new password: type in a new password</li>
+<li>When prompted to re-enter the new password: re-enter the new password</li>
+</ol>
+<p>Your password has now been changed. You will no longer need this password to log into ARCHER2 from this point
+forwards, you will use your SSH key and TOTP code as described above.</p>
+<!--
+
+Remember, you need both an SSH key and a password to log in to ARCHER2. You will need to collect an initial password before you can log into ARCHER2. We cover this next.
+
+!!! note
+    If you want to connect to ARCHER2 from more than one machine---for example, from your home laptop as well as your work laptop---you should generate an SSH key on each machine, and add each of the public keys into SAFE.
+
+### Initial passwords
+
+The SAFE web interface is used to provide your initial password for logging onto ARCHER2 (see the [SAFE
+Documentation](https://epcced.github.io/safe-docs) for more details on requesting accounts and picking up passwords).
+
+!!! note
+    ARCHER2 account passwords are also sometimes referred to as LDAP
+    passwords by the system.
+
+
+!!! note
+
+    You will be prompted to change your password the first time
+    that you log in to ARCHER2. You may also change your password, at
+    any time, on ARCHER2, using the `passwd` command. This change is
+    not be reflected in SAFE so, if you forget your password, you
+    should use SAFE to request a new one-shot password.
+-->
+
+<h2 id="ssh-clients">SSH Clients</h2>
+<p>As noted above, you interact with ARCHER2, over an encrypted
+communication channel (specifically, Secure Shell version 2
+(SSH-2)). This allows command-line access to one of the login nodes of
+ARCHER2, from which you can run commands or use a command-line text
+editor to edit files.  SSH can also be used to run graphical programs
+such as GUI text editors and debuggers, when used in conjunction with
+an X Server.</p>
+<h3 id="logging-in">Logging in</h3>
+<p>The login addresses for ARCHER2 are:</p>
+<ul>
+<li>ARCHER2 full system: login.archer2.ac.uk</li>
+</ul>
+<p>You can use the following command from the <a href="#command-line-terminal">terminal</a> window to log in to ARCHER2:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Full system</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>username@login.archer2.ac.uk
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>The order in which you are asked for credentials depends on the system you
+are accessing:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Full system</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>You will first be prompted for the passphrase associated with your SSH key pair. Once you have entered this passphrase successfully, you will then be prompted for your machine account password. You need to enter both credentials correctly to be able to access ARCHER2.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you logged into ARCHER2 with your account before the major upgrade in May/June 2023 you may see an error 
+from SSH that looks like</p>
+<div class="highlight"><pre><span></span><code>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@       WARNING: POSSIBLE DNS SPOOFING DETECTED!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+The ECDSA host key for login.archer2.ac.uk has changed,
+and the key for the corresponding IP address 193.62.216.43
+has a different value. This could either mean that
+DNS SPOOFING is happening or the IP address for the host
+and its host key have changed at the same time.
+Offending key for IP in /Users/auser/.ssh/known_hosts:11
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ECDSA key sent by the remote host is
+SHA256:UGS+LA8I46LqnD58WiWNlaUFY3uD1WFr+V8RCG09fUg.
+Please contact your system administrator.
+</code></pre></div>
+<p>If you see this, you should delete the offending host key from your <code>~/.ssh/known_hosts</code>
+file (in the example above the offending line is line #11)</p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If your SSH key pair is not stored in the default location (usually
+<code>~/.ssh/id_rsa</code>) on your local system, you may need to specify the path
+to the private part of the key wih the <code>-i</code> option to <code>ssh</code>. For
+example, if your key is in a file called <code>keys/id_rsa_ARCHER2</code> you would
+use the command <code>ssh -i keys/id_rsa_ARCHER2 username@login.archer2.ac.uk</code>
+to log in (or the equivalent for the 4-cabinet system).</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When you first log into ARCHER2, you will be prompted to change your
+initial password. This is a three-step process:</p>
+<ol>
+<li>When promoted to enter your <em>ldap password</em>: Re-enter the password
+    you retrieved from SAFE.</li>
+<li>When prompted to enter your new password: type in a new password.</li>
+<li>When prompted to re-enter the new password: re-enter the new
+    password.</li>
+</ol>
+<p>Your password will now have been changed</p>
+</div>
+<p>To allow remote programs, especially graphical applications, to control your local display, such as for a debugger, use:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Full system</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>-X<span class="w"> </span>username@login.archer2.ac.uk
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>Some sites recommend using the <code>-Y</code> flag. While this can fix some
+compatibility issues, the <code>-X</code> flag is more secure.</p>
+<p>Current MacOS systems do not have an X window system. Users should install the XQuartz package to allow for SSH with X11 forwarding on MacOS systems:</p>
+<ul>
+<li><a href="http://www.xquartz.org/">XQuartz website</a></li>
+</ul>
+<h2 id="host-keys">Host Keys</h2>
+<p>Adding the host keys to your SSH configuration file provides an extra level of security for your connections to ARCHER2. The host keys are checked against the login nodes when you login to ARCHER2 and if the remote server key does not match the one in the configuration file, the connection will be refused. This provides protection against potential malicious servers masquerading as the ARCHER2 login nodes.</p>
+<h3 id="loginarcher2acuk">login.archer2.ac.uk</h3>
+<div class="highlight"><pre><span></span><code>login.archer2.ac.uk ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBANu9BQJ1UFr4nwy8X5seIPgCnBl1TKc8XBq2YVY65qS53QcpzjZAH53/CtvyWkyGcmY8/PWsJo9sXHqzXVSkzk=
+
+login.archer2.ac.ukssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDFGGByIrskPayB5xRm3vkWoEc5bVtTCi0oTGslD8m+M1Sc/v2IV6FxaEVXGwO9ErQwrtFQRj0KameLS3Jn0LwQ13Tw+vTXV0bsKyGgEu2wW+BSDijGpbxRZXZrg30TltZXd4VkTuWiE6kyhJ6qiIIR0nwfDblijGy3u079gM5Om/Q2wydwh0iAASRzkqldL5bKDb14Vliy7tCT3TJXI49+qIagWUhNEzyN1j2oK/2n3JdflT4/anQ4jUywVG4D1Tor/evEeSa3h5++gbtgAXZaCtlQbBxwckmTetXqnlI+pvkF0AAuS18Bh+hdmvT1+xW0XLv7CMA64HfR93XgQIIuPqFAS1p+HuJkmk4xFAdwrzjnpYAiU5Apkq+vx3W957/LULzZkeiFQY2Y3CY9oPVR8WBmGKXOOBifhl2Hvd51fH1wd0Lw7Zph53NcVSQQhdDUVhgsPJA3M/+UlqoAMEB/V6ESE2z6yrXVfNjDNbbgA1K548EYpyNR8z4eRtZOoi0=
+
+login.archer2.ac.uk ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINyptPmidGmIBYHPcTwzgXknVPrMyHptwBgSbMcoZgh5
+</code></pre></div>
+<p>Host key verification can fail if this key is out of date, a problem which can be fixed by removing the offending entry in <code>~/.ssh/known_hosts</code> and replacing it with the new key published here.  We recommend users should check this page for any key updates and not just accept a new key from the server without confirmation.</p>
+<h2 id="making-access-more-convenient-using-the-ssh-configuration-file">Making access more convenient using the SSH configuration file</h2>
+<p>Typing in the full command to log in or transfer data to ARCHER2 can
+become tedious as it often has to be repeated several times. You can use
+the SSH configuration file, usually located on your local machine at
+<code>.ssh/config</code> to make the process more convenient.</p>
+<p>Each remote site (or group of sites) can have an entry in this file,
+which may look something like:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Full system</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Host archer2
+    HostName login.archer2.ac.uk
+    User username
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>(remember to replace <code>username</code> with your actual username!).</p>
+<p>Taking the full-system example: the <code>Host</code> line defines a short name for the entry. In this
+case, instead of typing <code>ssh username@login.archer2.ac.uk</code> to access the
+ARCHER2 login nodes, you could use <code>ssh archer2</code> instead. The remaining
+lines define the options for the host.</p>
+<ul>
+<li><code>Hostname login.archer2.ac.uk</code> --- defines the full address of the
+     host</li>
+<li><code>User username</code> --- defines the username to use by default for this
+     host (replace <code>username</code> with your own username on the remote
+     host)</li>
+</ul>
+<p>Now you can use SSH to access ARCHER2 without needing to enter your
+username or the full hostname every time:</p>
+<div class="highlight"><pre><span></span><code>ssh archer2
+</code></pre></div>
+<p>You can set up as many of these entries as you need in your local
+configuration file. Other options are available. See the ssh_config manual
+page (or <code>man ssh_config</code> on any machine with SSH installed) for a
+description of the SSH configuration file. For example, you may find the
+<code>IdentityFile</code> option useful if you have to manage multiple SSH key
+pairs for different systems as this allows you to specify which SSH key
+to use for each system.</p>
+<div class="admonition bug">
+<p class="admonition-title">Bug</p>
+<p>There is a known bug with Windows ssh-agent. If you get the error
+message: <code>Warning: agent returned different signature type ssh-rsa
+(expected rsa-sha2-512)</code>, you will need to either specify the path to
+your ssh key in the command line (using the <code>-i</code> option as described
+above) or add that path to your SSH config file by using the
+<code>IdentityFile</code> option.</p>
+</div>
+<h2 id="ssh-debugging-tips">SSH debugging tips</h2>
+<p>If you find you are unable to connect to ARCHER2, there are some simple checks you may use to diagnose the issue, which are described below. If you are having difficulties connecting, we suggest trying these before
+contacting the ARCHER2 Service Desk.</p>
+<h3 id="use-the-userloginarcher2acuk-syntax-rather-than-l-user-loginarcher2acuk">Use the <code>user@login.archer2.ac.uk</code> syntax rather than <code>-l user login.archer2.ac.uk</code></h3>
+<p>We have seen a number of instances where people using the syntax</p>
+<div class="highlight"><pre><span></span><code>ssh -l user login.archer2.ac.uk
+</code></pre></div>
+<p>have not been able to connect properly and get prompted for a password many
+times. We have found that using the alternative syntax:</p>
+<div class="highlight"><pre><span></span><code>ssh user@login.archer2.ac.uk
+</code></pre></div>
+<p>works more reliably.</p>
+<h3 id="can-you-connect-to-the-login-node">Can you connect to the login node?</h3>
+<p>Try the command <code>ping -c 3 login.archer2.ac.uk</code>, on Linux or MacOS, or
+<code>ping -n 3 login.archer2.ac.uk</code> on Windows. If you successfully
+connect to the login node, the output should include:</p>
+<pre><code>--- login.archer2.ac.uk ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 38ms
+</code></pre>
+<p>(the ping time '38ms' is not important). If not all packets are received
+there could be a problem with your Internet connection, or the login
+node could be unavailable.</p>
+<h3 id="ssh-key">SSH key</h3>
+<p>If you get the error message <code>Permission denied (publickey)</code>, this may
+indicate a problem with your SSH key. Some things to check:</p>
+<ul>
+<li>
+<p>Have you uploaded the key to SAFE? Please note that if the same
+     key is re-uploaded, SAFE will not map the "new" key to ARCHER2. If
+     for some reason this is required, please delete the key first,
+     then re-upload.</p>
+</li>
+<li>
+<p>Is SSH using the correct key? You can check which keys are
+     being found and offered by SSH using <code>ssh -vvv</code>. If your private
+     key has a non-default name, you should use the <code>-i</code> option to
+     provide it to ssh. For example, <code>ssh -i path/to/key
+     username@login.archer2.ac.uk</code>.</p>
+</li>
+<li>
+<p>Are you entering the passphrase correctly? You will be asked for
+     your private key's passphrase first. If you enter it incorrectly
+     you will usually be asked to enter it again (usually you will get
+     three chances, after which SSH will fail with <code>Permission denied
+     (publickey)</code>). If you would like to confirm your passphrase
+     without attempting to connect, you can use <code>ssh-keygen -y -f
+     /path/to/private/key</code>. If successful, this command will print the
+     corresponding public key. You can also use this to check that you
+     have uploaded the correct public key to SAFE.</p>
+</li>
+<li>
+<p>Are permissions correct on the SSH key? One common issue is that
+     the permissions are set incorrectly on either the key files or
+     the directory it is contained in. On Linux and MacOS, if
+     your private keys are held in <code>~/.ssh/</code> you can check this with
+     <code>ls -al ~/.ssh</code>. This should give something similar to the
+     following output:</p>
+<pre><code> $ ls -al ~/.ssh/
+ drwx------.  2 user group    48 Jul 15 20:24 .
+ drwx------. 12 user group  4096 Oct 13 12:11 ..
+ -rw-------.  1 user group   113 Jul 15 20:23 authorized_keys
+ -rw-------.  1 user group 12686 Jul 15 20:23 id_rsa
+ -rw-r--r--.  1 user group  2785 Jul 15 20:23 id_rsa.pub
+ -rw-r--r--.  1 user group  1967 Oct 13 14:11 known_hosts
+</code></pre>
+<p>The important section here is the string of letters and dashes at
+ the start, for the lines ending in <code>.</code>, <code>id_rsa</code>, and
+ <code>id_rsa.pub</code>, which indicate permissions on the containing
+ directory, private key, and public key, respectively. If your
+ permissions are not correct, they can be set with <code>chmod</code>. Consult
+ the table below for the relevant <code>chmod</code> command. </p>
+<table>
+<thead>
+<tr>
+<th>Target</th>
+<th>Permissions</th>
+<th><code>chmod</code> Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Directory</td>
+<td><code>drwx------</code></td>
+<td>700</td>
+</tr>
+<tr>
+<td>Private Key</td>
+<td><code>-rw-------</code></td>
+<td>600</td>
+</tr>
+<tr>
+<td>Public Key</td>
+<td><code>-rw-r--r--</code></td>
+<td>644</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><code>chmod</code> can be used to set permissions on the target in the following
+way: <code>chmod &lt;code&gt; &lt;target&gt;</code>. So for example to set correct
+permissions on the private key file <code>id_rsa_ARCHER2</code>, use the command
+<code>chmod 600 id_rsa_ARCHER2</code>.</p>
+<p>On Windows, permissions are handled differently but can be set by
+right-clicking on the file and selecting Properties &gt; Security &gt;
+Advanced. The user, SYSTEM, and Administrators should have <code>Full
+control</code>, and no other permissions should exist for both the public
+and private key files, as well as the containing folder.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Unix file permissions can be understood in the following way. There are
+three groups that can have file permissions: (owning) <em>users</em>, (owning)
+<em>groups</em>, and <em>others</em>. The available permissions are <em>read</em>, <em>write</em>,
+and <em>execute</em>. The first character indicates whether the target is a
+file <code>-</code>, or directory <code>d</code>. The next three characters indicate the
+owning user's permissions. The first character is <code>r</code> if they have read
+permission, <code>-</code> if they don't, the second character is <code>w</code> if they have
+write permission, <code>-</code> if they don't, the third character is <code>x</code> if they
+have execute permission, <code>-</code> if they don't. This pattern is then
+repeated for <em>group</em>, and <em>other</em> permissions. For example the pattern
+<code>-rw-r--r--</code> indicates that the owning user can read and write the file,
+members of the owning group can read it, and anyone else can also read
+it. The <code>chmod</code> codes are constructed by treating the user, group, and
+owner permission strings as binary numbers, then converting them to
+decimal. For example the permission string <code>-rwx------</code> becomes
+<code>111 000 000</code> -&gt; <code>700</code>.</p>
+</div>
+<h3 id="mfa">MFA</h3>
+<p>If your TOTP passcode is being consistently rejected, you can <a href="https://epcced.github.io/safe-docs/safe-for-users/#mfa_off">remove MFA from your account</a> and then <a href="https://epcced.github.io/safe-docs/safe-for-users/#mfa">re-enable it</a>.</p>
+<h3 id="ssh-verbose-output">SSH verbose output</h3>
+<p>The verbose-debugging output from <code>ssh</code> can be very useful for
+diagnosing issues. In particular, it can be used to distinguish
+between problems with the SSH key and password. To enable verbose
+output, add the <code>-vvv</code> flag to your SSH command. For example:</p>
+<pre><code>ssh -vvv username@login.archer2.ac.uk
+</code></pre>
+<p>The output is lengthy, but somewhere in there you should see lines
+similar to the following:</p>
+<pre><code>debug1: Next authentication method: publickey
+debug1: Offering public key: RSA SHA256:&lt;key_hash&gt; &lt;path_to_private_key&gt;
+debug3: send_pubkey_test
+debug3: send packet: type 50
+debug2: we sent a publickey packet, wait for reply
+debug3: receive packet: type 60
+debug1: Server accepts key: pkalg rsa-sha2-512 blen 2071
+debug2: input_userauth_pk_ok: fp SHA256:&lt;key_hash&gt;
+debug3: sign_and_send_pubkey: RSA SHA256:&lt;key_hash&gt;
+Enter passphrase for key '&lt;path_to_private_key&gt;':
+debug3: send packet: type 50
+debug3: receive packet: type 51
+Authenticated with partial success.
+debug1: Authentications that can continue: password, keyboard-interactive
+</code></pre>
+<p>In the text above, you can see which files ssh has checked for private
+keys, and you can see if any key is accepted. The line <code>Authenticated
+succeeded</code> indicates that the SSH key has been accepted. By default
+SSH will go through a list of standard private-key files, as well as
+any you have specified with <code>-i</code> or a config file. To succeed, one of
+these private keys needs to match to the public key uploaded to SAFE.</p>
+<p>If your SSH key passphrase is incorrect, you will be asked to try again
+up to three times in total, before being disconnected with <code>Permission
+denied (publickey)</code>. If you enter your passphrase correctly, but still
+see this error message, please consider the advice under <em>SSH key</em>
+above.</p>
+<p>You should next see something similiar to:</p>
+<pre><code>debug1: Next authentication method: keyboard-interactive
+debug2: userauth_kbdint
+debug3: send packet: type 50
+debug2: we sent a keyboard-interactive packet, wait for reply
+debug3: receive packet: type 60
+debug2: input_userauth_info_req
+debug2: input_userauth_info_req: num_prompts 1
+Password:
+debug3: send packet: type 61
+debug3: receive packet: type 60
+debug2: input_userauth_info_req
+debug2: input_userauth_info_req: num_prompts 0
+debug3: send packet: type 61
+debug3: receive packet: type 52
+debug1: Authentication succeeded (keyboard-interactive).
+</code></pre>
+<p>If you do not see the <code>Password:</code> prompt you may have connection issues,
+or there could be a problem with the ARCHER2 login nodes. If you do not
+see <code>Authenticated with partial success</code> it means your password was not
+accepted. You will be asked to re-enter your password, usually two more
+times before the connection will be rejected. Consider the suggestions
+under <em>Password</em> above. If you <em>do</em> see <code>Authenticated with partial
+success</code>, it means your password was accepted, and your SSH key will now
+be checked.</p>
+<p>The equivalent information can be obtained in PuTTY by
+enabling All Logging in settings.</p>
+<h2 id="related-software">Related Software</h2>
+<h3 id="tmux">tmux</h3>
+<p><a href="https://github.com/tmux/tmux/wiki">tmux</a> is a multiplexer application 
+available on the ARCHER2 login nodes. It allows for multiple sessions to 
+be open concurrently and these sessions can be detached and run in the 
+background. Furthermore, sessions will continue to run after a user logs 
+off and can be reattached to upon logging in again. It is particularly 
+useful if you are connecting to ARCHER2 on an unstable Internet connection 
+or if you wish to keep an arrangement of terminal applications running 
+while you disconnect your client from the Internet -- for example, when 
+moving between your home and workplace. </p>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ARCHER2-HPC" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/ARCHER2_HPC" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/groups/13848871/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>

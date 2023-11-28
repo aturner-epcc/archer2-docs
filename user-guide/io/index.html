@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.bd3936ea.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -73,7 +73,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
   
     
     
@@ -231,6 +231,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
         
@@ -247,6 +248,7 @@
     
       
       
+  
   
   
   
@@ -286,6 +288,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../quick-start/overview/" class="md-nav__link">
         
@@ -303,6 +306,7 @@
             
               
                 
+  
   
   
   
@@ -326,6 +330,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../quick-start/quickstart-developers/" class="md-nav__link">
         
@@ -343,6 +348,7 @@
             
               
                 
+  
   
   
   
@@ -373,6 +379,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../known-issues/" class="md-nav__link">
         
@@ -389,6 +396,7 @@
     
       
       
+  
   
   
   
@@ -428,6 +436,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../faq/" class="md-nav__link">
         
@@ -455,6 +464,7 @@
   
   
     
+  
   
   
     
@@ -493,6 +503,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../" class="md-nav__link">
         
@@ -510,6 +521,7 @@
             
               
                 
+  
   
   
   
@@ -533,6 +545,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../connecting/" class="md-nav__link">
         
@@ -550,6 +563,7 @@
             
               
                 
+  
   
   
   
@@ -573,6 +587,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../sw-environment/" class="md-nav__link">
         
@@ -590,6 +605,7 @@
             
               
                 
+  
   
   
   
@@ -613,6 +629,7 @@
   
   
     
+  
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -661,7 +678,9 @@
       
         <li class="md-nav__item">
   <a href="#common-io-patterns" class="md-nav__link">
-    Common I/O patterns
+    <span class="md-ellipsis">
+      Common I/O patterns
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Common I/O patterns">
@@ -669,35 +688,45 @@
         
           <li class="md-nav__item">
   <a href="#single-file-single-writer-serial-io" class="md-nav__link">
-    Single file, single writer (Serial I/O)
+    <span class="md-ellipsis">
+      Single file, single writer (Serial I/O)
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#file-per-process-fpp" class="md-nav__link">
-    File-per-process (FPP)
+    <span class="md-ellipsis">
+      File-per-process (FPP)
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#file-per-node-fpn" class="md-nav__link">
-    File-per-node (FPN)
+    <span class="md-ellipsis">
+      File-per-node (FPN)
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#single-file-multiple-writers-without-collective-operations" class="md-nav__link">
-    Single file, multiple writers without collective operations
+    <span class="md-ellipsis">
+      Single file, multiple writers without collective operations
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#single-shared-file-with-collective-writes-ssf" class="md-nav__link">
-    Single Shared File with collective writes (SSF)
+    <span class="md-ellipsis">
+      Single Shared File with collective writes (SSF)
+    </span>
   </a>
   
 </li>
@@ -709,22 +738,94 @@
       
         <li class="md-nav__item">
   <a href="#achieving-efficient-io" class="md-nav__link">
-    Achieving efficient I/O
+    <span class="md-ellipsis">
+      Achieving efficient I/O
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Achieving efficient I/O">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lustre" class="md-nav__link">
-    Lustre
+  <a href="#lustre-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lustre technology
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
+  <a href="#summary-achieving-best-io-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary: achieving best I/O performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary: achieving best I/O performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-per-process-fpp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      File-Per-Process (FPP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-shared-file-with-collective-writes-ssf_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single Shared File with collective writes (SSF)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-typical-io-performance-on-archer2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary: typical I/O performance on ARCHER2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary: typical I/O performance on ARCHER2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-per-process-fpp_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      File-Per-Process (FPP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-shared-file-with-collective-writes-ssf_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single Shared File with collective writes (SSF)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#striping" class="md-nav__link">
-    Striping
+    <span class="md-ellipsis">
+      Striping
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Striping">
@@ -732,14 +833,18 @@
         
           <li class="md-nav__item">
   <a href="#default-configuration" class="md-nav__link">
-    Default configuration
+    <span class="md-ellipsis">
+      Default configuration
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#setting-custom-striping-configurations" class="md-nav__link">
-    Setting Custom Striping Configurations
+    <span class="md-ellipsis">
+      Setting custom striping configurations
+    </span>
   </a>
   
 </li>
@@ -750,22 +855,20 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#recommended-archer2-io-settings" class="md-nav__link">
-    Recommended ARCHER2 I/O settings
-  </a>
-  
-    <nav class="md-nav" aria-label="Recommended ARCHER2 I/O settings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#alternative-mpi-library" class="md-nav__link">
-    Alternative MPI library
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment variables
+    </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#mpi-transport-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      MPI transport protocol
+    </span>
+  </a>
   
 </li>
         
@@ -776,7 +879,9 @@
       
         <li class="md-nav__item">
   <a href="#io-profiling" class="md-nav__link">
-    I/O Profiling
+    <span class="md-ellipsis">
+      I/O profiling
+    </span>
   </a>
   
 </li>
@@ -792,6 +897,7 @@
             
               
                 
+  
   
   
   
@@ -815,6 +921,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../containers/" class="md-nav__link">
         
@@ -832,6 +939,7 @@
             
               
                 
+  
   
   
   
@@ -855,6 +963,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../analysis/" class="md-nav__link">
         
@@ -872,6 +981,7 @@
             
               
                 
+  
   
   
   
@@ -895,6 +1005,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../profile/" class="md-nav__link">
         
@@ -912,6 +1023,7 @@
             
               
                 
+  
   
   
   
@@ -935,12 +1047,34 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../energy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Energy use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GPU development system
   </span>
   
 
@@ -959,6 +1093,7 @@
     
       
       
+  
   
   
   
@@ -998,6 +1133,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/" class="md-nav__link">
         
@@ -1015,6 +1151,7 @@
             
               
                 
+  
   
   
   
@@ -1038,6 +1175,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/castep/" class="md-nav__link">
         
@@ -1055,6 +1193,7 @@
             
               
                 
+  
   
   
   
@@ -1078,6 +1217,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/chemshell/" class="md-nav__link">
         
@@ -1095,6 +1235,7 @@
             
               
                 
+  
   
   
   
@@ -1118,6 +1259,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/cp2k/" class="md-nav__link">
         
@@ -1135,6 +1277,7 @@
             
               
                 
+  
   
   
   
@@ -1158,6 +1301,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/fhi-aims/" class="md-nav__link">
         
@@ -1175,6 +1319,7 @@
             
               
                 
+  
   
   
   
@@ -1198,6 +1343,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/lammps/" class="md-nav__link">
         
@@ -1215,6 +1361,7 @@
             
               
                 
+  
   
   
   
@@ -1238,6 +1385,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/mo-unified-model/" class="md-nav__link">
         
@@ -1255,6 +1403,7 @@
             
               
                 
+  
   
   
   
@@ -1278,6 +1427,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/nektarplusplus/" class="md-nav__link">
         
@@ -1295,6 +1445,7 @@
             
               
                 
+  
   
   
   
@@ -1318,6 +1469,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/nwchem/" class="md-nav__link">
         
@@ -1335,6 +1487,7 @@
             
               
                 
+  
   
   
   
@@ -1358,6 +1511,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/openfoam/" class="md-nav__link">
         
@@ -1375,6 +1529,7 @@
             
               
                 
+  
   
   
   
@@ -1398,6 +1553,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../research-software/qe/" class="md-nav__link">
         
@@ -1415,6 +1571,7 @@
             
               
                 
+  
   
   
   
@@ -1442,6 +1599,7 @@
     
       
       
+  
   
   
   
@@ -1481,6 +1639,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/" class="md-nav__link">
         
@@ -1498,6 +1657,7 @@
             
               
                 
+  
   
   
   
@@ -1521,6 +1681,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/fftw/" class="md-nav__link">
         
@@ -1538,6 +1699,7 @@
             
               
                 
+  
   
   
   
@@ -1561,6 +1723,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/netcdf/" class="md-nav__link">
         
@@ -1578,6 +1741,7 @@
             
               
                 
+  
   
   
   
@@ -1601,6 +1765,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/aocl/" class="md-nav__link">
         
@@ -1618,6 +1783,7 @@
             
               
                 
+  
   
   
   
@@ -1641,6 +1807,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/boost/" class="md-nav__link">
         
@@ -1658,6 +1825,7 @@
             
               
                 
+  
   
   
   
@@ -1681,6 +1849,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/glm/" class="md-nav__link">
         
@@ -1698,6 +1867,7 @@
             
               
                 
+  
   
   
   
@@ -1721,6 +1891,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/matio/" class="md-nav__link">
         
@@ -1738,6 +1909,7 @@
             
               
                 
+  
   
   
   
@@ -1761,6 +1933,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/mesa/" class="md-nav__link">
         
@@ -1778,6 +1951,7 @@
             
               
                 
+  
   
   
   
@@ -1801,6 +1975,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/petsc/" class="md-nav__link">
         
@@ -1818,6 +1993,7 @@
             
               
                 
+  
   
   
   
@@ -1841,6 +2017,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/scotch/" class="md-nav__link">
         
@@ -1858,6 +2035,7 @@
             
               
                 
+  
   
   
   
@@ -1881,6 +2059,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../software-libraries/superlu/" class="md-nav__link">
         
@@ -1898,6 +2077,7 @@
             
               
                 
+  
   
   
   
@@ -1925,6 +2105,7 @@
     
       
       
+  
   
   
   
@@ -1964,6 +2145,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../data-tools/" class="md-nav__link">
         
@@ -1981,6 +2163,7 @@
             
               
                 
+  
   
   
   
@@ -2004,6 +2187,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../data-tools/arm-forge/" class="md-nav__link">
         
@@ -2021,6 +2205,7 @@
             
               
                 
+  
   
   
   
@@ -2044,6 +2229,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../data-tools/julia/" class="md-nav__link">
         
@@ -2061,6 +2247,7 @@
             
               
                 
+  
   
   
   
@@ -2084,6 +2271,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../data-tools/cray-r/" class="md-nav__link">
         
@@ -2101,6 +2289,7 @@
             
               
                 
+  
   
   
   
@@ -2131,6 +2320,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../essentials/" class="md-nav__link">
         
@@ -2147,6 +2337,7 @@
     
       
       
+  
   
   
   
@@ -2192,7 +2383,9 @@
       
         <li class="md-nav__item">
   <a href="#common-io-patterns" class="md-nav__link">
-    Common I/O patterns
+    <span class="md-ellipsis">
+      Common I/O patterns
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Common I/O patterns">
@@ -2200,35 +2393,45 @@
         
           <li class="md-nav__item">
   <a href="#single-file-single-writer-serial-io" class="md-nav__link">
-    Single file, single writer (Serial I/O)
+    <span class="md-ellipsis">
+      Single file, single writer (Serial I/O)
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#file-per-process-fpp" class="md-nav__link">
-    File-per-process (FPP)
+    <span class="md-ellipsis">
+      File-per-process (FPP)
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#file-per-node-fpn" class="md-nav__link">
-    File-per-node (FPN)
+    <span class="md-ellipsis">
+      File-per-node (FPN)
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#single-file-multiple-writers-without-collective-operations" class="md-nav__link">
-    Single file, multiple writers without collective operations
+    <span class="md-ellipsis">
+      Single file, multiple writers without collective operations
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#single-shared-file-with-collective-writes-ssf" class="md-nav__link">
-    Single Shared File with collective writes (SSF)
+    <span class="md-ellipsis">
+      Single Shared File with collective writes (SSF)
+    </span>
   </a>
   
 </li>
@@ -2240,22 +2443,94 @@
       
         <li class="md-nav__item">
   <a href="#achieving-efficient-io" class="md-nav__link">
-    Achieving efficient I/O
+    <span class="md-ellipsis">
+      Achieving efficient I/O
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Achieving efficient I/O">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lustre" class="md-nav__link">
-    Lustre
+  <a href="#lustre-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lustre technology
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
+  <a href="#summary-achieving-best-io-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary: achieving best I/O performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary: achieving best I/O performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-per-process-fpp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      File-Per-Process (FPP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-shared-file-with-collective-writes-ssf_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single Shared File with collective writes (SSF)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-typical-io-performance-on-archer2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary: typical I/O performance on ARCHER2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary: typical I/O performance on ARCHER2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-per-process-fpp_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      File-Per-Process (FPP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-shared-file-with-collective-writes-ssf_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single Shared File with collective writes (SSF)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#striping" class="md-nav__link">
-    Striping
+    <span class="md-ellipsis">
+      Striping
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Striping">
@@ -2263,14 +2538,18 @@
         
           <li class="md-nav__item">
   <a href="#default-configuration" class="md-nav__link">
-    Default configuration
+    <span class="md-ellipsis">
+      Default configuration
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#setting-custom-striping-configurations" class="md-nav__link">
-    Setting Custom Striping Configurations
+    <span class="md-ellipsis">
+      Setting custom striping configurations
+    </span>
   </a>
   
 </li>
@@ -2281,22 +2560,20 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#recommended-archer2-io-settings" class="md-nav__link">
-    Recommended ARCHER2 I/O settings
-  </a>
-  
-    <nav class="md-nav" aria-label="Recommended ARCHER2 I/O settings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#alternative-mpi-library" class="md-nav__link">
-    Alternative MPI library
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment variables
+    </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#mpi-transport-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      MPI transport protocol
+    </span>
+  </a>
   
 </li>
         
@@ -2307,7 +2584,9 @@
       
         <li class="md-nav__item">
   <a href="#io-profiling" class="md-nav__link">
-    I/O Profiling
+    <span class="md-ellipsis">
+      I/O profiling
+    </span>
   </a>
   
 </li>
@@ -2336,7 +2615,7 @@ on the ARCHER2 storage. </p>
 <p>Information on the file systems, directory layouts, quotas,
 archiving and transferring data can be found in the
 <a href="../data/">Data management and transfer section</a>.</p>
-<p>The advice here is targetted at use of the parallel file
+<p>The advice here is targeted at use of the parallel file
 systems available on the compute nodes on ARCHER2 (i.e. <strong>Not</strong>
 the home and RDFaaS file systems).</p>
 <h2 id="common-io-patterns">Common I/O patterns</h2>
@@ -2406,7 +2685,7 @@ read and write calls to achieve good performance.</p>
 <p>This section provides information on getting the best performance out of
 the parallel <code>/work</code> file systems on ARCHER2 when writing data,
 particularly using parallel I/O patterns.</p>
-<h3 id="lustre">Lustre</h3>
+<h3 id="lustre-technology">Lustre technology</h3>
 <p>The ARCHER2 <code>/work</code> file systems use Lustre as a parallel file system
 technology. It has many disk units (called Object Storage Targets or
 OSTs), all under the control of a single Meta Data Server (MDS) so
@@ -2414,6 +2693,91 @@ that it appears to the user as a single file system.  The Lustre file
 system provides POSIX semantics (changes on one node are immediately
 visible on other nodes) and can support very high data rates for
 appropriate I/O patterns.</p>
+<p>In order to achieve good performance on the ARCHER2 Lustre file systems,
+you need to make sure your IO is configured correctly for the type
+of I/O you want to do. In the following sections we describe how to 
+do this.</p>
+<h3 id="summary-achieving-best-io-performance">Summary: achieving best I/O performance</h3>
+<p>The configuration you should use depends on the type of I/O you are
+performing. Here, we summarise the settings for two of the I/O patterns
+described above: File-Per-Process (FPP, including using ADIOS2) and
+Single Share File with collective writes (SSF).</p>
+<p>Following sections describe the settings in more detail.</p>
+<h4 id="file-per-process-fpp_1">File-Per-Process (FPP)</h4>
+<ul>
+<li>Optimal file system: NVMe-based Lustre</li>
+<li>Stripe count: single stripe (<code>-c 1</code>), this is the default on ARCHER2</li>
+<li>Stripe size: little impact on performance - default (1 MiB) is fine</li>
+<li>Environment variables: none required</li>
+<li>MPI transport protocol choice: N/A</li>
+</ul>
+<h4 id="single-shared-file-with-collective-writes-ssf_1">Single Shared File with collective writes (SSF)</h4>
+<ul>
+<li>Optimal file system: no difference between NVMe and HDD-based file systems</li>
+<li>Stripe count: Maximum striping (<code>-c -1</code>)</li>
+<li>Stripe size: little impact on performance - default (1 MiB) is fine</li>
+<li>Environment variables:<ul>
+<li><code>export FI_OFI_RXM_SAR_LIMIT=64K</code></li>
+<li><code>export MPICH_MPIIO_HINTS="*:cray_cb_write_lock_mode=2,*:cray_cb_nodes_multiplier=4”</code></li>
+</ul>
+</li>
+<li>MPI transport protocol choice: UCX, if possible</li>
+</ul>
+<h3 id="summary-typical-io-performance-on-archer2">Summary: typical I/O performance on ARCHER2</h3>
+<h4 id="file-per-process-fpp_2">File-Per-Process (FPP)</h4>
+<p>We regularly run tests of FPP write performance on ARCHER2 `/work`` Lustre file 
+systems using the <a href="https://github.com/EPCCed/epcc-reframe/tree/main/tests/synth/benchio">benchio</a> software in the following configuration:</p>
+<ul>
+<li>Number of MPI processes writing: 2048 (16 nodes each with 128 processes)</li>
+<li>Amount of data written: 65,536 MiB (32 MiB per process)</li>
+<li>Striping: stripe count = 1; stripe size = 1 MiB</li>
+<li>Environment variables: none</li>
+<li>MPI transport protocol: OFI</li>
+</ul>
+<p>Typical write performance:</p>
+<ul>
+<li>NVMe-based file system:<ul>
+<li>Maximum: 200 GiB/s</li>
+<li>Upper quartile: 180 GiB/s</li>
+<li>Median: 150 GiB/s</li>
+<li>Lower quartile: 135 GiB/s</li>
+</ul>
+</li>
+<li>HDD-based file system:<ul>
+<li>Maximum: 170 GiB/s</li>
+<li>Upper quartile: 160 GiB/s</li>
+<li>Median: 90 GiB/s</li>
+<li>Lower quartile: 30 GiB/s</li>
+</ul>
+</li>
+</ul>
+<h4 id="single-shared-file-with-collective-writes-ssf_2">Single Shared File with collective writes (SSF)</h4>
+<p>We regularly run tests of FPP write performance on ARCHER2 `/work`` Lustre file 
+systems using the <a href="https://github.com/EPCCed/epcc-reframe/tree/main/tests/synth/benchio">benchio</a> software in the following configuration:</p>
+<ul>
+<li>Number of MPI processes writing: 2048 (16 nodes each with 128 processes)</li>
+<li>Amount of data written: 65,536 MiB (32 MiB per process)</li>
+<li>Striping: stripe count = -1 (maximum striping); stripe size = 1 MiB</li>
+<li>Environment variables: <code>FI_OFI_RXM_SAR_LIMIT=64K</code>, <code>MPICH_MPIIO_HINTS="*:cray_cb_write_lock_mode=2,*:cray_cb_nodes_multiplier=4”</code></li>
+<li>MPI transport protocol: UCX</li>
+</ul>
+<p>Typical write performance:</p>
+<ul>
+<li>NVMe-based file system:<ul>
+<li>Maximum: 20 GiB/s</li>
+<li>Upper quartile: 11 GiB/s</li>
+<li>Median: 10 GiB/s</li>
+<li>Lower quartile: 9 GiB/s</li>
+</ul>
+</li>
+<li>HDD-based file system:<ul>
+<li>Maximum: 22 GiB/s</li>
+<li>Upper quartile: 12 GiB/s</li>
+<li>Median: 10 GiB/s</li>
+<li>Lower quartile: 8 GiB/s</li>
+</ul>
+</li>
+</ul>
 <h3 id="striping">Striping</h3>
 <p>One of the main factors leading to the high performance of Lustre file
 systems is the ability to store data on multiple OSTs. For many small
@@ -2448,7 +2812,7 @@ created directory <code>resdir</code>:</p>
 resdir
 stripe_count:   1 stripe_size:    1048576 stripe_offset:  -1
 </code></pre>
-<h4 id="setting-custom-striping-configurations">Setting Custom Striping Configurations</h4>
+<h4 id="setting-custom-striping-configurations">Setting custom striping configurations</h4>
 <p>Users can set stripe settings for a directory (or file) using the
 <code>lfs setstripe</code> command. The options for <code>lfs setstripe</code> are:</p>
 <ul>
@@ -2467,31 +2831,21 @@ stripe_count:   1 stripe_size:    1048576 stripe_offset:  -1
 <code>resdir</code>, along with maximum striping count you would use:</p>
 <pre><code>auser@ln03:~&gt; lfs setstripe -S 4m -c -1 resdir/
 </code></pre>
-<h3 id="recommended-archer2-io-settings">Recommended ARCHER2 I/O settings</h3>
-<p>As mentioned above, it is very important to use collective calls when
+<h3 id="environment-variables">Environment variables</h3>
+<p>The following environment variables typically only have an impact for the case 
+when you using Single Shared Files with collective communications.
+As mentioned above, it is very important to use collective calls when
 doing parallel I/O to a single shared file.</p>
 <p>However, with the default settings, parallel I/O on multiple nodes can
-currently give poor performance. We recommend always setting the
-following environment variable in your SLURM batch script:</p>
-<pre><code>export FI_OFI_RXM_SAR_LIMIT=64K
-</code></pre>
-<p>Although I/O requirements vary significantly between different
-applications, the following settings should be good in most cases:</p>
-<ul>
-<li>
-<p>If each process or node is writing to its own individual file then
-    the default settings (unstriped files) should give good
-    performance.</p>
-</li>
-<li>
-<p>If processes are writing to a single shared file (e.g. using
-    MPI-IO, HDF5 or NetCDF), set the appropriate directories to be
-    fully striped: <code>lfs setstripe -c -1 resdir</code>. On ARCHER2 this will
-    use all of the 12 OSTs.</p>
-</li>
-</ul>
-<h4 id="alternative-mpi-library">Alternative MPI library</h4>
-<p>Setting the environment variable <code>FI_OFI_RXM_SAR_LIMIT</code> can improve
+currently give poor performance. We recommend always setting these
+environment variables in your SLURM batch script when 
+you are using the SSF I/O pattern:</p>
+<p>export FI_OFI_RXM_SAR_LIMIT=64K
+  export MPICH_MPIIO_HINTS="<em>:cray_cb_write_lock_mode=2,</em>:cray_cb_nodes_multiplier=4”</p>
+<!-- TODO: add description of what these settings do -->
+
+<h3 id="mpi-transport-protocol">MPI transport protocol</h3>
+<p>Setting the environment variables described above can improve
 the performance of MPI collectives when handling large amounts of
 data, which in turn can improve collective file I/O. An alternative is
 to use the non-default UCX implementation of the MPI library as an
@@ -2504,7 +2858,7 @@ I/O, so you should check the overall performance of your program
 before and after the switch. It is possible that other functions
 may run slower even if the I/O performance improves.</p>
 </div>
-<h2 id="io-profiling">I/O Profiling</h2>
+<h2 id="io-profiling">I/O profiling</h2>
 <p>If you are concerned about your I/O performance, you should quantify
 your transfer rates in terms of GB/s of data read or written to
 disk. Small files can achieve very high I/O rates due to data caching
@@ -2524,7 +2878,8 @@ variable in your Slurm script</p>
 <p>Amongst other things, this will give you information on how many
 independent and collective I/O operations were issued. If you see a
 large number of independent operations compared to collectives, this
-indicates that you have inefficient I/O patterns and you should check that you are calling your parallel I/O library correctly.</p>
+indicates that you have inefficient I/O patterns and you should check
+that you are calling your parallel I/O library correctly.</p>
 <p>Although this information comes from the MPI library, it is still
 useful for users of higher-level libraries such as HDF5 as they all
 call MPI-IO at the lowest level.</p>
@@ -2608,7 +2963,7 @@ call MPI-IO at the lowest level.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.94c44541.min.js"></script>
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
       
     
   </body>
