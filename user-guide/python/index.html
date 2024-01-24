@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
     
     
       
@@ -758,6 +758,63 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#conda-on-archer2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conda on ARCHER2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conda on ARCHER2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conda-install-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conda install location
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conda install location">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-a-conda-container-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use a conda container image
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-conda-on-the-solid-state-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install conda on the solid state storage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conda-addtions-to-shell-configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conda addtions to shell configuration files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#running-python" class="md-nav__link">
     <span class="md-ellipsis">
       Running Python
@@ -780,6 +837,15 @@
   <a href="#example-mpi4py-job-submission-script" class="md-nav__link">
     <span class="md-ellipsis">
       Example mpi4py job submission script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-python-at-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Python at scale
     </span>
   </a>
   
@@ -2280,6 +2346,63 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#conda-on-archer2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conda on ARCHER2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conda on ARCHER2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conda-install-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conda install location
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conda install location">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-a-conda-container-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use a conda container image
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-conda-on-the-solid-state-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install conda on the solid state storage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conda-addtions-to-shell-configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conda addtions to shell configuration files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#running-python" class="md-nav__link">
     <span class="md-ellipsis">
       Running Python
@@ -2302,6 +2425,15 @@
   <a href="#example-mpi4py-job-submission-script" class="md-nav__link">
     <span class="md-ellipsis">
       Example mpi4py job submission script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-python-at-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Python at scale
     </span>
   </a>
   
@@ -2393,9 +2525,14 @@ they are compatible.</p>
 <p>Sometimes, you may need to setup a local custom Python environment such that it extends a centrally-installed <code>cray-python</code> module.
 By extend, we mean being able to install packages locally that are not provided by <code>cray-python</code>. This is necessary because some Python
 packages such as <code>mpi4py</code> must be built specifically for the ARCHER2 system and so are best provided centrally.</p>
-<p>You can do this by creating a lightweight <strong>virtual</strong> environment where the local packages can be installed. Further, this environment
+<p>You can do this by creating a lightweight <strong>virtual</strong> environment where the local packages can be installed. This environment
 is created on top of an existing Python installation, known as the environment's <strong>base</strong> Python.</p>
-<p>Select the base Python by loading the <code>cray-python</code> module that you wish to extend.</p>
+<p>First, load the <code>PrgEnv-gnu</code> environment.</p>
+<pre><code>auser@ln01:~&gt; module load PrgEnv-gnu
+</code></pre>
+<p>This first step is necessary because subsequent <code>pip</code> installs may involve source code compilation and it is better that this be done using
+the GCC compilers to maintain consistency with how some base Python packages have been built.</p>
+<p>Second, select the base Python by loading the <code>cray-python</code> module that you wish to extend.</p>
 <pre><code>auser@ln01:~&gt; module load cray-python
 </code></pre>
 <p>Next, create the virtual environment within a designated folder.</p>
@@ -2417,7 +2554,10 @@ That command fragment expands <code>${HOME}</code> and then replaces the <code>h
 <pre><code>(myvenv) auser@ln01:~&gt; python -m pip install &lt;package name&gt;
 </code></pre>
 <p>Running <code>pip</code> directly as in <code>pip install &lt;package name&gt;</code> will also work, but we show the <code>python -m</code> approach
-as this is consistent with the way the virtual environment was created.</p>
+as this is consistent with the way the virtual environment was created. Further, if the package installation
+will require code compilation, you should amend the command to ensure use of the ARCHER2 compiler wrappers.</p>
+<pre><code>(myvenv) auser@ln01:~&gt; CC=cc CXX=CC FC=ftn python -m pip install &lt;package name&gt;
+</code></pre>
 <p>And when you have finished installing packages, you can deactivate the environment by running the <code>deactivate</code> command.</p>
 <pre><code>(myvenv) auser@ln01:~&gt; deactivate
 auser@ln01:~&gt;
@@ -2437,9 +2577,9 @@ you must first activate the environment, by adding the activation command to the
 
 source /work/t01/t01/auser/myvenv/bin/activate
 
-export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK
+export SRUN_CPUS_PER_TASK=${SLURM_CPUS_PER_TASK}
 
-srun --distribution=block:block --hint=nomultithread python ${SLURM_SUBMIT_DIR}/myvenv-script.py
+srun --distribution=block:block --hint=nomultithread python myvenv-script.py
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -2452,12 +2592,100 @@ or <code>pytorch</code>. One extra command is required; it is issued immediately
 <pre><code>extend-venv-activate /work/t01/t01/auser/myvenv
 </code></pre>
 <p>The <code>extend-venv-activate</code> command merely adds some extra commands to the virtual environment's <code>activate</code> script,
-ensuring that the python packages will be gathered from the local virtual environment, the ML module and from the
+ensuring that the Python packages will be gathered from the local virtual environment, the ML module and from the
 <code>cray-python</code> base module. All this means you would avoid having to install ML packages within your local area.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The ML modules are themselves based on <code>cray-python</code>. For example, <code>tensorflow/2.12.0</code> is based on the <code>cray-python/3.9.13.1</code> module.</p>
+<p>The <code>extend-venv-activate</code> command becomes available (i.e., its location is placed on the path) only when the ML module is loaded.
+The ML modules are themselves based on <code>cray-python</code>. For example, <code>tensorflow/2.12.0</code> is based on the <code>cray-python/3.9.13.1</code> module.</p>
 </div>
+<h2 id="conda-on-archer2">Conda on ARCHER2</h2>
+<p>Conda-based Python distributions (e.g. Anaconda, Mamba, Miniconda) are an extremely popular way of installing and
+accessing software on many systems, including ARCHER2. Although conda-based distributions can be used on ARCHER2, 
+care is needed in how they are installed and configured so that the installation does not adversely effect your use
+of ARCHER2. In particular, you should be careful of:</p>
+<ul>
+<li>Where you install conda on ARCHER2</li>
+<li>Conda additions to shell configuration files such as <code>.bashrc</code></li>
+</ul>
+<p>We cover each of these points in more detail below.</p>
+<h3 id="conda-install-location">Conda install location</h3>
+<p>If you only need to use the files and executables from your conda installation on the login and data analysis nodes
+(via the <code>serial</code> QoS) then the best place to install conda is in your home directory structure - this will usually
+be the default install location provided by the installation script.</p>
+<p>If you need to access the files and executables from conda on the compute nodes then you will need to install to a 
+different location as the home file systems are not available on the compute nodes. The work file systems are not 
+well suited to hosting Python software natively due to the way in which file access work, particularly during 
+Python startup. There are two main options for using conda from ARCHER2 compute nodes:</p>
+<ol>
+<li>Use a conda container image </li>
+<li>Install conda on the solid state storage</li>
+</ol>
+<h4 id="use-a-conda-container-image">Use a conda container image</h4>
+<p>You can pull official conda-based container images from Dockerhub that you can use if you want just the standard
+set of Python modules that come with the distribution. For example, to get the latest Anaconda distribution as a 
+Singularity container image on the ARCHER2 work file system, you would use (on an ARCHER2 login node, from the
+directory on the work file system where you want to store the container image):</p>
+<div class="highlight"><pre><span></span><code>singularity build anaconda3.sif docker://continuumio/anaconda3
+</code></pre></div>
+<p>Once you have the container image, you can run scripts in it with a command like:</p>
+<div class="highlight"><pre><span></span><code>singularity exec -B $PWD anaconda3.sif python my_script.py
+</code></pre></div>
+<p>As the container image is a single large file, you end up doing a single large read from the work file system rather
+than lots of small reads of individual Python files, this improves the performance of Python and reduces the 
+detrimental impact on the wider file system performance for all users.</p>
+<p>We have pre-built a Singularity container with the Anaconda distribution in on 
+ARCHER2. Users can access it at <code>$EPCC_SINGULARITY_DIR/anaconda3.sif</code>. To run a Python
+script with the centrally-installed image, you can use:</p>
+<div class="highlight"><pre><span></span><code>singularity exec -B $PWD $EPCC_SINGULARITY_DIR/anaconda3.sif python my_script.py
+</code></pre></div>
+<p>If you want additional packages that are not available in the standard container images then
+you will need to build your own container images. If you need help to do this, then please
+contact the <a href="mailto:support@archer2.ac.uk">ARCHER2 Service Desk</a></p>
+<h4 id="install-conda-on-the-solid-state-storage">Install conda on the solid state storage</h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must have applied for and been granted access to the solid state storage on ARCHER2
+to use this approach. See the <a href="../data/#solid-state-nvme-file-system">Data Management section</a> for more details.</p>
+</div>
+<p>The ARCHER2 solid state storage is better suited to accessing many small files and so performs better
+for Python imports. You can install your conda distribution on the solid state storage to see better
+performance than you would from the work file systems. To do this, specify an install location 
+in your directories on the solid state storage when prompted in the conda installation process.</p>
+<h3 id="conda-addtions-to-shell-configuration-files">Conda addtions to shell configuration files</h3>
+<p>During the install process most conda-based distributions will ask a question like:</p>
+<blockquote>
+<p>Do you wish the installer to initialize Miniconda3 by running conda init?</p>
+</blockquote>
+<p>If you are installing to the ARCHER2 work directories or the solid state storage, you 
+should answer "no" to this question.</p>
+<p>Adding the initialisation to shell startup scripts (typically <code>.bashrc</code>) means that every time
+you login to ARCHER2, the conda environment will try to initialise by reading lots of files
+within the conda installation. This approach was designed for the case where a user has installed
+conda on their personal device and so is the only user of the file system. For shared file systems
+such as those on ARCHER2, this places a large load on the file system and will lead to you seeing 
+slow login times and slow response from your command line on ARCHER2. It will also lead to degraded
+read/write performance from the work file systems for you and other users so should be avoided at 
+all costs.</p>
+<p>If you have previously installed a conda distribution and answered "yes" to the question about
+adding the initialisation to shell configuration files, you should edit your <code>~/.bashrc</code> file
+to remove the conda initialisation entries. This means deleting the lines that look something
+like:</p>
+<div class="highlight"><pre><span></span><code># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;
+# !! Contents within this block are managed by &#39;conda init&#39; !!
+__conda_setup=&quot;$(&#39;/work/t01/t01/auser/miniconda3/bin/conda&#39; &#39;shell.bash&#39; &#39;hook&#39; 2&gt; /dev/null)&quot;
+if [ $? -eq 0 ]; then
+eval &quot;$__conda_setup&quot;
+else
+if [ -f &quot;/work/t01/t01/auser/miniconda3/etc/profile.d/conda.sh&quot; ]; then
+. &quot;/work/t01/t01/auser/miniconda3/etc/profile.d/conda.sh&quot;
+else
+export PATH=&quot;/work/t01/t01/auser/miniconda3/bin:$PATH&quot;
+fi
+fi
+unset __conda_setup
+# &lt;&lt;&lt; conda initialize &lt;&lt;&lt;
+</code></pre></div>
 <h2 id="running-python">Running Python</h2>
 <h3 id="example-serial-python-submission-script">Example serial Python submission script</h3>
 <div class="highlight"><pre><span></span><code>#!/bin/bash --login
@@ -2504,7 +2732,7 @@ module load cray-python
 source &lt;&lt;path to virtual environment&gt;&gt;/bin/activate
 
 # Pass cpus-per-task setting to srun
-export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK
+export SRUN_CPUS_PER_TASK=${SLURM_CPUS_PER_TASK}
 
 # Run your Python program
 #   Note that srun MUST be used to wrap the call to python,
@@ -2516,6 +2744,45 @@ srun --distribution=block:block --hint=nomultithread python mpi4py_test.py
 <p>If you have installed your own packages you will need to activate your local Python
 environment within your job submission script as shown at the end of
 <a href="./#installing-your-own-python-packages-with-pip">Installing your own Python packages (with pip)</a>.</p>
+</div>
+<p>By default, mpi4py will use the Cray MPICH <strong>OFI</strong> library. If one wishes to use <strong>UCX</strong> instead, you must first,
+within the submission script, load <code>PrgEnv-gnu</code> before loading the UCX modules, as shown below.</p>
+<div class="highlight"><pre><span></span><code>module load PrgEnv-gnu
+module load craype-network-ucx
+module load cray-mpich-ucx
+module load cray-python
+</code></pre></div>
+<h3 id="running-python-at-scale">Running Python at scale</h3>
+<p>The file system metadata server may become overloaded when running a parallel Python script over many fully populated nodes (i.e., 128 MPI ranks per node).
+Performance degrades due to the IO operations that accompany a high volume of Python import statements. Typically, each import will first require the module or
+library to be located by searching a number of file paths before the module is loaded into memory. Such a workload scales as <em>N<sub>p</sub></em> x <em>N<sub>lib</sub></em> x <em>N<sub>path</path></em> ,
+where <em>N<sub>p</sub></em> is the number of parallel processes, <em>N<sub>lib</sub></em> is the number of libraries imported and <em>N<sub>path</path></em> the number of file paths searched. And so, in this way
+much time can be lost during the initial phase of a large Python job, not to mention the fact that the IO contention will be impacting other users of the system.</p>
+<p><a href="https://computing.llnl.gov/projects/spindle">Spindle</a> is a tool for improving the library-loading performance of dynamically linked HPC applications. It provides a
+mechanism for scalable loading of shared libraries, executables and Python files from a shared file system at scale without turning the file system into a bottleneck.
+This is achieved by caching libraries or their locations within node memory. Spindle takes a pure user-space approach: users do not need to configure new file systems,
+load particular OS kernels or build special system components. The tool operates on existing binaries &mdash; no application modification or special build flags are required.</p>
+<p>The script below shows how to run Spindle with your Python code.</p>
+<div class="highlight"><pre><span></span><code>#!/bin/bash --login
+
+#SBATCH --nodes=256
+#SBATCH --ntasks-per-node=128
+...
+
+module load cray-python
+module load spinde/0.13
+
+export SRUN_CPUS_PER_TASK=${SLURM_CPUS_PER_TASK}
+
+spindle --slurm --python-prefix=/opt/cray/pe/python/${CRAY_PYTHON_LEVEL} \      
+    srun --overlap --distribution=block:block --hint=nomultithread \
+        python mpi4py_script.py
+</code></pre></div>
+<p>The <code>--python-prefix</code> argument can be set to a list of colon-separated paths if necessary. In the example above,
+the <code>CRAY_PYTHON_LEVEL</code> environment variable is set as a conseqeunce of loading <code>cray-python</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>srun --overlap</code> option is required for Spindle as the version of Slurm on ARCHER2 is newer than 20.11.</p>
 </div>
 <h2 id="using-jupyterlab-on-archer2">Using JupyterLab on ARCHER2</h2>
 <p>It is possible to view and run Jupyter notebooks from both login nodes 
@@ -2752,10 +3019,10 @@ running <code>squeue -u $USER</code> in a separate terminal.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c18c5fb9.min.js"></script>
       
     
   </body>
