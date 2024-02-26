@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -256,10 +256,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
@@ -404,10 +402,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
@@ -471,10 +467,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
@@ -755,6 +749,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Installing your own Python packages (with pip)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extending-ml-modules-with-your-own-packages-via-pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extending ML modules with your own packages via pip
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -999,7 +1008,7 @@
         
   
   <span class="md-ellipsis">
-    GPU development system
+    GPU development platform
   </span>
   
 
@@ -1026,10 +1035,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
@@ -1532,10 +1539,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
@@ -2038,10 +2043,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
@@ -2254,6 +2257,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-tools/vmd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VMD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2342,6 +2366,21 @@
       Installing your own Python packages (with pip)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Installing your own Python packages (with pip)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extending-ml-modules-with-your-own-packages-via-pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extending ML modules with your own packages via pip
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2586,7 +2625,8 @@ srun --distribution=block:block --hint=nomultithread python myvenv-script.py
 <p>If you find that a module you've installed to a virtual environment on <code>/work</code> isn't found when running a job, it may be that it was previously installed to the default location of <code>$HOME/.local</code> which is not mounted on the compute nodes. This can be an issue as <code>pip</code> will reuse any modules found at this default location rather than reinstall them into a virtual environment. Thus, even if the virtual environment is on <code>/work</code>, a module you've asked for may actually be located on <code>/home</code>.</p>
 <p>You can check a module's install location and its dependencies with <code>pip show</code>, for example <code>pip show matplotlib</code>. You may then run <code>pip uninstall matplotlib</code> while no virtual environment is active to uninstall it from <code>$HOME/.local</code>, and then re-run <code>pip install matplotlib</code> while your virtual environment on <code>/work</code> is active to reinstall it there. You will need to do this for any modules installed on <code>/home</code> that will use either directly or indirectly. Remember you can check all your installed modules with <code>pip list</code>.</p>
 </div>
-<p>Lastly, the environment being extended does not have to come from one of the centrally-installed <code>cray-python</code> modules.
+<h3 id="extending-ml-modules-with-your-own-packages-via-pip">Extending ML modules with your own packages via pip</h3>
+<p>The environment being extended does not have to come from one of the centrally-installed <code>cray-python</code> modules.
 You can also create a local virtual environment based on one of the Machine Learning (ML) modules, e.g., <code>tensorflow</code>
 or <code>pytorch</code>. One extra command is required; it is issued immediately after the <code>python -m venv ...</code> command.</p>
 <pre><code>extend-venv-activate /work/t01/t01/auser/myvenv
@@ -3022,7 +3062,7 @@ running <code>squeue -u $USER</code> in a separate terminal.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c18c5fb9.min.js"></script>
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
     
   </body>
