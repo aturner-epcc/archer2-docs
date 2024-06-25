@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
@@ -154,7 +154,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -2858,11 +2858,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data-tools/arm-forge/" class="md-nav__link">
+      <a href="../../data-tools/forge/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Arm Forge
+    Linaro Forge
   </span>
   
 
@@ -4336,13 +4336,10 @@ The current job priority formula on ARCHER2 is:</p>
 <li>P(Age) - The priority based on the job age normalised to a value between 0 and 1.
   The maximum raw value is 14 days (where P(Age) = 1).</li>
 <li>P(Fairshare) - The fairshare priority normalised to a value between 0 and 1. Your
-  fairshare priority is determined by a combination of your budget code fairshare
-  value and your user fairshare value within that budget code. The more use that
-  the budget code you are using has made of the system recently relative to other
-  budget codes on the system, the lower the budget code fairshare value will be; and the more
-  use you have made of the system recently relative to other users within your
-  budget code, the lower your user fairshare value will be. The decay half life
-  for fairshare on ARCHER2 is set to 2 days. <a href="https://slurm.schedmd.com/fair_tree.html">More information on the Slurm fairshare
+  fairshare priority is determined by your user fairshare value. The more use that
+  your username has made of the system recently relative to other
+  users on the system, the lower the fairshare value will be. The decay half life
+  for fairshare on ARCHER2 is set to 2 days. <a href="https://slurm.schedmd.com/classic_fair_share.html">More information on the Slurm fairshare
   algorithm</a>.</li>
 <li>P(Size) - The priority based on the job size normalised to a value between 0 and 1.
   The maximum size is the total number of ARCHER2 compute nodes.</li>
@@ -6247,11 +6244,8 @@ and, once the username has been selected, the budget you want to charge the rese
 <h2 id="capability-days">Capability Days</h2>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>The next ARCHER2 Capability Day is 4 - 6 June 2024:</p>
-<ul>
-<li><code>pre-capabilityday</code> - 0800-2000 BST, Tue 4 Jun 2024</li>
-<li><code>capabilityday</code> - 2000 BST Tue 4 Jun - 1400 BST Thu 6 Jun 2024</li>
-</ul>
+<p>We expect the next Capability Days session to be in August or September 2024. Once the dates have been
+set, ARCHER2 users will be informed and this section updated.</p>
 </div>
 <p>ARCHER2 Capability Days are a mechanism to allow users to run large scale (512 node or more) tests
 on the system free of charge. The motivations behind Capability Days are:</p>
@@ -6267,14 +6261,18 @@ charge.</p>
 <li>pre-Capability Day session (<code>pre-capabilityday</code> QoS) to allow users to test scaling and job setup ahead of full Capability Day</li>
 <li>Capability Day session (<code>capabilityday</code> QoS)</li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Any jobs left in the queues when Capability Days finish will be deleted.</p>
+</div>
 <h3 id="pre-capability-day-session">pre-Capability Day session</h3>
-<p>The pre-Capability Day session typically runs directly before the full Capability Day session and allows
+<p>The pre-Capability Day session is typically available directly before the full Capability Day session and allows
 short test jobs to prepare for Capability Day.</p>
 <p>Submit to the <code>pre-capabilityday</code> QoS. Jobs can be submitted ahead of time and will start when the pre-Capability Day
 session starts.</p>
 <p><code>pre-capabilityday</code> QoS limits:</p>
 <ul>
-<li>Runs for 12 hours</li>
+<li>Available for 12 hours</li>
 <li>1024 nodes available</li>
 <li>Minimum job size: 256 nodes, maximum job size: 1024 nodes<ul>
 <li>Individual jobs steps (i.e. <code>srun</code> commands) within job scripts should also be a minimum of 256 nodes</li>
@@ -6312,12 +6310,12 @@ module<span class="w"> </span>load<span class="w"> </span>xthi
 <span class="nb">srun</span><span class="w"> </span>--hint<span class="o">=</span>multithread<span class="w"> </span>--distribution<span class="o">=</span>block:block<span class="w"> </span>my_app.x
 </code></pre></div>
 <h3 id="capability-day-session">Capability Day session</h3>
-<p>The Capability Day session typically runs directly after the pre-Capability Day session.</p>
+<p>The Capability Day session is typically available directly after the pre-Capability Day session.</p>
 <p>Submit to the <code>capability</code> QoS. Jobs can be submitted ahead of time and will start when the Capability Day
 session starts.</p>
 <p><code>capabilityday</code> QoS limits:</p>
 <ul>
-<li>Runs for 42 hours</li>
+<li>Available for 42 hours</li>
 <li>4096 nodes available</li>
 <li>Minimum job size: 512 nodes, maximum job size: 4096 nodes<ul>
 <li>Individual jobs steps (i.e. <code>srun</code> commands) within job scripts should also be a minimum of 512 nodes</li>
@@ -6587,7 +6585,7 @@ value to obtain more information on huge pages use.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>
