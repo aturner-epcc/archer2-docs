@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -2798,6 +2798,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../data-tools/spack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spack
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../data-tools/visidata/" class="md-nav__link">
         
   
@@ -3546,7 +3567,7 @@
 
 
 <h1 id="amd-gpu-development-platform">AMD GPU Development Platform</h1>
-<p>In early 2024 ARCHER2 users gained access to a small GPU system
+<p>In early 2024, ARCHER2 users gained access to a small GPU system
 integrated into ARCHER2 which is designed to allow users to test and develop software
 using AMD GPUs.</p>
 <div class="admonition important">
@@ -3555,13 +3576,16 @@ using AMD GPUs.</p>
 testing rather than to be used for production research.</p>
 </div>
 <h2 id="hardware-available">Hardware available</h2>
-<p>The GPU Development Platform consists of 4 compute nodes each with:</p>
-<ul>
-<li>1x AMD EPYC 7543P (Milan) processor, 32 core, 2.8 GHz</li>
-<li>4x AMD Instinct MI210 accelerator</li>
-<li>512 GiB host memory</li>
-<li>2&times; 100 Gb/s Slingshot interfaces per node</li>
-</ul>
+<p>The GPU Development Platform consists of 4 compute nodes each with:
+- 1x AMD EPYC 7543P (Milan) processor, 32 core, 2.8 GHz
+- 4x AMD Instinct MI210 accelerator
+- 512 GiB host memory
+- 2&times; 100 Gb/s Slingshot interfaces per node</p>
+<p>The AMD Instinct&trade; MI210 Accelerators feature:
+ - Architecture: CDNA 2
+ - Compute Units: 104
+ - Memory: 64 GB HBM2e</p>
+<p>A comprehensive list of features is available on the <a href="https://www.amd.com/en/products/accelerators/instinct/mi200/mi210.html">AMD website.</a></p>
 <h2 id="accessing-the-gpu-compute-nodes">Accessing the GPU compute nodes</h2>
 <p>The GPU nodes can be accessed through the Slurm job submission system from the
 standard ARCHER2 login nodes. Details of the scheduler limits and configuration
@@ -4082,9 +4106,6 @@ on the compute node architecture.</p>
 #SBATCH --partition=gpu
 #SBATCH --qos=gpu-exc
 
-# Enable GPU-aware MPI
-export MPICH_GPU_SUPPORT_ENABLED=1
-
 # Check assigned GPU
 srun --ntasks=1 rocm-smi
 
@@ -4093,6 +4114,9 @@ module load xthi
 srun --ntasks=4 --cpus-per-task=8 \
      --hint=nomultithread --distribution=block:block \
      xthi
+
+# Enable GPU-aware MPI
+export MPICH_GPU_SUPPORT_ENABLED=1
 
 srun --ntasks=4 --cpus-per-task=8 \
      --hint=nomultithread --distribution=block:block \
@@ -4123,31 +4147,31 @@ on the compute node architecture.</p>
 #SBATCH --partition=gpu
 #SBATCH --qos=gpu-exc
 
-# Enable GPU-aware MPI
-export MPICH_GPU_SUPPORT_ENABLED=1
-
 # Check assigned GPU
 nodelist=$(scontrol show hostname $SLURM_JOB_NODELIST)
 for nodeid in $nodelist
 do
    echo $nodeid
-   srun --ntasks=1 --nodelist=$nodeid rocm-smi
+   srun --ntasks=1 --gpus=4 --nodes=1 --ntasks-per-node=1 --nodelist=$nodeid rocm-smi
 done
 
 # Check process/thread pinning
 module load xthi
-srun --ntasks=8 --cpus-per-task=8 \
+srun --ntasks-per-node=4 --cpus-per-task=8 \
      --hint=nomultithread --distribution=block:block \
      xthi
 
-srun --ntasks=8 --cpus-per-task=8 \
+# Enable GPU-aware MPI
+export MPICH_GPU_SUPPORT_ENABLED=1
+
+srun --ntasks-per-node=4 --cpus-per-task=8 \
      --hint=nomultithread --distribution=block:block \
      ./my_gpu_program.x
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>When you use the <code>--qos=gpu-exc</code> QoS you must also add the <code>--exclusive</code> flag
-and then specify the number of nodes you want with <code>--nodes=1</code>.</p>
+and then specify the number of nodes you want with, for example, <code>--nodes=2</code>.</p>
 </div>
 <h3 id="interactive-jobs">Interactive jobs</h3>
 <h4 id="using-salloc">Using <code>salloc</code></h4>
@@ -4626,7 +4650,7 @@ available on the Frontier exascale system:</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
